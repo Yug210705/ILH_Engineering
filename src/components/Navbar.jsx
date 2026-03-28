@@ -1,5 +1,5 @@
 import { ChevronDown, Menu, X } from 'lucide-react';
-import siteLogo from '../assets/logo.png';
+import siteLogo from '../assets/Logo.png';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
