@@ -23,13 +23,13 @@ export default function Leadership() {
             </div>
 
             {/* Title */}
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[52px] sm:text-[64px] lg:text-[68px] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a]">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[52px] sm:text-[64px] lg:text-[76px] font-[700] leading-[1.0] tracking-[-0.02em] text-[#0a0a0a]">
               Engineering<br/>Leadership
             </h2>
 
             {/* CTA Button */}
             <div className="flex items-center gap-[6px] mt-8">
-              <div className="bg-[#3e976c] text-white font-[500] tracking-wide text-[16px] px-8 h-[50px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] hover:shadow-md hover:-translate-y-0.5">
+              <div className="bg-[#3e976c] text-white font-[500] tracking-wide text-[16px] px-10 h-[50px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] hover:shadow-md hover:-translate-y-0.5">
                 Learn More
               </div>
               <div className="bg-[#3e976c] text-white w-[50px] h-[50px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] hover:shadow-md hover:-translate-y-0.5">
