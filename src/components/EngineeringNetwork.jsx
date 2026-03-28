@@ -3,7 +3,7 @@ import groupPhoto from '../assets/groupphoto.png';
 
 export default function EngineeringNetwork() {
   return (
-    <section className="w-full relative overflow-hidden bg-white py-24 lg:py-32">
+    <section className="w-full relative overflow-hidden bg-white pt-24 lg:pt-32 pb-0">
       <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

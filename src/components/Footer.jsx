@@ -21,7 +21,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-white pt-24">
+    <footer className="w-full bg-white pt-0">
       {/* Top Features Row */}
       <div className="w-full border-y border-gray-100 mb-12">
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
