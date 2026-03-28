@@ -1,4 +1,4 @@
-import { Users, HardHat, Puzzle, Phone, Mail, MapPin, Twitter, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Users, HardHat, Puzzle, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -50,11 +50,11 @@ export default function Footer() {
               <div className="flex flex-col gap-6">
                 <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#9ca3af]">Capabilities</h4>
                 <ul className="flex flex-col gap-3 text-[14px] text-[#9ca3af] font-medium transition-colors">
-                  <li className="hover:text-white cursor-pointer">Electrical Power Systems</li>
-                  <li className="hover:text-white cursor-pointer">Mission Critical Infrastructure</li>
-                  <li className="hover:text-white cursor-pointer">Communication & Network Resilience</li>
-                  <li className="hover:text-white cursor-pointer">Life Safety & Security Systems</li>
-                  <li className="hover:text-white cursor-pointer">Project Management for Critical Deployments</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Electrical Power Systems</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Mission Critical Infrastructure</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Communication & Network Resilience</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Life Safety & Security Systems</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Project Management for Critical Deployments</li>
                 </ul>
               </div>
 
@@ -62,15 +62,15 @@ export default function Footer() {
               <div className="flex flex-col gap-6 order-last lg:order-none">
                 <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#9ca3af]">Get in Touch</h4>
                 <ul className="flex flex-col gap-5 text-[14.5px] text-[#9ca3af] font-medium">
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 transition-colors">
                     <Phone size={18} className="shrink-0 mt-0.5" />
                     786-297-8226
                   </li>
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 transition-colors">
                     <Mail size={18} className="shrink-0 mt-0.5" />
                     ILHEngineering.com
                   </li>
-                  <li className="flex items-start gap-3 leading-relaxed">
+                  <li className="flex items-start gap-3 leading-relaxed transition-colors">
                     <MapPin size={18} className="shrink-0 mt-0.5" />
                     <span>333 SE 2nd Ave Suite<br/>#2000, Miami, Florida<br/>33131</span>
                   </li>
@@ -86,7 +86,7 @@ export default function Footer() {
                    </div>
                 </div>
                 {/* Secondary Badge Mockup */}
-                <div className="w-[85px] h-[85px] p-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-[18px] border border-blue-400/30 flex items-center justify-center text-[10px] text-blue-200 font-bold text-center leading-none">
+                <div className="w-[85px] h-[85px] p-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-[18px] border border-blue-400/30 flex items-center justify-center text-[8px] text-blue-200 font-bold text-center leading-[1.2]">
                   MIAMI-DADE DISADVANTAGED BUSINESS ENTERPRISE
                 </div>
               </div>
@@ -94,29 +94,29 @@ export default function Footer() {
               {/* Insights */}
               <div className="flex flex-col gap-6 pt-4">
                 <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#9ca3af]">Insights</h4>
-                <ul className="flex flex-col gap-3 text-[14px] text-[#9ca3af] font-medium">
-                  <li className="hover:text-white cursor-pointer">Technical Insights</li>
-                  <li className="hover:text-white cursor-pointer">Infrastructure Briefings</li>
-                  <li className="hover:text-white cursor-pointer">Capability Statement</li>
+                <ul className="flex flex-col gap-3 text-[14px] text-[#9ca3af] font-medium transition-colors">
+                  <li className="hover:text-white cursor-pointer transition-colors">Technical Insights</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Infrastructure Briefings</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Capability Statement</li>
                 </ul>
               </div>
 
               {/* Experience */}
               <div className="flex flex-col gap-6 pt-4">
                 <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#9ca3af]">Experience</h4>
-                <ul className="flex flex-col gap-3 text-[14px] text-[#9ca3af] font-medium">
-                  <li className="hover:text-white cursor-pointer">Projects</li>
-                  <li className="hover:text-white cursor-pointer">Case Studies</li>
+                <ul className="flex flex-col gap-3 text-[14px] text-[#9ca3af] font-medium transition-colors">
+                  <li className="hover:text-white cursor-pointer transition-colors">Projects</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Case Studies</li>
                 </ul>
               </div>
 
               {/* The Firm */}
               <div className="flex flex-col gap-6 pt-4">
                 <h4 className="text-[12px] font-bold uppercase tracking-widest text-[#9ca3af]">The Firm</h4>
-                <ul className="flex flex-col gap-3 text-[14px] text-[#9ca3af] font-medium">
-                  <li className="hover:text-white cursor-pointer">About ILH Eng.</li>
-                  <li className="hover:text-white cursor-pointer">Founder</li>
-                  <li className="hover:text-white cursor-pointer">Engineering Approach</li>
+                <ul className="flex flex-col gap-3 text-[14px] text-[#9ca3af] font-medium transition-colors">
+                  <li className="hover:text-white cursor-pointer transition-colors">About ILH Eng.</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Founder</li>
+                  <li className="hover:text-white cursor-pointer transition-colors">Engineering Approach</li>
                 </ul>
               </div>
             </div>
@@ -125,10 +125,7 @@ export default function Footer() {
             <div className="pt-10 border-t border-dashed border-white/20 mt-16 flex flex-col md:flex-row items-center justify-between gap-8">
               <span className="text-[#64748b] text-[13px] font-[500]">© 2026 ILH Engineering. All rights reserved.</span>
               <div className="flex items-center gap-7">
-                <Twitter className="w-[18px] h-[18px] text-white/40 hover:text-white cursor-pointer transition-colors" />
-                <Linkedin className="w-[18px] h-[18px] text-white/40 hover:text-white cursor-pointer transition-colors" />
-                <Facebook className="w-[18px] h-[18px] text-white/40 hover:text-white cursor-pointer transition-colors" />
-                <Instagram className="w-[18px] h-[18px] text-white/40 hover:text-white cursor-pointer transition-colors" />
+                {/* Social icons removed for stability */}
               </div>
             </div>
           </div>
