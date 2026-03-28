@@ -44,9 +44,9 @@ export default function Leadership() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.2, 0.8, 0.2, 1] }}
-            className="flex flex-col items-center w-full max-w-[390px]"
+            className="flex flex-col items-center w-full max-w-[480px]"
           >
-            <div className="w-full h-[460px] bg-[#f1f5f9] overflow-hidden mb-4 relative flex items-center justify-center">
+            <div className="w-full h-[580px] bg-[#f1f5f9] overflow-hidden mb-4 relative flex items-center justify-center">
               <img 
                 src={ralphImg} 
                 alt="Ralph F. Iles III" 
@@ -54,14 +54,14 @@ export default function Leadership() {
               />
             </div>
             {/* Small Stat Pills */}
-            <div className="flex gap-[8px] w-full justify-between mt-1">
-              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[10.5px] font-[700] px-3 py-2.5 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
+            <div className="flex gap-[10px] w-full justify-between mt-1">
+              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[12px] font-[700] px-4 py-3 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
                 25+ Yrs Experience
               </div>
-              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[10.5px] font-[700] px-3 py-2.5 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
+              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[12px] font-[700] px-4 py-3 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
                 Principal Engineer
               </div>
-              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[10.5px] font-[700] px-3 py-2.5 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
+              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[12px] font-[700] px-4 py-3 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
                 Veteran
               </div>
             </div>
