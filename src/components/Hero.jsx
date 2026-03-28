@@ -48,47 +48,56 @@ export default function Hero() {
         <div className="absolute top-0 left-[-32px] lg:left-[-48px] h-full flex flex-col items-start justify-center pointer-events-none z-10 w-[200%] pb-20 lg:pb-32">
           
           {/* Block 0: Pill (Short) */}
-          <div className="bg-[#ffffff] rounded-tr-[24px] rounded-br-[0px] pr-8 pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-6 pt-10 flex items-end shrink-0 w-max z-10 animate-slide-in">
+          <div className="bg-[#ffffff] pr-[20px] lg:pr-[28px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-4 pt-10 flex items-end shrink-0 w-max z-10 animate-slide-in"
+               style={{ borderTopRightRadius: '24px', borderBottomRightRadius: '0px' }}>
             <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3 py-1.5 rounded-[8px] text-[12.5px] font-[600] tracking-tight">
               <div className="w-[5.5px] h-[5.5px] rounded-full bg-brand-green mb-[0px]"></div>
               Mission-Critical Infrastructure Engineering
             </div>
             {/* Out-step from Block 0 to 1 */}
-            <Curve type="bottom-out" className="absolute bottom-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
+            <div className="absolute bottom-0 w-[24px] h-[24px] z-40 pointer-events-none" 
+                 style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 0%, transparent 23.5px, #ffffff 24px)' }}></div>
           </div>
 
           {/* Block 1: Infrastructure (Long) */}
-          <div className="bg-[#ffffff] rounded-tr-[24px] rounded-br-[24px] pr-[16px] lg:pr-[24px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-2 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-20 animate-slide-in stagger-1">
+          <div className="bg-[#ffffff] pr-[16px] lg:pr-[24px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-2 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-20 animate-slide-in stagger-1"
+               style={{ borderTopRightRadius: '24px', borderBottomRightRadius: '24px' }}>
             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
               Infrastructure
             </h1>
           </div>
 
           {/* Block 2: that Performs (Short) */}
-          <div className="bg-[#ffffff] rounded-tr-[0px] rounded-br-[0px] pr-[20px] lg:pr-[28px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-3 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-30 animate-slide-in stagger-1">
+          <div className="bg-[#ffffff] pr-[20px] lg:pr-[28px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-3 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-30 animate-slide-in stagger-1"
+               style={{ borderTopRightRadius: '0px', borderBottomRightRadius: '0px' }}>
             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
               that <span className="text-brand-green">Performs</span>
             </h1>
             {/* In-step from Block 1 to 2 */}
-            <Curve type="bottom-in" className="absolute top-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
+            <div className="absolute top-0 w-[24px] h-[24px] z-40 pointer-events-none" 
+                 style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 100%, transparent 23.5px, #ffffff 24px)' }}></div>
             {/* Out-step from Block 2 to 3 */}
-            <Curve type="bottom-out" className="absolute bottom-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
+            <div className="absolute bottom-0 w-[24px] h-[24px] z-40 pointer-events-none" 
+                 style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 0%, transparent 23.5px, #ffffff 24px)' }}></div>
           </div>
 
           {/* Block 3: when Failure isn't (Long) */}
-          <div className="bg-[#ffffff] rounded-tr-[24px] rounded-br-[24px] pr-[32px] lg:pr-[56px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-3 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-40 animate-slide-in stagger-2">
+          <div className="bg-[#ffffff] pr-[32px] lg:pr-[56px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-3 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-40 animate-slide-in stagger-2"
+               style={{ borderTopRightRadius: '24px', borderBottomRightRadius: '24px' }}>
              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
                when Failure isn&#39;t
              </h1>
           </div>
 
           {/* Block 4: an Option. (Short) */}
-          <div className="bg-[#ffffff] rounded-tr-none rounded-br-[24px] pr-[24px] lg:pr-[32px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-8 lg:pb-12 pt-2 lg:pt-3 flex flex-col shrink-0 w-max z-50 animate-slide-in stagger-3">
+          <div className="bg-[#ffffff] pr-[24px] lg:pr-[32px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-8 lg:pb-12 pt-2 lg:pt-3 flex flex-col shrink-0 w-max z-50 animate-slide-in stagger-3"
+               style={{ borderTopRightRadius: '0px', borderBottomRightRadius: '24px' }}>
              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
                an <span className="text-brand-green">Option.</span>
              </h1>
              {/* In-step from Block 3 to 4 */}
-             <Curve type="bottom-in" className="absolute top-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
+             <div className="absolute top-0 w-[24px] h-[24px] z-40 pointer-events-none" 
+                  style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 100%, transparent 23.5px, #ffffff 24px)' }}></div>
           </div>
 
         </div>
