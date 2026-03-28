@@ -24,17 +24,17 @@ export default function EngineeringNetwork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0.8, 0.2, 1] }}
-          className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-20 mb-10"
+          className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-10 mb-10"
         >
           {/* Title */}
-          <div className="flex-1">
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[46px] sm:text-[56px] lg:text-[76px] font-[800] leading-[1.0] tracking-[-0.03em] text-[#0a0a0a]">
+          <div className="flex-[2]">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[42px] sm:text-[52px] lg:text-[72px] xl:text-[76px] font-[800] leading-[1.0] tracking-[-0.03em] text-[#0a0a0a] whitespace-normal">
               Expertise for Complex<br/>Infrastructure Projects
             </h2>
           </div>
           
           {/* Description */}
-          <div className="flex-none lg:w-[420px] pt-2 lg:pt-6">
+          <div className="flex-1 lg:max-w-[380px] pt-2 lg:pt-6">
             <p className="text-[#71717a] text-[16px] lg:text-[18px] font-[500] leading-[1.6]">
               ILH Engineering works with a trusted network of engineers, infrastructure specialists, and project partners to support complex deployments.
             </p>
