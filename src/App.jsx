@@ -4,6 +4,7 @@ import Experience from './components/Experience';
 import DesignRisk from './components/DesignRisk';
 import Philosophy from './components/Philosophy';
 import Capabilities from './components/Capabilities';
+import ProjectExperience from './components/ProjectExperience';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <DesignRisk />
       <Philosophy />
       <Capabilities />
+      <ProjectExperience />
     </div>
   );
 }
