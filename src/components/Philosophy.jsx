@@ -117,7 +117,7 @@ export default function Philosophy() {
         </div>
 
         {/* Heading */}
-        <h2 className="text-[52px] md:text-[68px] lg:text-[76px] xl:text-[84px] font-[800] leading-[1.0] tracking-[-0.035em] text-[#0a0a0a] text-center max-w-[1200px] mb-8">
+        <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[48px] sm:text-[60px] lg:text-[72px] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1200px] mb-8">
           Reliability Is Not Luck. <br className="hidden md:block"/> It Is Engineered.
         </h2>
 

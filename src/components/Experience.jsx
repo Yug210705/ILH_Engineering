@@ -79,7 +79,7 @@ export default function Experience() {
                 Engineering Experience
               </div>
               
-              <h2 className="text-[52px] md:text-[68px] lg:text-[76px] font-[800] leading-[1.0] tracking-[-0.035em] text-[#0f172a] mt-2 flex flex-col items-start w-full">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[48px] sm:text-[60px] lg:text-[72px] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] mt-2 flex flex-col items-start w-full">
                 <div className="flex flex-wrap items-baseline gap-x-4 mb-[2px]">
                   <span>Infrastructure</span> 
                   {/* Visibly darker "that" matching Image 16 */}
