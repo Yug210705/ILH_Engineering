@@ -1,5 +1,5 @@
 import { ChevronDown, Building2 } from 'lucide-react';
-import siteLogo from '../assets/Logo.png';
+import siteLogo from '../assets/logo.png';
 
 export default function Navbar() {
   return (

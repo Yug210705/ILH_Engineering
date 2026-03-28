@@ -1,5 +1,5 @@
 import { Play } from 'lucide-react';
-import heroImg from '../assets/DC Siteview 1 2.png';
+import heroImg from '../assets/dc-hero.png';
 
 function Curve({ className, type, style }) {
   if (type === 'bottom-out') {
