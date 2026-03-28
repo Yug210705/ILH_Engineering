@@ -8,10 +8,11 @@ import ProjectExperience from './components/ProjectExperience';
 import Testimonials from './components/Testimonials';
 import Leadership from './components/Leadership';
 import EngineeringNetwork from './components/EngineeringNetwork';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white w-full overflow-x-hidden pt-4 pb-20 text-[#0a0a0a]">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden pt-4 pb-0 text-[#0a0a0a]">
       <Navbar />
       <Hero />
       <Experience />
@@ -22,6 +23,7 @@ function App() {
       <Testimonials />
       <Leadership />
       <EngineeringNetwork />
+      <Footer />
     </div>
   );
 }
