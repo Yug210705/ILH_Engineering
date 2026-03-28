@@ -27,8 +27,8 @@ export default function EngineeringNetwork() {
           className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-10 mb-10"
         >
           {/* Title */}
-          <div className="flex-[2]">
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[42px] sm:text-[52px] lg:text-[72px] xl:text-[76px] font-[800] leading-[1.0] tracking-[-0.03em] text-[#0a0a0a] whitespace-normal">
+          <div className="flex-[3]">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[44px] sm:text-[56px] lg:text-[72px] xl:text-[80px] font-[800] leading-[0.95] tracking-[-0.04em] text-[#0a0a0a] whitespace-normal">
               Expertise for Complex<br/>Infrastructure Projects
             </h2>
           </div>
