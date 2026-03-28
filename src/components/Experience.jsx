@@ -34,7 +34,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="w-full relative overflow-hidden bg-[#f4f7f6] pt-32 text-sans flex flex-col">
+    <section className="w-full relative overflow-hidden bg-gradient-to-b from-white to-[#f4f7f6] pt-32 text-sans flex flex-col">
       
       {/* Top Section: Hero/Header area */}
       <div className="relative w-full z-10 flex flex-col items-center">
