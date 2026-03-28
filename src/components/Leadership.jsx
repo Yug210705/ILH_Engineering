@@ -17,23 +17,23 @@ export default function Leadership() {
             className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
           >
             {/* Pill */}
-            <div className="inline-flex items-center gap-[6px] bg-[#e8f2ee] text-[#374151] px-3.5 py-[5px] rounded-[6px] text-[12px] font-[500] tracking-tight border border-[#d2efe2] mb-6">
-              <div className="w-[4.5px] h-[4.5px] rounded-full bg-brand-green"></div>
+            <div className="inline-flex items-center gap-[6px] bg-[#e8f2ee] text-[#1f2937] px-4 py-[6px] rounded-full text-[13px] font-[500] tracking-tight border border-[#d2efe2] mb-6">
+              <div className="w-[5px] h-[5px] rounded-full bg-brand-green"></div>
               Not a biography, credibility narrative.
             </div>
 
             {/* Title */}
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[52px] sm:text-[64px] lg:text-[76px] font-[800] leading-[1.0] tracking-normal text-[#0a0a0a]">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[52px] sm:text-[64px] lg:text-[76px] font-[700] leading-[1.05] tracking-[-0.03em] text-[#0a0a0a]">
               Engineering<br/>Leadership
             </h2>
 
             {/* CTA Button */}
-            <div className="flex items-center gap-[6px] mt-8">
-              <div className="bg-[#3e976c] text-white font-[500] tracking-wide text-[16px] px-10 h-[50px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] hover:shadow-md hover:-translate-y-0.5">
+            <div className="flex items-center gap-[8px] mt-10">
+              <div className="bg-[#3e976c] text-white font-[500] tracking-wide text-[16px] px-12 h-[52px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] shadow-[0_10px_20px_rgba(55,151,104,0.18)] hover:-translate-y-0.5 hover:shadow-[0_12px_24px_rgba(55,151,104,0.25)]">
                 Learn More
               </div>
-              <div className="bg-[#3e976c] text-white w-[50px] h-[50px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] hover:shadow-md hover:-translate-y-0.5">
-                <ArrowUpRight size={20} strokeWidth={2} />
+              <div className="bg-[#3e976c] text-white w-[52px] h-[52px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] shadow-[0_10px_20px_rgba(55,151,104,0.18)] hover:-translate-y-0.5 hover:shadow-[0_12px_24px_rgba(55,151,104,0.25)]">
+                <ArrowUpRight size={22} strokeWidth={2} />
               </div>
             </div>
           </motion.div>
