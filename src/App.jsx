@@ -7,6 +7,7 @@ import Capabilities from './components/Capabilities';
 import ProjectExperience from './components/ProjectExperience';
 import Testimonials from './components/Testimonials';
 import Leadership from './components/Leadership';
+import EngineeringNetwork from './components/EngineeringNetwork';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <ProjectExperience />
       <Testimonials />
       <Leadership />
+      <EngineeringNetwork />
     </div>
   );
 }
