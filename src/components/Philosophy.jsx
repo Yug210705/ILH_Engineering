@@ -114,7 +114,7 @@ export default function Philosophy() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-        className="w-full max-w-[1536px] mx-auto px-6 md:px-10 relative z-10 flex flex-col items-center"
+        className="w-full max-w-[1600px] mx-auto px-6 md:px-10 relative z-10 flex flex-col items-center"
       >
         
         {/* Tag */}
@@ -137,7 +137,7 @@ export default function Philosophy() {
       </motion.div>
 
       {/* Cinematic, Screen-Spanning Graphic Container BROKEN OUT of the text constraints */}
-      <div className="relative w-full max-w-[1536px] min-h-[500px] max-h-[85vh] aspect-[1200/600] mx-auto mt-6 mb-24 pointer-events-auto px-4 sm:px-12">
+      <div className="relative w-full max-w-[1600px] min-h-[500px] max-h-[85vh] aspect-[1200/600] mx-auto mt-6 mb-24 pointer-events-auto px-4 sm:px-12">
         
         {/* Base SVG Layer - Expanded aggressively outwards for strict full-viewport utilization */}
         <svg viewBox="0 100 1200 600" className="absolute inset-0 w-full h-full z-0 overflow-visible pointer-events-none">

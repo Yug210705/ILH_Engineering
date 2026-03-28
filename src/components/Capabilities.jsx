@@ -40,7 +40,7 @@ export default function Capabilities() {
            }}>
       </div>
 
-      <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Header Area */}
         <motion.div 

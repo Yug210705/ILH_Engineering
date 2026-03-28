@@ -27,7 +27,7 @@ export default function ProjectExperience() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-        className="w-full max-w-[1200px] mx-auto px-6 mb-16 flex flex-col items-center"
+        className="w-full max-w-[1600px] mx-auto px-6 mb-16 flex flex-col items-center"
       >
         {/* Pill */}
         <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3.5 py-1.5 rounded-[12px] text-[12.5px] font-bold tracking-wide border border-[#d2efe2] mb-8 shadow-sm shadow-[#379768]/10">

@@ -121,7 +121,7 @@ export default function Experience() {
             visible: { transition: { staggerChildren: 0.15 } },
             hidden: {}
           }}
-          className="w-full max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-4 h-full border-x border-[#e2e8f0] relative"
+          className="w-full max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-4 h-full border-x border-[#e2e8f0] relative"
         >
           
           {cards.map((card, index) => {

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function DesignRisk() {
   return (
     <section className="w-full bg-[#f4f7f6] pt-24 pb-32">
-      <div className="w-full max-w-[1300px] mx-auto px-6 lg:px-12 flex flex-col items-center">
+      <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12 flex flex-col items-center">
         
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
