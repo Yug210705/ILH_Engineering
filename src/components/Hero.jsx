@@ -1,4 +1,5 @@
 import { Play } from 'lucide-react';
+import heroImg from '../assets/DC Siteview 1 2.png';
 
 function Curve({ className, type, style }) {
   if (type === 'bottom-out') {
@@ -38,7 +39,7 @@ export default function Hero() {
       {/* Container for the Hero with Image inside */}
       <div className="relative w-full h-[750px] lg:h-[860px] rounded-[24px] overflow-hidden bg-[#2a2a2a] shadow-xl">
         <img 
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop" 
+          src={heroImg} 
           alt="Industrial Facility Aerial View" 
           className="w-full h-full object-cover"
         />

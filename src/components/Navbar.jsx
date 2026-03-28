@@ -1,11 +1,12 @@
 import { ChevronDown, Building2 } from 'lucide-react';
+import siteLogo from '../assets/Logo.png';
 
 export default function Navbar() {
   return (
     <nav className="w-full max-w-[1600px] mx-auto flex items-center justify-between px-6 sm:px-8 lg:px-12 py-2 bg-transparent relative z-20">
       {/* Logos side */}
       <div className="flex-1 flex items-center justify-start">
-        <img src="/ilh-logo-hd.png" alt="ILH Engineering" className="h-[60px] w-auto object-contain" />
+        <img src={siteLogo} alt="ILH Engineering" className="h-[60px] w-auto object-contain" />
       </div>
       
       {/* Center Links */}

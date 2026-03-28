@@ -1,5 +1,6 @@
 import { Users, HardHat, Puzzle, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import siteLogo from '../assets/Logo.png';
 
 export default function Footer() {
   const features = [
@@ -81,7 +82,7 @@ export default function Footer() {
               <div className="flex flex-col items-start lg:items-end gap-12">
                 <div className="flex flex-col items-center">
                    <div className="flex flex-col items-center gap-3">
-                     <img src="/ilh-logo-hd.png" alt="ILH" className="h-[90px] w-auto brightness-0 invert opacity-100" />
+                     <img src={siteLogo} alt="ILH" className="h-[90px] w-auto brightness-0 invert opacity-100" />
                    </div>
                 </div>
                 {/* Secondary Badge Mockup */}
