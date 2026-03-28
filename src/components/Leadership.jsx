@@ -73,18 +73,18 @@ export default function Leadership() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.25, ease: [0.2, 0.8, 0.2, 1] }}
-            className="flex-1 flex flex-col text-center lg:text-left pt-6 lg:pt-[180px] max-w-[450px]"
+            className="flex-none w-full lg:w-[400px] flex flex-col text-center lg:text-left pt-6 lg:pt-[190px]"
           >
-            <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[38px] lg:text-[42px] font-[700] text-[#0a0a0a] tracking-tight leading-[1.0] mb-3">
+            <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[34px] lg:text-[38px] font-[700] text-[#0a0a0a] tracking-[-0.02em] leading-[1.0] mb-4">
               Ralph F. Iles III
             </h3>
-            <h4 className="text-[17px] font-[500] text-[#6b7280] leading-[1.35] mb-8 lg:pr-10 mix-blend-multiply">
-              Founding Director & Principal Engineer of ILH Engineering
+            <h4 className="text-[18px] lg:text-[20px] font-[500] text-[#6b7280] leading-[1.4] mb-8 lg:pr-10 mix-blend-multiply">
+              Founding Director & Principal<br/>Engineer of ILH Engineering
             </h4>
-            <p className="text-[#9ca3af] text-[15px] font-[400] leading-[1.7] mb-5 lg:pr-6">
+            <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7] mb-5 lg:pr-6">
               With over 25+ yrs of experience in electrical and technology infrastructure, Ralph founded ILH Engineering to bring senior-level expertise directly to every project.
             </p>
-            <p className="text-[#9ca3af] text-[15px] font-[400] leading-[1.7] lg:pr-6">
+            <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7] lg:pr-6">
               His hands-on approach ensures that every design is precise, compliant, & built to perform.
             </p>
           </motion.div>
