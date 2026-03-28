@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ralphImg from '../assets/ralph.png';
 
 export default function Leadership() {
   return (
@@ -16,7 +17,7 @@ export default function Leadership() {
             className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
           >
             {/* Pill */}
-            <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3.5 py-1.5 rounded-[12px] text-[12.5px] font-[600] tracking-tight border border-[#d2efe2] mb-8 shadow-sm">
+            <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-[#1f2937] px-3.5 py-1.5 rounded-[8px] text-[12.5px] font-[500] tracking-tight mb-8">
               <div className="w-[5.5px] h-[5.5px] rounded-full bg-brand-green mb-[0px]"></div>
               Not a biography, credibility narrative.
             </div>
@@ -27,12 +28,12 @@ export default function Leadership() {
             </h2>
 
             {/* CTA Button */}
-            <div className="flex items-stretch shadow-[0_12px_30px_rgba(55,151,104,0.22)] rounded-[8px] overflow-hidden group cursor-pointer w-max transition-transform border border-[#3e976c] hover:-translate-y-0.5 mt-10">
-              <div className="bg-[#3e976c] text-white font-[600] tracking-wide text-[16px] px-7 py-3.5 flex items-center justify-center transition-colors group-hover:bg-[#34835d]">
+            <div className="flex items-center gap-2 mt-8">
+              <div className="bg-[#3e976c] text-white font-[600] tracking-wide text-[16.5px] px-8 h-[52px] rounded-[8px] flex items-center justify-center transition-transform hover:-translate-y-0.5 shadow-[0_12px_30px_rgba(55,151,104,0.25)] cursor-pointer hover:bg-[#34835d]">
                 Learn More
               </div>
-              <div className="bg-[#2f855a] text-white px-3.5 flex items-center justify-center border-l border-white/20 transition-colors group-hover:bg-[#276e4a]">
-                <ArrowUpRight size={20} strokeWidth={2.5} />
+              <div className="bg-[#3e976c] text-white w-[52px] h-[52px] rounded-[8px] flex items-center justify-center transition-transform hover:-translate-y-0.5 shadow-[0_12px_30px_rgba(55,151,104,0.25)] cursor-pointer hover:bg-[#34835d]">
+                <ArrowUpRight size={22} strokeWidth={2} />
               </div>
             </div>
           </motion.div>
@@ -45,22 +46,22 @@ export default function Leadership() {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.2, 0.8, 0.2, 1] }}
             className="flex flex-col items-center w-full max-w-[360px]"
           >
-            <div className="w-full h-[420px] bg-slate-100 overflow-hidden mb-5 border border-gray-100/50">
+            <div className="w-full h-[450px] bg-[#f1f5f9] overflow-hidden mb-4 relative flex items-center justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop" 
+                src={ralphImg} 
                 alt="Ralph F. Iles III" 
-                className="w-full h-full object-cover object-top filter grayscale-[10%] contrast-105"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             {/* Small Stat Pills */}
             <div className="flex gap-2.5 w-full justify-between mt-1">
-              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[11px] font-[700] px-3 py-2 rounded-[4px] tracking-tight flex-1 text-center border border-gray-100">
+              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[11px] font-[700] px-3 py-2 rounded-[6px] tracking-tight flex-1 text-center">
                 25+ Yrs Experience
               </div>
-              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[11px] font-[700] px-3 py-2 rounded-[4px] tracking-tight flex-1 text-center border border-gray-100">
+              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[11px] font-[700] px-3 py-2 rounded-[6px] tracking-tight flex-1 text-center">
                 Principal Engineer
               </div>
-              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[11px] font-[700] px-3 py-2 rounded-[4px] tracking-tight flex-1 text-center border border-gray-100">
+              <div className="bg-[#f4f4f5] text-[#0a0a0a] text-[11px] font-[700] px-3 py-2 rounded-[6px] tracking-tight flex-1 text-center">
                 Veteran
               </div>
             </div>
