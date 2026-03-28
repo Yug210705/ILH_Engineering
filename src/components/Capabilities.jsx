@@ -1,26 +1,31 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ChevronsRight } from 'lucide-react';
 
 export default function Capabilities() {
   const capabilitiesList = [
     {
       title: "Electrical Power Systems",
-      desc: "Resilient power distribution and backup systems."
+      desc: "Resilient power distribution and backup systems.",
+      img: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop"
     },
     {
       title: "Data Center & Mission-Critical Infrastructure",
-      desc: "Infrastructure engineered for continuous uptime."
+      desc: "Infrastructure engineered for continuous uptime.",
+      img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop"
     },
     {
       title: "Connectivity & Network Resilience",
-      desc: "Redundant communications infrastructure."
+      desc: "Redundant communications infrastructure.",
+      img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop"
     },
     {
       title: "Life Safety & Security Systems",
-      desc: "Integrated safety and compliance systems."
+      desc: "Integrated safety and compliance systems.",
+      img: "https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=600&auto=format&fit=crop"
     },
     {
       title: "Project Management for Critical Deployments",
-      desc: "End-to-End management of mission critical installations."
+      desc: "End-to-End management of mission critical installations.",
+      img: "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=600&auto=format&fit=crop"
     }
   ];
 
@@ -65,27 +70,44 @@ export default function Capabilities() {
             </p>
             
             {/* Split Button */}
-            <div className="flex items-stretch shadow-md rounded-[8px] overflow-hidden group cursor-pointer w-max transition-transform hover:-translate-y-0.5">
+            <div className="flex items-stretch shadow-md rounded-[8px] overflow-hidden group cursor-pointer w-max transition-transform border border-[#3e976c] hover:-translate-y-0.5">
               <div className="bg-[#3e976c] text-white font-[600] tracking-wide text-[14.5px] px-5 py-3 flex items-center justify-center transition-colors group-hover:bg-[#34835d]">
                 View All Capabilities
               </div>
-              <div className="bg-[#2f855a] text-white px-3 flex items-center justify-center border-l border-white/10 transition-colors group-hover:bg-[#276e4a]">
+              <div className="bg-[#2f855a] text-white px-3 flex items-center justify-center border-l border-white/20 transition-colors group-hover:bg-[#276e4a]">
                 <ArrowUpRight size={18} strokeWidth={2.5} />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Cards list */}
-        <div className="flex flex-col gap-4 w-full relative z-10 w-full lg:w-[95%]">
+        {/* Cards list Container with 'group/list' for sibling fade effects */}
+        <div className="flex flex-col gap-4 w-full relative z-10 w-full lg:w-[95%] group/list">
           {capabilitiesList.map((item, index) => (
             <div 
               key={index}
-              className="bg-[#ffffff] rounded-[16px] px-8 sm:px-10 py-6 shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] transition-all flex flex-col justify-center cursor-pointer"
+              className="bg-[#ffffff] rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
             >
-              <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                  className="text-[22px] sm:text-[24px] font-[700] text-[#0a0a0a] tracking-tight mb-1">{item.title}</h3>
-              <p className="text-[#9ca3af] text-[13.5px] font-[500] tracking-tight">{item.desc}</p>
+              
+              {/* External Floating Chevrons icon (Visually placed where the card used to be) */}
+              <div className="absolute left-[-48px] top-1/2 -translate-y-1/2 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-75">
+                <ChevronsRight size={26} className="text-[#3e976c]" strokeWidth={2.5} />
+              </div>
+
+              {/* Expanding Thumbnail Image Container */}
+              <div className="h-[64px] overflow-hidden rounded-[8px] opacity-0 w-0 group-hover/card:opacity-100 group-hover/card:w-[124px] group-hover/card:mr-6 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] shrink-0 shadow-sm border border-gray-100">
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover scale-110 group-hover/card:scale-100 transition-transform duration-700" />
+              </div>
+              
+              {/* Card Typography */}
+              <div className="flex flex-col justify-center">
+                <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
+                    className="text-[22px] sm:text-[24px] font-[700] text-[#0a0a0a] group-hover/card:text-[#3e976c] transition-colors duration-300 tracking-tight mb-1 whitespace-nowrap overflow-visible">
+                  {item.title}
+                </h3>
+                <p className="text-[#9ca3af] text-[13.5px] font-[500] tracking-tight">{item.desc}</p>
+              </div>
+
             </div>
           ))}
         </div>
