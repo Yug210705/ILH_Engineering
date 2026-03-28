@@ -21,7 +21,7 @@ export default function ProjectExperience() {
   ];
 
   return (
-    <section className="w-full relative overflow-hidden bg-[#f8faf9] py-24 lg:py-32 border-t border-[#e2e8f0]">
+    <section className="w-full relative overflow-hidden bg-[#f8faf9] pt-24 lg:pt-32 pb-16 border-t border-[#e2e8f0]">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
