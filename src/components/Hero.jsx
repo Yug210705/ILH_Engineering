@@ -1,30 +1,30 @@
 import { Play } from 'lucide-react';
 
-function Curve({ className, type }) {
+function Curve({ className, type, style }) {
   if (type === 'bottom-out') {
     return (
-      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`}>
+      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`} style={style}>
         <path d="M0 24 V0 C0 13.255 10.745 24 24 24 H0 Z" fill="#ffffff" />
       </svg>
     );
   }
   if (type === 'bottom-in') {
     return (
-      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`}>
+      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`} style={style}>
         <path d="M0 0 V24 C0 10.745 10.745 0 24 0 H0 Z" fill="#ffffff" />
       </svg>
     );
   }
   if (type === 'top-in') {
     return (
-      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`}>
+      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`} style={style}>
          <path d="M24 24 H0 C13.255 24 24 13.255 24 0 V24 Z" fill="#ffffff" />
       </svg>
     );
   }
   if (type === 'top-out') {
     return (
-      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`}>
+      <svg width="24" height="24" viewBox="0 0 24 24" className={`pointer-events-none ${className}`} style={style}>
          <path d="M24 0 H0 C13.255 0 24 10.745 24 24 V0 Z" fill="#ffffff" />
       </svg>
     );
@@ -54,7 +54,7 @@ export default function Hero() {
               Mission-Critical Infrastructure Engineering
             </div>
             {/* Out-step from Block 0 to 1 */}
-            <Curve type="bottom-out" className="absolute bottom-0 right-[-23.5px] w-[24px] h-[24px] z-40" />
+            <Curve type="bottom-out" className="absolute bottom-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
           </div>
 
           {/* Block 1: Infrastructure (Long) */}
@@ -70,9 +70,9 @@ export default function Hero() {
               that <span className="text-brand-green">Performs</span>
             </h1>
             {/* In-step from Block 1 to 2 */}
-            <Curve type="bottom-in" className="absolute top-0 right-[-23.5px] w-[24px] h-[24px] z-40" />
+            <Curve type="bottom-in" className="absolute top-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
             {/* Out-step from Block 2 to 3 */}
-            <Curve type="bottom-out" className="absolute bottom-0 right-[-23.5px] w-[24px] h-[24px] z-40" />
+            <Curve type="bottom-out" className="absolute bottom-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
           </div>
 
           {/* Block 3: when Failure isn't (Long) */}
@@ -88,7 +88,7 @@ export default function Hero() {
                an <span className="text-brand-green">Option.</span>
              </h1>
              {/* In-step from Block 3 to 4 */}
-             <Curve type="bottom-in" className="absolute top-0 right-[-23.5px] w-[24px] h-[24px] z-40" />
+             <Curve type="bottom-in" className="absolute top-0 w-[24px] h-[24px] z-40" style={{ right: '-24px' }} />
           </div>
 
         </div>
