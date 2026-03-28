@@ -6,6 +6,7 @@ import Philosophy from './components/Philosophy';
 import Capabilities from './components/Capabilities';
 import ProjectExperience from './components/ProjectExperience';
 import Testimonials from './components/Testimonials';
+import Leadership from './components/Leadership';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Capabilities />
       <ProjectExperience />
       <Testimonials />
+      <Leadership />
     </div>
   );
 }
