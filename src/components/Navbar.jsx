@@ -1,36 +1,97 @@
-import { ChevronDown, Building2 } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import siteLogo from '../assets/logo.png';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
-  return (
-    <nav className="w-full max-w-[1600px] mx-auto flex items-center justify-between px-6 sm:px-8 lg:px-12 py-2 bg-transparent relative z-20">
-      {/* Logos side */}
-      <div className="flex-1 flex items-center justify-start">
-        <img src={siteLogo} alt="ILH Engineering" className="h-[60px] w-auto object-contain" />
-      </div>
-      
-      {/* Center Links */}
-      <div className="hidden md:flex shrink-0 items-center justify-center gap-2 lg:gap-3">
-        <button className="flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 rounded-[8px] text-[13px] font-semibold text-gray-700">
-          Capabilities <ChevronDown size={14} strokeWidth={2.25} className="text-gray-500" />
-        </button>
-        <button className="bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 rounded-[8px] text-[13px] font-semibold text-gray-700">
-          Experience
-        </button>
-        <button className="flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 rounded-[8px] text-[13px] font-semibold text-gray-700">
-          The Firm <ChevronDown size={14} strokeWidth={2.25} className="text-gray-500" />
-        </button>
-        <button className="flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 transition-colors px-4 py-2 rounded-[8px] text-[13px] font-semibold text-gray-700">
-          Geographic Coverage <ChevronDown size={14} strokeWidth={2.25} className="text-gray-500" />
-        </button>
-      </div>
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      {/* Action side */}
-      <div className="flex-1 flex items-center justify-end">
-        <button className="bg-brand-green hover:bg-brand-green-dark text-white px-5 py-[9px] rounded-[8px] text-[13px] font-semibold transition-colors duration-300">
-          Contact Us
-        </button>
-      </div>
-    </nav>
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Capabilities', hasDropdown: true },
+    { name: 'Experience', hasDropdown: false },
+    { name: 'The Firm', hasDropdown: true },
+    { name: 'Geographic Coverage', hasDropdown: true }
+  ];
+
+  return (
+    <>
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+          isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
+        }`}
+      >
+        <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between px-6 sm:px-8 lg:px-12">
+          {/* Logos side */}
+          <div className="flex-1 flex items-center justify-start">
+            <img src={siteLogo} alt="ILH Engineering" className="h-[45px] sm:h-[55px] lg:h-[60px] w-auto object-contain" />
+          </div>
+          
+          {/* Desktop Center Links */}
+          <div className="hidden xl:flex shrink-0 items-center justify-center gap-1.5 lg:gap-2">
+            {navLinks.map((link) => (
+              <button 
+                key={link.name}
+                className="flex items-center gap-1.5 bg-transparent hover:bg-gray-100 transition-colors px-3 lg:px-4 py-2 rounded-[8px] text-[13px] font-bold text-gray-800"
+              >
+                {link.name} {link.hasDropdown && <ChevronDown size={14} strokeWidth={2.5} className="text-gray-400" />}
+              </button>
+            ))}
+          </div>
+
+          {/* Desktop Action side */}
+          <div className="flex-1 hidden md:flex items-center justify-end gap-4">
+            <button className="bg-brand-green hover:bg-[#328b58] text-white px-6 py-[10px] rounded-[10px] text-[13px] font-[800] transition-all duration-300 shadow-md shadow-brand-green/20">
+              Contact Us
+            </button>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <div className="xl:hidden flex items-center justify-end">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-gray-800 bg-gray-100 rounded-lg"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-[90] bg-white pt-24 px-6 flex flex-col gap-6"
+          >
+            {navLinks.map((link) => (
+              <button 
+                key={link.name}
+                className="flex items-center justify-between w-full p-4 border-b border-gray-50 text-[18px] font-bold text-gray-800 text-left"
+              >
+                {link.name} {link.hasDropdown && <ChevronDown size={20} />}
+              </button>
+            ))}
+            <div className="mt-auto pb-12 flex flex-col gap-4">
+              <button className="w-full bg-brand-green text-white py-4 rounded-xl font-bold text-[18px]">
+                Contact Us
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
+      {/* Spacer to prevent content from jumping under fixed nav */}
+      <div className="h-[70px] sm:h-[90px]"></div>
+    </>
   );
 }
