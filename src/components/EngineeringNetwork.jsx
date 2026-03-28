@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import groupPhoto from '../assets/groupphoto.png';
 
 export default function EngineeringNetwork() {
   return (
@@ -46,14 +47,8 @@ export default function EngineeringNetwork() {
           className="w-full relative"
         >
           <div className="w-full min-h-[400px] lg:h-[700px] bg-[#f4f4f5] overflow-hidden">
-            {/* 
-              NOTE: Using a placeholder Unsplash image.
-              You can replace this with your actual image by either importing it like:
-              import teamImg from '../assets/team.png'
-              and setting src={teamImg} 
-            */}
             <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop" 
+              src={groupPhoto} 
               alt="ILH Engineering Network Team" 
               className="w-full h-full object-cover"
             />
