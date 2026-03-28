@@ -49,18 +49,15 @@ export default function Hero() {
           
           {/* Block 0: Pill (Short) */}
           <div className="bg-[#ffffff] pr-[20px] lg:pr-[28px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-4 pt-10 flex items-end shrink-0 w-max z-10 animate-slide-in"
-               style={{ borderTopLeftRadius: '24px', borderTopRightRadius: '24px', borderBottomRightRadius: '0px' }}>
+               style={{ borderTopLeftRadius: '24px', borderTopRightRadius: '24px', borderBottomRightRadius: '24px' }}>
             <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3 py-1.5 rounded-[8px] text-[12.5px] font-[600] tracking-tight">
               <div className="w-[5.5px] h-[5.5px] rounded-full bg-brand-green mb-[0px]"></div>
               Mission-Critical Infrastructure Engineering
             </div>
-            {/* Out-step from Block 0 to 1 */}
-            <div className="absolute bottom-0 w-[24px] h-[24px] z-40 pointer-events-none" 
-                 style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 0%, transparent 23.5px, #ffffff 24px)' }}></div>
           </div>
 
-          {/* Block 1: Infrastructure (Long - heavily padded to prevent spike) */}
-          <div className="bg-[#ffffff] pr-[80px] lg:pr-[120px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-2 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-20 animate-slide-in stagger-1"
+          {/* Block 1: Infrastructure (Long) */}
+          <div className="bg-[#ffffff] pr-[32px] lg:pr-[48px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max z-20 animate-slide-in stagger-1"
                style={{ borderTopRightRadius: '24px', borderBottomRightRadius: '24px' }}>
             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
               Infrastructure
@@ -68,21 +65,15 @@ export default function Hero() {
           </div>
 
           {/* Block 2: that Performs (Short) */}
-          <div className="bg-[#ffffff] pr-[20px] lg:pr-[28px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-3 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-30 animate-slide-in stagger-1"
-               style={{ borderTopRightRadius: '0px', borderBottomRightRadius: '0px' }}>
+          <div className="bg-[#ffffff] pr-[32px] lg:pr-[48px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-4 pt-1 lg:pt-3 flex flex-col shrink-0 w-max z-30 animate-slide-in stagger-1"
+               style={{ borderTopRightRadius: '24px', borderBottomRightRadius: '24px' }}>
             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
               that <span className="text-brand-green">Performs</span>
             </h1>
-            {/* In-step from Block 1 to 2 */}
-            <div className="absolute top-0 w-[24px] h-[24px] z-40 pointer-events-none" 
-                 style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 100%, transparent 23.5px, #ffffff 24px)' }}></div>
-            {/* Out-step from Block 2 to 3 */}
-            <div className="absolute bottom-0 w-[24px] h-[24px] z-40 pointer-events-none" 
-                 style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 0%, transparent 23.5px, #ffffff 24px)' }}></div>
           </div>
 
-          {/* Block 3: when Failure isn't (Long - heavily padded to prevent spike) */}
-          <div className="bg-[#ffffff] pr-[80px] lg:pr-[120px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-3 pt-1 lg:pt-2 flex flex-col shrink-0 w-max z-40 animate-slide-in stagger-2"
+          {/* Block 3: when Failure isn't (Long) */}
+          <div className="bg-[#ffffff] pr-[32px] lg:pr-[48px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-2 lg:pb-4 pt-1 lg:pt-3 flex flex-col shrink-0 w-max z-40 animate-slide-in stagger-2"
                style={{ borderTopRightRadius: '24px', borderBottomRightRadius: '24px' }}>
              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
                when Failure isn&#39;t
@@ -90,14 +81,11 @@ export default function Hero() {
           </div>
 
           {/* Block 4: an Option. (Short) */}
-          <div className="bg-[#ffffff] pr-[24px] lg:pr-[32px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-8 lg:pb-12 pt-2 lg:pt-3 flex flex-col shrink-0 w-max z-50 animate-slide-in stagger-3"
-               style={{ borderBottomLeftRadius: '24px', borderTopRightRadius: '0px', borderBottomRightRadius: '24px' }}>
+          <div className="bg-[#ffffff] pr-[32px] lg:pr-[48px] pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-8 lg:pb-12 pt-2 lg:pt-4 flex flex-col shrink-0 w-max z-50 animate-slide-in stagger-3"
+               style={{ borderBottomLeftRadius: '24px', borderTopRightRadius: '24px', borderBottomRightRadius: '24px' }}>
              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[56px] lg:text-[76px] font-[700] tracking-tight text-[#0a0a0a] leading-[0.95]">
                an <span className="text-brand-green">Option.</span>
              </h1>
-             {/* In-step from Block 3 to 4 */}
-             <div className="absolute top-0 w-[24px] h-[24px] z-40 pointer-events-none" 
-                  style={{ right: '-24px', backgroundImage: 'radial-gradient(circle at 100% 100%, transparent 23.5px, #ffffff 24px)' }}></div>
           </div>
 
         </div>
