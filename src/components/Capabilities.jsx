@@ -1,4 +1,5 @@
 import { ArrowUpRight, ChevronsRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Capabilities() {
   const capabilitiesList = [
@@ -42,7 +43,13 @@ export default function Capabilities() {
       <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Header Area */}
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-12 w-full lg:w-[95%]">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+          className="flex flex-col md:flex-row justify-between items-start mb-16 gap-12 w-full lg:w-[95%]"
+        >
           
           {/* Left / Center Column */}
           <div className="flex-[1.8] flex flex-col items-start">
@@ -79,12 +86,25 @@ export default function Capabilities() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Cards list Container with 'group/list' for sibling fade effects */}
-        <div className="flex flex-col gap-4 w-full relative z-10 w-full lg:w-[95%] group/list">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } },
+            hidden: {}
+          }}
+          className="flex flex-col gap-4 w-full relative z-10 w-full lg:w-[95%] group/list"
+        >
           {capabilitiesList.map((item, index) => (
-            <div 
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.2, 0.8, 0.2, 1] } }
+              }}
               key={index}
               className="bg-[#ffffff] rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
             >
@@ -108,9 +128,9 @@ export default function Capabilities() {
                 <p className="text-[#9ca3af] text-[13.5px] font-[500] tracking-tight">{item.desc}</p>
               </div>
 
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

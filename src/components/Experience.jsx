@@ -1,4 +1,5 @@
 import { Building2, Server, Network, ShieldCheck } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function Experience() {
@@ -70,7 +71,13 @@ export default function Experience() {
         </div>
 
         {/* Content Container spanning max-w-[1300] */}
-        <div className="w-full max-w-[1300px] px-6 relative z-10 pb-[70px]">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+          className="w-full max-w-[1300px] px-6 relative z-10 pb-[70px]"
+        >
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
             {/* Left Header */}
             <div className="flex-[1.6]">
@@ -98,7 +105,7 @@ export default function Experience() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom Section: Cards Strip Area */}
@@ -106,14 +113,27 @@ export default function Experience() {
       <div className="w-full bg-[#f4f7f6] border-y border-[#e2e8f0] relative z-20 h-auto md:h-[260px] flex items-center mt-[-1px]">
         
         {/* Container for the 4 layout columns */}
-        <div className="w-full max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-4 h-full border-x border-[#e2e8f0] relative">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.15 } },
+            hidden: {}
+          }}
+          className="w-full max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-4 h-full border-x border-[#e2e8f0] relative"
+        >
           
           {cards.map((card, index) => {
             const isActive = activeCard === index;
             const ActIcon = card.Icon;
 
             return (
-              <div 
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.2, 0.8, 0.2, 1] } }
+                }}
                 key={card.id}
                 className="relative z-10 w-full h-[260px]"
                 onMouseEnter={() => setActiveCard(index)}
@@ -145,11 +165,11 @@ export default function Experience() {
                     <p className="text-[#a1a1aa] text-[13px] mt-1.5 font-medium leading-snug">{card.subtitle}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
           
-        </div>
+        </motion.div>
       </div>
     </section>
   );

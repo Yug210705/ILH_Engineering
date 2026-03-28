@@ -1,4 +1,5 @@
 import { Zap, Share2, Shield, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 
 export default function Philosophy() {
@@ -108,7 +109,13 @@ export default function Philosophy() {
         ></div>
       </div>
 
-      <div className="w-full max-w-[1536px] mx-auto px-6 md:px-10 relative z-10 flex flex-col items-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+        className="w-full max-w-[1536px] mx-auto px-6 md:px-10 relative z-10 flex flex-col items-center"
+      >
         
         {/* Tag */}
         <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-[14px] text-[14px] font-bold tracking-wide border border-[#d2efe2] mb-8 shadow-sm shadow-[#379768]/10">
@@ -127,7 +134,7 @@ export default function Philosophy() {
           Electrical power, communications networks, life-safety systems, & operational technologies<br className="hidden lg:block"/>
           must work together under failure conditions. At the lowest cost possible.
         </p>
-      </div>
+      </motion.div>
 
       {/* Cinematic, Screen-Spanning Graphic Container BROKEN OUT of the text constraints */}
       <div className="relative w-full max-w-[1536px] min-h-[500px] max-h-[85vh] aspect-[1200/600] mx-auto mt-6 mb-24 pointer-events-auto px-4 sm:px-12">
