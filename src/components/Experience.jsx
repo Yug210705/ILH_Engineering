@@ -33,12 +33,24 @@ export default function Experience() {
   ];
 
   return (
-    <section className="w-full relative overflow-hidden bg-gradient-to-b from-white to-[#f4f7f6] pt-24 sm:pt-32 text-sans flex flex-col">
+    <section className="w-full bg-gradient-to-b from-white to-[#f4f7f6] pt-16 sm:pt-24 pb-32">
       
       {/* Top Section: Hero/Header area */}
       <div className="relative w-full z-10 flex flex-col items-center">
-        {/* Glow & Masked Grid Container */}
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+          <div 
+            className="absolute inset-x-0 top-0 h-[120%] w-full pointer-events-none z-0"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(55,151,104,0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(55,151,104,0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '48px 48px',
+              backgroundPosition: 'top 32px center',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 12%, black 40%, black 60%, transparent 88%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent 12%, black 40%, black 60%, transparent 88%, transparent 100%)'
+            }}
+          ></div>
           <div 
             className="absolute rounded-full"
             style={{
@@ -49,20 +61,6 @@ export default function Experience() {
               transform: 'translateX(-40%)',
               background: 'radial-gradient(circle, rgba(144, 219, 203, 0.3) 0%, rgba(144, 219, 203, 0) 70%)',
               filter: 'blur(40px)'
-            }}
-          ></div>
-          
-          <div 
-            className="absolute inset-x-0 top-0 h-[150%] w-full pointer-events-none"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgba(55,151,104,0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(55,151,104,0.1) 1px, transparent 1px)
-              `,
-              backgroundSize: '48px 48px',
-              backgroundPosition: 'top 32px center',
-              maskImage: 'radial-gradient(ellipse 80% 80% at 50% 40%, black 20%, transparent 85%)',
-              WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 40%, black 20%, transparent 85%)'
             }}
           ></div>
         </div>
@@ -99,7 +97,7 @@ export default function Experience() {
       </div>
 
       {/* Bottom Section: Cards Strip Area */}
-      <div className="w-full bg-[#f4f7f6] border-y border-[#e2e8f0] relative z-20">
+      <div className="w-full bg-transparent relative z-20">
         
         <motion.div 
           initial="hidden"

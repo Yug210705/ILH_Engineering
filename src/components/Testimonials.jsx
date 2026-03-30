@@ -29,7 +29,7 @@ export default function Testimonials() {
   const OFFSET = CARD_WIDTH + GAP;
 
   return (
-    <section className="w-full relative overflow-hidden bg-[#f8faf9] pt-8 pb-32">
+    <section className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-28 pb-32 overflow-hidden">
        
        {/* Full Width Overflow Track */}
        <div className="w-full relative h-[300px] flex items-center justify-center">

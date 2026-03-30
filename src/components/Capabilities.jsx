@@ -31,12 +31,14 @@ export default function Capabilities() {
   ];
 
   return (
-    <section className="w-full relative overflow-hidden bg-[#f3f7f5] py-24 lg:py-32">
-      {/* Absolute Grid Background */}
+    <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f4f7f6] to-white py-24 lg:py-32">
+      {/* Absolute Grid Background - Expanded super-smooth fade */}
       <div className="absolute inset-0 pointer-events-none" 
            style={{ 
              backgroundImage: `linear-gradient(to right, #e2e8e4 1px, transparent 1px), linear-gradient(to bottom, #e2e8e4 1px, transparent 1px)`, 
-             backgroundSize: '48px 48px' 
+             backgroundSize: '48px 48px',
+             maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 10%, black 35%, black 65%, transparent 90%, transparent 100%)',
+             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent 10%, black 35%, black 65%, transparent 90%, transparent 100%)'
            }}>
       </div>
 
@@ -106,7 +108,7 @@ export default function Capabilities() {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.2, 0.8, 0.2, 1] } }
               }}
               key={index}
-              className="bg-[#ffffff] rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
+              className="bg-white rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
             >
               
               {/* External Floating Chevrons icon (Visually placed where the card used to be) */}

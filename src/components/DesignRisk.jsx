@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function DesignRisk() {
   return (
-    <section className="w-full bg-[#f4f7f6] pt-24 pb-32">
+    <section className="w-full bg-[#f4f7f6] pt-24 pb-32 relative z-10">
       <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12 flex flex-col items-center">
         
         <motion.div 
@@ -40,7 +40,7 @@ export default function DesignRisk() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-            className="bg-white border border-[#fecaca] p-6 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[32px] overflow-hidden"
+            className="bg-white/80 backdrop-blur-md border border-[#fecaca] p-6 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[32px] overflow-hidden"
           >
             {/* Image */}
             <div className="w-full h-[240px] sm:h-[320px] bg-slate-100 overflow-hidden mb-10 relative">
@@ -78,7 +78,7 @@ export default function DesignRisk() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-            className="bg-white border border-[#bbf7d0] p-6 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[32px] overflow-hidden"
+            className="bg-white/80 backdrop-blur-md border border-[#bbf7d0] p-6 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[32px] overflow-hidden"
           >
             {/* Image */}
             <div className="w-full h-[240px] sm:h-[320px] bg-slate-100 overflow-hidden mb-10 relative">

@@ -36,9 +36,9 @@ export default function Philosophy() {
   );
 
   return (
-    <section ref={sectionRef} className="w-full relative bg-[#f4f7f6] pt-28 pb-32 overflow-hidden">
+    <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-28 pb-32 overflow-hidden">
       
-      {/* Background Vignette Grid */}
+      {/* Background Vignette Grid - Restored for local depth with ultra-smooth radial mask */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none w-full max-w-[100vw]">
         <div 
           className="absolute inset-0 w-full h-full"
@@ -49,18 +49,18 @@ export default function Philosophy() {
             `,
             backgroundSize: '48px 48px',
             backgroundPosition: 'center center',
-            maskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 80%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 80%)'
+            maskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 10%, transparent 90%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 10%, transparent 90%)'
           }}
         ></div>
       </div>
-
+      
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-        className="w-full max-w-[1600px] mx-auto px-6 md:px-10 relative z-10 flex flex-col items-center"
+        className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center"
       >
         
         {/* Tag */}
