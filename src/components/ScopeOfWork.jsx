@@ -82,7 +82,10 @@ export default function ScopeOfWork() {
             <motion.div 
               key={index}
               whileHover={{ backgroundColor: '#fafffe' }}
-              className={`p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col items-start gap-6 sm:gap-10 bg-white relative overflow-hidden group transition-colors duration-500 ${index !== features.length - 1 ? 'md:border-r border-[#f0f0f0]' : ''}`}
+              className={`p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col items-start gap-6 sm:gap-10 bg-white relative overflow-hidden group transition-colors duration-500 
+                ${index === features.length - 1 ? 'col-span-2 md:col-span-1' : 'col-span-1'} 
+                ${index !== features.length - 1 ? 'md:border-r border-[#f0f0f0]' : ''}
+                ${index === 0 ? 'border-r md:border-r-0' : ''}`}
             >
               {/* Icon Area - Dynamic Scale on hover */}
               <div className="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(62,151,108,0.15)]">
