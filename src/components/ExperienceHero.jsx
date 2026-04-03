@@ -16,30 +16,34 @@ export default function ExperienceHero() {
             fetchpriority="high"
           />
 
-          {/* ===== TEXT positioned securely inside the built-in white cutout area ===== */}
-          {/* Re-aligned precisely to the image cutout's physical boundaries based on accurate constraints */}
-          <div className="absolute top-[3%] sm:top-[6%] lg:top-[3%] left-[4%] sm:left-[8%] lg:left-[10%] z-10 flex flex-col items-start w-full sm:max-w-[75%] lg:max-w-[55%] text-left">
+          {/* TEXT - constrained to white cutout area */}
+          <div className="absolute ml-4 bottom-[55%] sm:top-[6%] lg:top-[3%] left-[5%] sm:left-[8%] lg:left-[10%] z-10 flex flex-col items-start max-w-[75%] sm:max-w-[70%] lg:max-w-[55%] text-left">
             
             {/* Project Experience Tag */}
-            <div className="inline-flex items-center gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-4 sm:px-6 py-1.5 sm:py-1.5 rounded-full text-[11px] sm:text-[15px] lg:text-[16px] font-[500] tracking-tight border border-[#cfe2d9] mb-2 sm:mb-5 lg:mb-6 sm:ml-4 lg:ml-6 ml-1">
-              <div className="w-1.5 sm:w-2.5 h-1.5 sm:h-2.5 rounded-full bg-[#3e976c]"></div>
+            <div className="inline-flex items-center gap-1.5 sm:gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-2.5 sm:px-6 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[15px] lg:text-[16px] font-[500] tracking-tight border border-[#cfe2d9] mb-1.5 sm:mb-5 lg:mb-6 ml-0.5 sm:ml-4 lg:ml-6">
+              <div className="w-1.5 sm:w-2.5 h-1.5 sm:h-2.5 rounded-full bg-[#3e976c] shrink-0"></div>
               Project Experience
             </div>
 
             <h1 
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-              className="leading-[1.0] lg:leading-[0.95] tracking-tight w-full pl-1 sm:pl-4 lg:pl-6"
+              className="leading-[1.0] lg:leading-[0.95] tracking-tight w-full pl-0 sm:pl-4 lg:pl-6"
             >
-              <span className="block text-[#c8cfd6] font-[500] text-[clamp(18px,6vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight">
+              <span
+                className="block font-[500] px-0 sm:px-4 lg:px-6 text-[clamp(14px,4.5vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight transition-colors duration-300 cursor-default"
+                style={{ color: '#c8cfd6' }}
+                onMouseEnter={e => e.currentTarget.style.color = '#3e976c'}
+                onMouseLeave={e => e.currentTarget.style.color = '#c8cfd6'}
+              >
                 Infrastructure
               </span>
-              <span className="block text-[#0a0a0a] font-[800] text-[clamp(20px,7vw,84px)] xl:text-[84px] mt-0.5 lg:mt-2 break-words whitespace-normal leading-[0.95]">
+              <span className="block px-0 sm:px-4 lg:px-5 mb-3 text-[#0a0a0a] font-[800] text-[clamp(16px,5vw,84px)] xl:text-[84px] mt-0.5 lg:mt-2 break-words whitespace-normal leading-[0.95]">
                 Case Studies.
               </span>
             </h1>
           </div>
 
-          {/* ===== Scroll Indicator - center bottom of image ===== */}
+          {/* Scroll Indicator */}
           <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 z-20">
             <div className="w-[18px] sm:w-[22px] h-[28px] sm:h-[34px] border-2 border-white/60 rounded-full flex justify-center pt-1.5">
               <motion.div 
@@ -50,8 +54,7 @@ export default function ExperienceHero() {
             </div>
           </div>
 
-          {/* ===== Green Button - bottom right cutout area ===== */}
-          {/* Positioning and Scale adjusted for higher prominence with clean edge spacing */}
+          {/* Green Button - Desktop */}
           <div className="absolute bottom-[1.8%] right-[1%] z-30 hidden lg:block">
             <button 
               onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
@@ -61,13 +64,14 @@ export default function ExperienceHero() {
             </button>
           </div>
           
-          {/* Mobile Green Button */}
+          {/* Green Button - Mobile */}
           <div className="absolute bottom-[2.5%] right-[1.5%] z-30 lg:hidden">
             <button 
               onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-[#3e976c] text-white p-5 rounded-[16px] shadow-xl transform active:scale-95"
+              className="bg-[#3e976c] text-white p-3 sm:p-5 rounded-[12px] sm:rounded-[16px] shadow-xl transform active:scale-95"
             >
-              <ArrowDown size={28} strokeWidth={2.5} />
+              <ArrowDown size={20} strokeWidth={2.5} className="sm:hidden" />
+              <ArrowDown size={28} strokeWidth={2.5} className="hidden sm:block" />
             </button>
           </div>
           

@@ -26,26 +26,26 @@ export default function Footer({ showTopRow = true }) {
       {/* Top Features Row */}
       {showTopRow && (
         <div className="w-full border-y border-gray-100 mb-10">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-          {features.map((f, i) => (
-            <div key={i} className="px-8 lg:px-14 py-8 lg:py-12 flex flex-col items-start gap-5">
-              <div className="p-3 rounded-xl bg-[#f0f9f4]">
-                <f.Icon className="w-7 h-7 text-brand-green" strokeWidth={1.5} />
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            {features.map((f, i) => (
+              <div key={i} className="px-8 lg:px-14 py-8 lg:py-12 flex flex-col items-start gap-5">
+                <div className="p-3 rounded-xl bg-[#f0f9f4]">
+                  <f.Icon className="w-7 h-7 text-brand-green" strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[800] text-[#0a0a0a] leading-tight mb-3 tracking-tight">{f.title}</h3>
+                  <p className="text-[#94a3b8] text-[15px] leading-[1.5] font-medium">{f.desc}</p>
+                </div>
               </div>
-              <div>
-                <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[800] text-[#0a0a0a] leading-tight mb-3 tracking-tight">{f.title}</h3>
-                <p className="text-[#94a3b8] text-[15px] leading-[1.5] font-medium">{f.desc}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
       )}
 
       {/* Main Footer Content */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pb-24">
         <div className="flex flex-col-reverse xl:flex-row gap-8 items-stretch">
-          
+
           {/* Left Dark Card */}
           <div className="flex-[1.5] bg-[#0a120b] rounded-[32px] sm:rounded-[40px] p-8 sm:p-10 lg:p-16 text-white flex flex-col justify-between">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-16 gap-x-12">
@@ -75,19 +75,18 @@ export default function Footer({ showTopRow = true }) {
                   </li>
                   <li className="flex items-start gap-3.5 leading-relaxed transition-colors">
                     <MapPin size={18} className="shrink-0 mt-0.5 text-[#379768]" />
-                    <span>333 SE 2nd Ave Suite<br/>#2000, Miami, Florida<br/>33131</span>
+                    <span>333 SE 2nd Ave Suite<br />#2000, Miami, Florida<br />33131</span>
                   </li>
                 </ul>
               </div>
 
-              {/* Logo / Badge Area - Horizontal on mobile, vertical on desktop */}
+              {/* Logo / Badge */}
               <div className="flex flex-row lg:flex-col items-center lg:items-end gap-6 sm:gap-12">
                 <div className="flex flex-col items-center">
-                   <div className="flex flex-col items-center gap-3">
-                     <img src={siteLogo} alt="ILH" className="h-[60px] sm:h-[90px] w-auto brightness-0 invert opacity-100" />
-                   </div>
+                  <div className="flex flex-col items-center gap-3">
+                    <img src={siteLogo} alt="ILH" className="h-[60px] sm:h-[90px] w-auto brightness-0 invert opacity-100" />
+                  </div>
                 </div>
-                {/* Secondary Badge Mockup */}
                 <div className="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] p-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-[16px] sm:rounded-[20px] border border-blue-400/30 flex items-center justify-center text-[6.5px] sm:text-[8px] text-blue-200 font-bold text-center leading-[1.3] uppercase tracking-tighter shrink-0">
                   MIAMI-DADE DISADVANTAGED BUSINESS ENTERPRISE
                 </div>
@@ -123,14 +122,14 @@ export default function Footer({ showTopRow = true }) {
               </div>
             </div>
 
-            {/* Bottom Section */}
+            {/* Bottom */}
             <div className="pt-8 sm:pt-12 border-t border-dashed border-white/10 mt-10 sm:mt-20 flex flex-col md:flex-row items-center justify-between gap-8">
               <span className="text-[#64748b] text-[13px] font-[600]">© 2026 ILH Engineering. All rights reserved.</span>
               <div className="flex items-center gap-8">
-                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
-                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
-                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
-                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
+                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors" />
+                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors" />
+                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors" />
+                <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors" />
               </div>
             </div>
           </div>
@@ -138,20 +137,35 @@ export default function Footer({ showTopRow = true }) {
           {/* Right Mint CTA Card */}
           <div className="flex-1 bg-[#e8f2ee] rounded-[32px] sm:rounded-[40px] p-8 sm:p-10 lg:p-16 flex flex-col justify-between">
             <div>
-               <div className="inline-flex items-center gap-2 bg-[#d7e9e1] text-[#1f2937] px-4 py-1.5 rounded-full text-[12px] sm:text-[13px] font-[800] tracking-tight border border-white/30 mb-6 sm:mb-10">
-                <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
+              <div className="inline-flex items-center gap-2 bg-[#d7e9e1] text-[#1f2937] px-4 py-1.5 rounded-full text-[12px] sm:text-[13px] font-[800] tracking-tight border border-white/30 mb-6 sm:mb-10">
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-green" />
                 Start the Conversation
               </div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(32px,10vw,76px)] font-[800] text-[#0a0a0a] leading-[1.05] tracking-tight mb-6 sm:mb-10 break-words whitespace-normal px-1">
-                Discuss Your<br className="hidden sm:block"/>Infrastructure<br />Challenges With <br className="sm:hidden"/><span className="text-[#94a3b8] font-[500] italic">an</span> <br className="sm:hidden"/>Engineer
+
+              {/*
+                FIX: was using <br className="hidden sm:block"/> between "Your" and "Infrastructure"
+                which caused them to concatenate into "YourInfrastructure" on mobile.
+                Now each word is on its own line naturally via the heading size + container width,
+                with explicit spaces preserved and no conditional <br> between words.
+              */}
+              <h2
+                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                className="text-[clamp(28px,7vw,76px)] font-[800] text-[#0a0a0a] leading-[1.05] tracking-tight mb-6 sm:mb-10"
+              >
+                Discuss Your{' '}
+                Infrastructure{' '}
+                Challenges With{' '}
+                <span className="text-[#94a3b8] font-[500] italic">an</span>{' '}
+                Engineer
               </h2>
+
               <p className="text-[#6b7280] text-[15.5px] sm:text-[18px] font-medium leading-[1.6] max-w-[460px]">
                 ILH Engineering helps organizations design resilient infrastructure for environments where reliability matters.
               </p>
             </div>
 
             <div className="mt-10 sm:mt-20">
-              <button className="w-full bg-brand-green hover:bg-[#2e8451] text-white font-[800] py-4 sm:py-6 px-4 rounded-xl text-[14px] sm:text-[18px] transition-all shadow-xl shadow-brand-green/20 mb-6 leading-tight break-words whitespace-normal">
+              <button className="w-full bg-brand-green hover:bg-[#2e8451] text-white font-[800] py-4 sm:py-6 px-4 rounded-xl text-[14px] sm:text-[18px] transition-all shadow-xl shadow-brand-green/20 mb-6 leading-tight">
                 Schedule Infrastructure Consultation
               </button>
               <p className="text-[#6b7280] text-[14px] font-semibold text-center opacity-80">

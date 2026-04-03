@@ -47,7 +47,7 @@ export default function Navbar({ currentView, setCurrentView }) {
                 <button 
                   key={link.name}
                   onClick={() => handleLinkClick(link.view)}
-                  className={`flex items-center gap-1.5 transition-all px-4 lg:px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold ${
+                  className={`cursor-pointer flex items-center gap-1.5 transition-all px-4 lg:px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold ${
                     isActive 
                     ? 'bg-[#e8f2ee] text-brand-green border border-[#d2efe2]' 
                     : 'bg-transparent hover:bg-gray-100/80 text-gray-800'
@@ -61,7 +61,7 @@ export default function Navbar({ currentView, setCurrentView }) {
 
           {/* Desktop Action side */}
           <div className="flex-1 hidden md:flex items-center justify-end gap-4">
-            <button className="bg-brand-green hover:bg-[#328b58] text-white px-7 py-[11px] rounded-[12px] text-[13.5px] font-[800] transition-all duration-300 shadow-lg shadow-brand-green/20">
+            <button className="cursor-pointer bg-brand-green hover:bg-[#328b58] text-white px-7 py-[11px] rounded-[12px] text-[13.5px] font-[800] transition-all duration-300 shadow-lg shadow-brand-green/20">
               Contact Us
             </button>
           </div>
@@ -70,7 +70,7 @@ export default function Navbar({ currentView, setCurrentView }) {
           <div className="xl:hidden flex items-center justify-end">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-gray-800 bg-gray-100 rounded-lg"
+              className="cursor-pointer p-2 text-gray-800 bg-gray-100 rounded-lg"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -91,13 +91,13 @@ export default function Navbar({ currentView, setCurrentView }) {
               <button 
                 key={link.name}
                 onClick={() => handleLinkClick(link.view)}
-                className="flex items-center justify-between w-full p-4 border-b border-gray-50 text-[18px] font-bold text-gray-800 text-left"
+                className="cursor-pointer flex items-center justify-between w-full p-4 border-b border-gray-50 text-[18px] font-bold text-gray-800 text-left"
               >
                 {link.name} {link.hasDropdown && <ChevronDown size={20} />}
               </button>
             ))}
             <div className="mt-auto pb-12 flex flex-col gap-4">
-              <button className="w-full bg-brand-green text-white py-4 rounded-xl font-bold text-[18px]">
+              <button className="cursor-pointer w-full bg-brand-green text-white py-4 rounded-xl font-bold text-[18px]">
                 Contact Us
               </button>
             </div>
