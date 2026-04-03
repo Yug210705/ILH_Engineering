@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 export default function DesignRisk() {
   return (
-    <section className="w-full bg-[#f4f7f6] pt-24 pb-32 relative z-10">
-      <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12 flex flex-col items-center">
+    <section className="w-full bg-[#f4f7f6] pt-8 pb-32 relative z-10">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col items-center">
         
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0.8, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
           {/* Tag */}
@@ -20,7 +20,7 @@ export default function DesignRisk() {
           </div>
 
           {/* Heading */}
-          <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[34px] sm:text-[52px] lg:text-[72px] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1100px] mb-8">
+          <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(30px,8vw,72px)] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1100px] mb-8 break-words whitespace-normal px-2">
             Most Infrastructure Failures <br className="hidden md:block"/> Start With Design.
           </h2>
 
@@ -36,10 +36,10 @@ export default function DesignRisk() {
           
           {/* Left Card: Fragmented Infrastructure */}
           <motion.div 
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0.7, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="bg-white/80 backdrop-blur-md border border-[#fecaca] p-6 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[32px] overflow-hidden"
           >
             {/* Image */}
@@ -53,7 +53,7 @@ export default function DesignRisk() {
             </div>
 
             {/* Title */}
-            <h3 className="text-[26px] sm:text-[30px] font-[800] tracking-tight text-[#0f172a] mb-6 px-2">
+            <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-[800] tracking-tight text-[#0f172a] mb-6 px-2 break-words">
               Fragmented Infrastructure
             </h3>
 
@@ -74,10 +74,10 @@ export default function DesignRisk() {
 
           {/* Right Card: Engineered Infrastructure */}
           <motion.div 
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0.7, x: 15 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
             className="bg-white/80 backdrop-blur-md border border-[#bbf7d0] p-6 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[32px] overflow-hidden"
           >
             {/* Image */}
@@ -91,7 +91,7 @@ export default function DesignRisk() {
             </div>
 
             {/* Title */}
-            <h3 className="text-[26px] sm:text-[30px] font-[800] tracking-tight text-[#0f172a] mb-6 px-2">
+            <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-[800] tracking-tight text-[#0f172a] mb-6 px-2 break-words">
               Engineered Infrastructure
             </h3>
 

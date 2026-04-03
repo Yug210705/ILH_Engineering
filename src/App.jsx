@@ -14,6 +14,7 @@ import ExperienceHero from './components/ExperienceHero';
 import ScopeOfWork from './components/ScopeOfWork';
 import CaseStudyHighlight from './components/CaseStudyHighlight';
 import CaseStudyGallery from './components/CaseStudyGallery';
+import CaseStudyPage from './components/CaseStudyPage';
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -34,16 +35,19 @@ function App() {
           <Leadership />
           <EngineeringNetwork />
         </>
+      ) : currentView === 'caseStudy' ? (
+        <>
+          <CaseStudyPage />
+        </>
       ) : (
         <>
           <ExperienceHero />
           <ScopeOfWork />
-          <CaseStudyHighlight />
+          <CaseStudyHighlight setCurrentView={setCurrentView} />
           <CaseStudyGallery />
-          <DesignRisk />
         </>
       )}
-      <Footer />
+      <Footer showTopRow={currentView === 'home'} />
     </div>
   );
 }

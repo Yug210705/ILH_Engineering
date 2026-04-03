@@ -36,7 +36,7 @@ export default function Philosophy() {
   );
 
   return (
-    <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-28 pb-32 overflow-hidden">
+    <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-28 pb-16 overflow-hidden">
       
       {/* Background Vignette Grid - Restored for local depth with ultra-smooth radial mask */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none w-full max-w-[100vw]">
@@ -56,10 +56,10 @@ export default function Philosophy() {
       </div>
       
       <motion.div 
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0.8, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center"
       >
         
@@ -159,7 +159,7 @@ export default function Philosophy() {
       </div>
 
       {/* Bottom Text and CTA */}
-      <div className="w-full max-w-[1600px] mx-auto px-6 flex flex-col items-center mt-12">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col items-center mt-12">
         <p className="text-[#64748b] text-[16px] md:text-[17px] font-medium text-center max-w-[800px] mb-8 mix-blend-multiply">
           Our approach prioritizes redundancy, system integration, and disciplined infrastructure <br className="hidden md:block"/>
           planning to ensure critical operations remain online when disruption occurs.

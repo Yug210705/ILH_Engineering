@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // Asset imports
 import expImage from '../assets/exp_image.png';
 // Using the generated image from previous step
-import modernizationImg from '../datacenter_modernization_1774885509930_1774886140684.png';
+import modernizationImg from '../assets/modernization.png';
 
 const projects = [
   {
@@ -32,11 +32,11 @@ const projects = [
 
 export default function CaseStudyGallery() {
   return (
-    <section className="w-full bg-[#fafafa] relative pt-32 pb-24 border-t border-[#f0f0f0]">
+    <section className="w-full bg-[#fafafa] relative pt-12 pb-20 border-t border-[#f0f0f0]">
       
       {/* 1. Header Area */}
-      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 text-center mb-20 lg:mb-28">
-        <div className="inline-flex items-center gap-1.5 bg-[#e8f2ee] text-[#3e976c] px-4 py-2 rounded-lg text-[13px] font-[700] tracking-tight border border-[#cfe2d9] mb-8">
+      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 text-center mb-12 lg:mb-16">
+        <div className="inline-flex items-center gap-1.5 bg-[#e8f2ee] text-[#3e976c] px-4 py-2 rounded-lg text-[13px] font-[700] tracking-tight border border-[#cfe2d9] mb-6">
           <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
           All Case Studies
         </div>

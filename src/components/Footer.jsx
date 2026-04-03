@@ -2,7 +2,7 @@ import { Users, HardHat, Puzzle, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import siteLogo from '../assets/Logo.png';
 
-export default function Footer() {
+export default function Footer({ showTopRow = true }) {
   const features = [
     {
       Icon: Users,
@@ -24,8 +24,9 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white pt-20">
       {/* Top Features Row */}
-      <div className="w-full border-y border-gray-100 mb-20">
-        <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+      {showTopRow && (
+        <div className="w-full border-y border-gray-100 mb-20">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           {features.map((f, i) => (
             <div key={i} className="px-8 lg:px-14 py-16 flex flex-col items-start gap-5">
               <div className="p-3 rounded-xl bg-[#f0f9f4]">
@@ -39,9 +40,10 @@ export default function Footer() {
           ))}
         </div>
       </div>
+      )}
 
       {/* Main Footer Content */}
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pb-24">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pb-24">
         <div className="flex flex-col xl:flex-row gap-8 items-stretch">
           
           {/* Left Dark Card */}

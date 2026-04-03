@@ -4,16 +4,16 @@ import ralphImg from '../assets/ralph.png';
 
 export default function Leadership() {
   return (
-    <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f8faf9] to-white py-24 lg:py-32">
+    <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f8faf9] to-white pt-24 lg:pt-32 pb-8">
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-16 lg:gap-10">
           
           {/* Left Column */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0.8, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
           >
             {/* Pill */}
@@ -23,7 +23,7 @@ export default function Leadership() {
             </div>
 
             {/* Title */}
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[52px] sm:text-[64px] lg:text-[76px] font-[700] leading-[1.05] tracking-[-0.03em] text-[#0a0a0a]">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(36px,10vw,76px)] font-[700] leading-[1.05] tracking-[-0.03em] text-[#0a0a0a] break-words whitespace-normal px-2">
               Engineering<br/>Leadership
             </h2>
 
@@ -40,10 +40,10 @@ export default function Leadership() {
 
           {/* Center Column: Portrait */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0.8, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.2, 0.8, 0.2, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="flex flex-col items-center w-full max-w-[480px]"
           >
             <div className="w-full h-[580px] bg-slate-100 overflow-hidden mb-4 relative flex items-center justify-center rounded-[20px] shadow-lg">
@@ -54,14 +54,14 @@ export default function Leadership() {
               />
             </div>
             {/* Small Stat Pills */}
-            <div className="flex gap-[10px] w-full justify-between mt-1 px-4 sm:px-8 lg:px-0">
-              <div className="bg-white/80 backdrop-blur-sm shadow-sm border border-slate-100 text-[#0a0a0a] text-[12px] font-[700] px-4 py-3 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
+            <div className="flex flex-wrap sm:flex-nowrap gap-[10px] w-full justify-between mt-1 px-4 sm:px-8 lg:px-0">
+              <div className="bg-white/80 backdrop-blur-sm shadow-sm border border-slate-100 text-[#0a0a0a] text-[11px] sm:text-[12px] font-[700] px-3 sm:px-4 py-2.5 sm:py-3 rounded-[6px] tracking-tight flex-1 sm:flex-1 text-center whitespace-normal sm:whitespace-nowrap break-words min-w-[30%]">
                 25+ Yrs Experience
               </div>
-              <div className="bg-white/80 backdrop-blur-sm shadow-sm border border-slate-100 text-[#0a0a0a] text-[12px] font-[700] px-4 py-3 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
+              <div className="bg-white/80 backdrop-blur-sm shadow-sm border border-slate-100 text-[#0a0a0a] text-[11px] sm:text-[12px] font-[700] px-3 sm:px-4 py-2.5 sm:py-3 rounded-[6px] tracking-tight flex-1 sm:flex-1 text-center whitespace-normal sm:whitespace-nowrap break-words min-w-[30%]">
                 Principal Engineer
               </div>
-              <div className="bg-white/80 backdrop-blur-sm shadow-sm border border-slate-100 text-[#0a0a0a] text-[12px] font-[700] px-4 py-3 rounded-[6px] tracking-tight flex-1 text-center whitespace-nowrap">
+              <div className="bg-white/80 backdrop-blur-sm shadow-sm border border-slate-100 text-[#0a0a0a] text-[11px] sm:text-[12px] font-[700] px-3 sm:px-4 py-2.5 sm:py-3 rounded-[6px] tracking-tight flex-1 sm:flex-1 text-center whitespace-normal sm:whitespace-nowrap break-words min-w-[30%]">
                 Veteran
               </div>
             </div>
@@ -69,10 +69,10 @@ export default function Leadership() {
 
           {/* Right Column: Text block */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0.8, x: 15 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, delay: 0.25, ease: [0.2, 0.8, 0.2, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, delay: 0.15, ease: "easeOut" }}
             className="flex-none w-full lg:w-[400px] flex flex-col text-center lg:text-left pt-6 lg:pt-[190px] px-4 sm:px-8 lg:px-0"
           >
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[34px] lg:text-[38px] font-[700] text-[#0a0a0a] tracking-[-0.02em] leading-[1.0] mb-4">

@@ -4,57 +4,72 @@ import { motion } from 'framer-motion';
 
 export default function ExperienceHero() {
   return (
-    <section className="w-full bg-transparent relative overflow-hidden pt-4 pb-16">
+    <section className="w-full bg-white relative overflow-hidden pt-4 pb-16 lg:pb-24">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative">
+        <div className="relative w-full rounded-[40px]">
+          {/* Main Image Base */}
+          <img 
+            src={experienceImg} 
+            alt="Infrastructure Case Studies" 
+            className="w-full h-auto block object-cover rounded-[40px]"
+          />
 
-      {/* Main Image + Text Overlays */}
-      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 relative">
-        
-        {/* The image already has built-in white cutouts (Figma subtract) */}
-        <img 
-          src={experienceImg} 
-          alt="Infrastructure Case Studies" 
-          className="w-full h-auto block"
-        />
+          {/* ===== TEXT positioned securely inside the built-in white cutout area ===== */}
+          {/* Re-aligned precisely to the image cutout's physical boundaries based on accurate constraints */}
+          <div className="absolute top-[2%] sm:top-[2.5%] lg:top-[3%] left-[8%] sm:left-[9%] lg:left-[10%] z-10 flex flex-col items-start w-auto max-w-[65%] lg:max-w-[55%]">
+            
+            {/* Project Experience Tag - Precisely aligned with the header below and shifted upwards */}
+            <div className="-translate-y-3.5 lg:-translate-y-5 inline-flex items-center gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-5 sm:px-6 py-1 sm:py-1.5 rounded-full text-[13px] sm:text-[15px] lg:text-[16px] font-[500] tracking-tight border border-[#cfe2d9] mb-4 sm:mb-5 lg:mb-6 ml-2 sm:ml-4 lg:ml-6">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#3e976c]"></div>
+              Project Experience
+            </div>
 
-        {/* ===== TEXT positioned inside the built-in white cutout area ===== */}
-        <div className="absolute top-[2%] sm:top-[3%] left-[12%] sm:left-[13%] lg:left-[14%] z-10 flex flex-col">
-          {/* Project Experience Tag */}
-          <div className="inline-flex self-start items-center gap-1.5 bg-[#e8f2ee] text-brand-green px-4 sm:px-5 py-1.5 sm:py-2 rounded-lg text-[8px] sm:text-[10px] lg:text-[12px] font-[800] tracking-wide border border-[#d2efe2] mb-6 sm:mb-7 lg:mb-8 -mt-2 sm:-mt-3">
-            <div className="w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-brand-green"></div>
-            Project Experience
+            <h1 
+              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
+              className="leading-[0.95] tracking-tight w-full pl-2 sm:pl-4 lg:pl-6"
+            >
+              <span className="block text-[#c8cfd6] font-[500] text-[clamp(24px,8vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight">
+                Infrastructure
+              </span>
+              <span className="block text-[#0a0a0a] font-[800] text-[clamp(26px,9vw,84px)] xl:text-[84px] mt-1 lg:mt-2 break-words whitespace-normal leading-[0.95]">
+                Case Studies.
+              </span>
+            </h1>
           </div>
 
-          <h1 
-            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-            className="leading-[0.95] tracking-tight"
-          >
-            <span className="block text-[#c8cfd6] text-[32px] sm:text-[46px] md:text-[58px] lg:text-[76px] xl:text-[90px] font-[400]">
-              Infrastructure
-            </span>
-            <span className="block text-[#0a0a0a] text-[32px] sm:text-[46px] md:text-[58px] lg:text-[76px] xl:text-[90px] font-[800]">
-              Case Studies.
-            </span>
-          </h1>
-        </div>
-
-        {/* ===== Scroll Indicator - center bottom of image ===== */}
-        <div className="absolute bottom-[8%] left-[46%] z-20">
-          <div className="w-[14px] sm:w-[18px] h-[22px] sm:h-[30px] border-2 border-white/50 rounded-full flex justify-center pt-1">
-            <motion.div 
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-1.5 bg-white rounded-full"
-            />
+          {/* ===== Scroll Indicator - center bottom of image ===== */}
+          <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 z-20">
+            <div className="w-[18px] sm:w-[22px] h-[28px] sm:h-[34px] border-2 border-white/60 rounded-full flex justify-center pt-1.5">
+              <motion.div 
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="w-1.5 h-1.5 bg-white rounded-full"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* ===== Green Button - bottom right cutout area ===== */}
-        <div className="absolute -bottom-[0.2%] right-[2%] sm:-bottom-[0.5%] sm:right-[2.5%] lg:bottom-[0%] lg:right-[3%] z-10">
-          <button className="bg-brand-green hover:bg-[#2d7d56] text-white p-6 sm:p-8 lg:p-10 rounded-[18px] sm:rounded-[24px] lg:rounded-[36px] transition-all duration-300 shadow-2xl shadow-brand-green/40">
-            <ArrowDown size={32} className="sm:w-12 sm:h-12 lg:w-16 lg:h-16" strokeWidth={2.5} />
-          </button>
+          {/* ===== Green Button - bottom right cutout area ===== */}
+          {/* Positioning and Scale adjusted for higher prominence with clean edge spacing */}
+          <div className="absolute bottom-[1.8%] right-[1%] z-30 hidden lg:block">
+            <button 
+              onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-[#3e976c] hover:bg-[#2d7d56] text-white p-9 rounded-[24px] shadow-2xl shadow-[#3e976c]/40 transition-all duration-300 transform active:scale-95"
+            >
+              <ArrowDown size={36} className="w-12 h-12" strokeWidth={2.5} />
+            </button>
+          </div>
+          
+          {/* Mobile Green Button */}
+          <div className="absolute bottom-[2.5%] right-[1.5%] z-30 lg:hidden">
+            <button 
+              onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-[#3e976c] text-white p-5 rounded-[16px] shadow-xl transform active:scale-95"
+            >
+              <ArrowDown size={28} strokeWidth={2.5} />
+            </button>
+          </div>
+          
         </div>
-
       </div>
     </section>
   );

@@ -33,7 +33,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-white to-[#f4f7f6] pt-16 sm:pt-24 pb-32">
+    <section className="w-full bg-gradient-to-b from-white to-[#f4f7f6] pt-16 sm:pt-24 pb-12">
       
       {/* Top Section: Hero/Header area */}
       <div className="relative w-full z-10 flex flex-col items-center">
@@ -67,11 +67,11 @@ export default function Experience() {
 
         {/* Content Container */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0.8, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-          className="w-full max-w-[1600px] px-6 sm:px-10 lg:px-12 relative z-10 pb-16 lg:pb-24"
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pb-16 lg:pb-24"
         >
           <div className="flex flex-col md:flex-row justify-between items-start lg:items-center gap-8 md:gap-12">
             {/* Left Header */}
@@ -107,7 +107,7 @@ export default function Experience() {
             visible: { transition: { staggerChildren: 0.15 } },
             hidden: {}
           }}
-          className="w-full max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 border-x border-[#e2e8f0]"
+          className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
         >
           {cards.map((card, index) => {
             const isActive = activeCard === index;
@@ -116,8 +116,8 @@ export default function Experience() {
             return (
               <motion.div 
                 variants={{
-                  hidden: { opacity: 0, y: 40 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.2, 0.8, 0.2, 1] } }
+                  hidden: { opacity: 0.7, y: 15 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
                 }}
                 key={card.id}
                 className="relative z-10 w-full min-h-[220px] sm:min-h-[260px]"

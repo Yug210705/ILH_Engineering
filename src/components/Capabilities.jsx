@@ -31,7 +31,7 @@ export default function Capabilities() {
   ];
 
   return (
-    <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f4f7f6] to-white py-24 lg:py-32">
+    <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f4f7f6] to-white pt-16 pb-12">
       {/* Absolute Grid Background - Expanded super-smooth fade */}
       <div className="absolute inset-0 pointer-events-none" 
            style={{ 
@@ -42,14 +42,14 @@ export default function Capabilities() {
            }}>
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         
         {/* Header Area */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0.8, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex flex-col md:flex-row justify-between items-start mb-16 gap-12 w-full lg:w-[95%]"
         >
           
@@ -61,9 +61,9 @@ export default function Capabilities() {
             </div>
             
             <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                className="text-[48px] sm:text-[60px] lg:text-[72px] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] ml-0 lg:ml-10">
-              Critical<br/>
-              Infrastructure<br/>
+                className="text-[clamp(32px,10vw,72px)] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] ml-0 lg:ml-10 break-words whitespace-normal px-2">
+              Critical<br className="hidden sm:block"/>
+              Infrastructure<br className="hidden sm:block"/>
               Engineering
             </h2>
           </div>
@@ -104,15 +104,15 @@ export default function Capabilities() {
           {capabilitiesList.map((item, index) => (
             <motion.div 
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.2, 0.8, 0.2, 1] } }
+                hidden: { opacity: 0.7, y: 10 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
               }}
               key={index}
               className="bg-white rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
             >
               
               {/* External Floating Chevrons icon (Visually placed where the card used to be) */}
-              <div className="absolute left-[-48px] top-1/2 -translate-y-1/2 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-75">
+              <div className="absolute left-[-48px] top-1/2 -translate-y-1/2 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-75 hidden sm:block">
                 <ChevronsRight size={26} className="text-[#3e976c]" strokeWidth={2.5} />
               </div>
 
@@ -124,10 +124,10 @@ export default function Capabilities() {
               {/* Card Typography */}
               <div className="flex flex-col justify-center">
                 <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                    className="text-[22px] sm:text-[24px] font-[700] text-[#0a0a0a] group-hover/card:text-[#3e976c] transition-colors duration-300 tracking-tight mb-1 whitespace-nowrap overflow-visible">
+                    className="text-[18px] sm:text-[22px] lg:text-[24px] font-[700] text-[#0a0a0a] group-hover/card:text-[#3e976c] transition-colors duration-300 tracking-tight mb-1 whitespace-normal break-words leading-snug pr-4">
                   {item.title}
                 </h3>
-                <p className="text-[#9ca3af] text-[13.5px] font-[500] tracking-tight">{item.desc}</p>
+                <p className="text-[#9ca3af] text-[13.5px] font-[500] tracking-tight whitespace-normal break-words pr-4">{item.desc}</p>
               </div>
 
             </motion.div>

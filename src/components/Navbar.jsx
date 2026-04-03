@@ -33,7 +33,7 @@ export default function Navbar({ currentView, setCurrentView }) {
           isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
         }`}
       >
-        <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between px-6 sm:px-8 lg:px-12">
+        <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between px-4 sm:px-8 lg:px-12">
           {/* Logos side */}
           <div className="flex-1 flex items-center justify-start cursor-pointer transition-opacity hover:opacity-80" onClick={() => handleLinkClick('home')}>
             <img src={siteLogo} alt="ILH Engineering" className="h-[45px] sm:h-[55px] lg:h-[60px] w-auto object-contain" />
@@ -42,7 +42,7 @@ export default function Navbar({ currentView, setCurrentView }) {
           {/* Desktop Center Links */}
           <div className="hidden xl:flex shrink-0 items-center justify-center gap-1.5 lg:gap-2">
             {navLinks.map((link) => {
-              const isActive = currentView === link.view && link.name === 'Experience';
+              const isActive = (currentView === link.view || (currentView === 'caseStudy' && link.view === 'experience')) && link.name === 'Experience';
               return (
                 <button 
                   key={link.name}

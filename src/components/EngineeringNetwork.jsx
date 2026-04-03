@@ -3,13 +3,13 @@ import groupPhoto from '../assets/groupphoto.png';
 
 export default function EngineeringNetwork() {
   return (
-    <section className="w-full relative overflow-hidden bg-white pt-24 lg:pt-32 pb-0">
+    <section className="w-full relative overflow-hidden bg-white pt-8 lg:pt-12 pb-0">
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0.8, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex justify-start mb-4"
         >
           {/* Pill */}
@@ -20,16 +20,16 @@ export default function EngineeringNetwork() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0.8, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0.8, 0.2, 1] }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
           className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-10 mb-10"
         >
           {/* Title */}
           <div className="flex-[3]">
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[44px] sm:text-[56px] lg:text-[72px] xl:text-[80px] font-[800] leading-[0.95] tracking-[-0.04em] text-[#0a0a0a] whitespace-normal">
-              Expertise for Complex<br/>Infrastructure Projects
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(32px,8vw,80px)] font-[800] leading-[0.95] tracking-[-0.04em] text-[#0a0a0a] whitespace-normal break-words z-10 relative">
+              Expertise for Complex<br className="hidden sm:block"/> Infrastructure Projects
             </h2>
           </div>
           
@@ -42,10 +42,10 @@ export default function EngineeringNetwork() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0.7, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           className="w-full relative"
         >
           <div className="w-full overflow-hidden">
