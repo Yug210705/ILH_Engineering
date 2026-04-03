@@ -57,23 +57,24 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          {/* Block 3: when Failure isn't (Long) */}
+          {/* Block 3: when Failure isn't an Option. (Consolidated for Mobile) */}
           <motion.div 
             initial={{ opacity: 0.7, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.2 }}
-            className="bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[95vw] sm:max-w-[calc(100vw-32px)] z-40 rounded-[20px] sm:rounded-l-none sm:rounded-r-[20px]">
+            className="bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[95vw] sm:max-w-[calc(100vw-32px)] z-40 rounded-[20px] sm:rounded-l-none sm:rounded-tr-[20px] sm:rounded-br-[24px]">
              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
-               when Failure isn&#39;t
+               when Failure isn&#39;t <span className="sm:hidden text-brand-green">an Option.</span>
+               <span className="hidden sm:inline">when Failure isn&#39;t</span>
              </h1>
           </motion.div>
 
-          {/* Block 4: an Option. (Short) */}
+          {/* Block 4: an Option. (Desktop Only) */}
           <motion.div 
             initial={{ opacity: 0.7, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.25 }}
-            className="bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[95vw] sm:max-w-[calc(100vw-32px)] z-50 rounded-[20px] sm:rounded-l-none sm:rounded-tr-[20px] sm:rounded-br-[24px]">
+            className="hidden sm:flex bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-50 rounded-[20px] sm:rounded-l-none sm:rounded-tr-[20px] sm:rounded-br-[24px]">
              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
                an <span className="text-brand-green">Option.</span>
              </h1>
