@@ -18,7 +18,7 @@ export default function ExperienceHero() {
 
           {/* ===== TEXT positioned securely inside the built-in white cutout area ===== */}
           {/* Re-aligned precisely to the image cutout's physical boundaries based on accurate constraints */}
-          <div className="absolute top-[1.5%] sm:top-[6%] lg:top-[3%] left-[4%] sm:left-[8%] lg:left-[10%] z-10 flex flex-col items-start w-full sm:max-w-[75%] lg:max-w-[55%] text-left">
+          <div className="absolute top-[2%] sm:top-[6%] lg:top-[3%] left-[4%] sm:left-[8%] lg:left-[10%] z-10 flex flex-col items-start w-full sm:max-w-[75%] lg:max-w-[55%] text-left">
             
             {/* Project Experience Tag */}
             <div className="inline-flex items-center gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-3 sm:px-6 py-1.5 rounded-full text-[10px] sm:text-[15px] lg:text-[16px] font-[500] tracking-tight border border-[#cfe2d9] mb-1 sm:mb-5 lg:mb-6 sm:ml-4 lg:ml-6 ml-1">
@@ -30,10 +30,10 @@ export default function ExperienceHero() {
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
               className="leading-[1.0] lg:leading-[0.95] tracking-tight w-full pl-1 sm:pl-4 lg:pl-6"
             >
-              <span className="block text-[#c8cfd6] font-[500] text-[clamp(14px,5.2vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight transition-all">
+              <span className="block text-[#3e976c] font-[500] text-[clamp(14px,5.5vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight transition-all">
                 Infrastructure
               </span>
-              <span className="block text-[#0a0a0a] font-[800] text-[clamp(16px,6.5vw,84px)] xl:text-[84px] mt-0.5 lg:mt-2 break-words whitespace-normal leading-[0.95] transition-all">
+              <span className="block text-[#000000] font-[800] text-[clamp(18px,7.5vw,84px)] xl:text-[84px] mt-0.5 lg:mt-2 break-words whitespace-normal leading-[0.95] transition-all">
                 Case Studies.
               </span>
             </h1>
