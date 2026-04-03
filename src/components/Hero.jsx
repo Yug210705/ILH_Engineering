@@ -11,7 +11,7 @@ export default function Hero() {
         initial={{ opacity: 0.9, scale: 0.995 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative w-full h-[500px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
+        className="relative w-full h-[620px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
       >
         <img 
           src={heroImg} 
@@ -28,10 +28,10 @@ export default function Hero() {
             initial={{ opacity: 0.7, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.05 }}
-            className="bg-[#ffffff] pr-[20px] lg:pr-[28px] pl-[20px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 pt-4 sm:pt-5 flex items-end shrink-0 w-full max-w-max z-10"
+            className="bg-[#ffffff] pr-[16px] lg:pr-[28px] pl-[16px] xl:pl-[48px] relative pointer-events-auto pb-1 pt-3 sm:pt-5 flex items-end shrink-0 w-max max-w-[calc(100vw-32px)] z-10"
             style={{ borderTopRightRadius: '12px', borderBottomRightRadius: '12px' }}>
-            <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3 py-1.5 rounded-[8px] text-[clamp(10px,3vw,12.5px)] font-[700] tracking-tight whitespace-normal break-words leading-snug">
-              <div className="w-[5px] h-[5px] rounded-full bg-brand-green shrink-0"></div>
+            <div className="inline-flex items-center gap-1.5 bg-[#e8f2ee] text-brand-green px-2.5 py-1.5 rounded-[8px] text-[11px] sm:text-[12.5px] font-[700] tracking-tight whitespace-normal break-words leading-tight">
+              <div className="w-[5px] h-[5px] rounded-full bg-brand-green shrink-0 mt-[1px]"></div>
               <span>Mission-Critical Infrastructure Engineering</span>
             </div>
           </motion.div>
@@ -41,9 +41,9 @@ export default function Hero() {
             initial={{ opacity: 0.7, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.1 }}
-            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[20px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-full sm:w-max max-w-[calc(100vw-32px)] sm:max-w-max z-20"
+            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-20"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '20px' }}>
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               Infrastructure
             </h1>
           </motion.div>
@@ -53,9 +53,9 @@ export default function Hero() {
             initial={{ opacity: 0.7, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.15 }}
-            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[20px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-full sm:w-max max-w-[calc(100vw-32px)] sm:max-w-max z-30"
+            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-30"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '20px' }}>
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               that <span className="text-brand-green">Performs</span>
             </h1>
           </motion.div>
@@ -65,9 +65,9 @@ export default function Hero() {
             initial={{ opacity: 0.7, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.2 }}
-            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[20px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-full sm:w-max max-w-[calc(100vw-32px)] sm:max-w-max z-40"
+            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-40"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '20px' }}>
-             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
                when Failure isn&#39;t
              </h1>
           </motion.div>
@@ -77,9 +77,9 @@ export default function Hero() {
             initial={{ opacity: 0.7, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35, delay: 0.25 }}
-            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[20px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex flex-col shrink-0 w-full sm:w-max max-w-[calc(100vw-32px)] sm:max-w-max z-50"
+            className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-50"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '24px' }}>
-             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
                an <span className="text-brand-green">Option.</span>
              </h1>
           </motion.div>
@@ -93,17 +93,20 @@ export default function Hero() {
           transition={{ duration: 0.4, delay: 0.35 }}
           className="absolute bottom-6 left-6 lg:left-8 z-30 flex items-center text-white"
         >
-          <div className="bg-[#524f46]/95 backdrop-blur-md border border-white/5 rounded-[14px] p-2 pr-4 sm:pr-8 flex items-center gap-2 sm:gap-4 hover:bg-[#524f46] transition-all cursor-pointer shadow-xl w-[calc(100vw-48px)] sm:w-fit max-w-[300px] sm:max-w-max">
-            <div className="relative shrink-0 flex items-center justify-center">
+          <div className="bg-[#524f46]/95 backdrop-blur-md flex items-center justify-center p-2 rounded-[14px] shadow-xl w-max hover:bg-[#524f46] transition-all cursor-pointer group">
+            <div className="relative shrink-0 flex items-center justify-center mr-3">
               <img src={ralphImg} 
-                   alt="Ralph" className="w-[36px] sm:w-[50px] h-[36px] sm:h-[50px] rounded-[10px] object-cover" />
+                   alt="Ralph" className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] rounded-[10px] object-cover" />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <Play size={16} fill="#ffffff" stroke="transparent" className="ml-0.5 opacity-90" />
               </div>
             </div>
-            <div className="flex flex-col justify-center">
-              <span className="font-bold text-[13px] sm:text-[14px] leading-tight mb-[1px] tracking-tight">Hear from Ralph</span>
-              <span className="text-[#a1a1aa] text-[10px] sm:text-[12px] leading-[1.3] font-[500] max-w-[140px] sm:max-w-[180px]">Founding Director & Principal Engineer</span>
+            </div>
+            <div className="flex flex-col justify-center pr-4 md:pr-6">
+              <span className="font-bold text-[13px] md:text-[14px] leading-tight mb-[1px] tracking-tight whitespace-nowrap">Hear from Ralph</span>
+              <span className="text-[#a1a1aa] text-[10px] md:text-[12px] leading-[1.2] font-[500] max-w-[130px] md:max-w-[150px] line-clamp-2 overflow-hidden">
+                Founding Director & Principal Engineer
+              </span>
             </div>
           </div>
         </motion.div>

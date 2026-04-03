@@ -142,8 +142,8 @@ export default function Footer({ showTopRow = true }) {
                 <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
                 Start the Conversation
               </div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[44px] sm:text-[54px] lg:text-[76px] font-[800] text-[#0a0a0a] leading-[0.95] tracking-[-0.04em] mb-10">
-                Discuss Your<br/>Infrastructure<br/>Challenges With <span className="text-[#94a3b8] font-[500] italic">an</span><br/>Engineer
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(32px,10vw,76px)] font-[800] text-[#0a0a0a] leading-[1.05] tracking-[-0.04em] mb-10 break-words whitespace-normal px-1">
+                Discuss Your<br className="hidden sm:block"/>Infrastructure<br className="hidden sm:block"/>Challenges With <span className="text-[#94a3b8] font-[500] italic">an</span><br className="hidden sm:block"/>Engineer
               </h2>
               <p className="text-[#6b7280] text-[18px] font-medium leading-[1.6] max-w-[460px]">
                 ILH Engineering helps organizations design resilient infrastructure for environments where reliability matters.
@@ -151,7 +151,7 @@ export default function Footer({ showTopRow = true }) {
             </div>
 
             <div className="mt-20">
-              <button className="w-full bg-brand-green hover:bg-[#2e8451] text-white font-[800] py-6 rounded-xl text-[18px] transition-all shadow-xl shadow-brand-green/20 mb-6">
+              <button className="w-full bg-brand-green hover:bg-[#2e8451] text-white font-[800] py-4 sm:py-6 px-4 rounded-xl text-[14px] sm:text-[18px] transition-all shadow-xl shadow-brand-green/20 mb-6 leading-tight break-words whitespace-normal">
                 Schedule Infrastructure Consultation
               </button>
               <p className="text-[#6b7280] text-[14px] font-semibold text-center opacity-80">

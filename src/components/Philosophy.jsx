@@ -82,9 +82,9 @@ export default function Philosophy() {
         </p>
       </motion.div>
 
-      {/* Graphic Container with horizontal scroll on mobile to prevent squishing */}
-      <div className="relative w-full overflow-x-auto lg:overflow-x-visible pb-12">
-        <div className="relative min-w-[1000px] lg:min-w-0 w-full max-w-[1400px] aspect-[1200/600] mx-auto mt-6 pointer-events-auto px-12">
+      {/* Graphic Container */}
+      <div className="relative w-full pb-12">
+        <div className="relative w-full aspect-[1200/600] max-w-[1400px] mx-auto mt-6 pointer-events-auto sm:px-12">
           
           <svg viewBox="0 100 1200 600" className="absolute inset-0 w-full h-full z-0 overflow-visible pointer-events-none">
             
@@ -125,35 +125,35 @@ export default function Philosophy() {
 
           {/* HTML Overlay Cards */}
           <div 
-            className={`absolute bg-white border border-gray-100/60 rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
+            className={`absolute bg-white border border-gray-100/60 rounded-[8px] sm:rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
             style={{ left: '13.33%', top: '16.66%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
-            <Zap size={34} className="text-brand-green mb-4" strokeWidth={2.4} />
-            <span className="font-bold text-[19px] text-[#0f172a]">Power</span>
+            <Zap className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
+            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Power</span>
           </div>
 
           <div 
-            className={`absolute bg-white border border-gray-100/60 rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
+            className={`absolute bg-white border border-gray-100/60 rounded-[8px] sm:rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
             style={{ left: '13.33%', top: '80%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
-            <Shield size={34} className="text-brand-green mb-4" strokeWidth={2.4} />
-            <span className="font-bold text-[19px] text-[#0f172a]">Security</span>
+            <Shield className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
+            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Security</span>
           </div>
 
           <div 
-            className={`absolute bg-white border border-gray-100/60 rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
+            className={`absolute bg-white border border-gray-100/60 rounded-[8px] sm:rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
             style={{ left: '86.66%', top: '16.66%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
-            <Share2 size={34} className="text-brand-green mb-4" strokeWidth={2.4} />
-            <span className="font-bold text-[19px] text-[#0f172a]">Connectivity</span>
+            <Share2 className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
+            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Connectivity</span>
           </div>
 
           <div 
-            className={`absolute bg-white border border-gray-100/60 rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
+            className={`absolute bg-white border border-gray-100/60 rounded-[8px] sm:rounded-[24px] flex flex-col items-center justify-center cursor-pointer overflow-hidden hover:!scale-[1.04] transition-transform duration-400 ${isVisible ? 'animate-card' : 'opacity-0'}`}
             style={{ left: '86.66%', top: '80%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
-            <Settings size={34} className="text-brand-green mb-4" strokeWidth={2.4} />
-            <span className="font-bold text-[19px] text-[#0f172a]">Operations</span>
+            <Settings className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
+            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Operations</span>
           </div>
         </div>
       </div>

@@ -43,9 +43,9 @@ export default function CaseStudyGallery() {
 
         <h2 
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-          className="text-[42px] sm:text-[54px] lg:text-[72px] xl:text-[84px] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mb-6"
+          className="text-[clamp(32px,10vw,84px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mb-6 break-words whitespace-normal px-2"
         >
-          Explore <span className="text-[#c8cfd6]">Infrastructure</span> <br /> Case Studies
+          Explore <span className="text-[#c8cfd6]">Infrastructure</span> <br className="hidden sm:block"/> Case Studies
         </h2>
         
         <p className="text-[#8e9aaf] text-[17px] sm:text-[19px] lg:text-[21px] font-[500] max-w-[800px] mx-auto">
@@ -78,10 +78,10 @@ export default function CaseStudyGallery() {
                 </div>
               </div>
 
-              <div className="p-10 lg:p-12 flex flex-col gap-4">
+              <div className="p-6 md:p-10 lg:p-12 flex flex-col gap-4">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  className="text-[22px] lg:text-[24px] xl:text-[28px] font-[800] text-[#0a0a0a] leading-tight group-hover:text-[#3e976c] transition-colors"
+                  className="text-[20px] lg:text-[24px] xl:text-[28px] font-[800] text-[#0a0a0a] leading-tight group-hover:text-[#3e976c] transition-colors break-words whitespace-normal"
                 >
                   {project.title}
                 </h3>
