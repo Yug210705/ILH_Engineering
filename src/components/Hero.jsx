@@ -88,7 +88,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.35 }}
-          className="absolute bottom-[100px] sm:bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:left-8 z-30 flex items-center text-white"
+          className="absolute bottom-[100px] sm:bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:left-8 z-30 hidden sm:flex items-center text-white"
         >
           <div className="bg-[#524f46]/95 backdrop-blur-md flex items-center justify-center p-1.5 sm:p-2 rounded-[12px] sm:rounded-[14px] shadow-xl w-max hover:bg-[#524f46] transition-all cursor-pointer group">
             <div className="relative shrink-0 flex items-center justify-center mr-2.5 sm:mr-3">
@@ -128,6 +128,20 @@ export default function Hero() {
         >
           <div className="bg-[#ffffff] px-4 sm:px-10 py-5 sm:py-8 rounded-t-[20px] sm:rounded-tl-[32px] sm:rounded-tr-none flex justify-center">
              <div className="flex flex-col items-start w-full max-w-[100%] sm:max-w-none">
+                {/* Mobile-only Ralph Card - Shifted inside white section */}
+                <div className="flex sm:hidden items-center mb-5 w-full bg-[#f4f7f6] p-2 rounded-[14px] border border-[#d2efe2]">
+                  <div className="relative shrink-0 flex items-center justify-center mr-3">
+                    <img src={ralphImg} alt="Ralph" className="w-[44px] h-[44px] rounded-[10px] object-cover" />
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <Play size={14} fill="#3e976c" stroke="transparent" className="ml-0.5 opacity-90" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center">
+                    <span className="font-bold text-[14px] text-[#0a0a0a] leading-tight mb-[1px]">Hear from Ralph</span>
+                    <span className="text-[#71717a] text-[11px] leading-[1.2] font-[500]">Founding Director</span>
+                  </div>
+                </div>
+
                 <button className="bg-brand-green hover:bg-[#328b58] text-white font-[800] text-[clamp(12px,3.8vw,16px)] sm:text-[16px] px-2 sm:px-6 py-3.5 sm:py-4 rounded-[10px] w-full transition-all tracking-wide shadow-lg shadow-brand-green/20 leading-tight whitespace-normal break-words flex items-center justify-center">
                   Schedule Infrastructure Consultation
                 </button>
