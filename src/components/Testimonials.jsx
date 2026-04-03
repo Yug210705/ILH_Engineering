@@ -28,7 +28,7 @@ export default function Testimonials() {
   // to ensure flawless scaling on mobile devices without JS resizing logic.
 
   return (
-    <section className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-8 pb-32 overflow-hidden">
+    <section className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-8 pb-16 sm:pb-32 overflow-hidden">
        
       <div className="w-full max-w-[1600px] mx-auto">
         {/* slider track - centered relative to 1600px bound */}
