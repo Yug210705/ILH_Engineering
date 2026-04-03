@@ -62,12 +62,12 @@ export default function ExperienceHero() {
           </div>
           
           {/* Mobile Green Button */}
-          <div className="absolute bottom-[1.8%] right-[1.2%] z-30 lg:hidden">
+          <div className="absolute bottom-[1.5%] right-[0.8%] z-30 lg:hidden">
             <button 
               onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-[#3e976c] text-white p-3.5 rounded-[14px] shadow-xl transform active:scale-95"
+              className="bg-[#3e976c] text-white p-2.5 rounded-[12px] shadow-xl transform active:scale-95"
             >
-              <ArrowDown size={22} strokeWidth={2.5} />
+              <ArrowDown size={18} strokeWidth={2.5} />
             </button>
           </div>
           
