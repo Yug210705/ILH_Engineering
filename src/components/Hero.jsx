@@ -11,7 +11,7 @@ export default function Hero() {
         initial={{ opacity: 0.9, scale: 0.995 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative w-full h-[680px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
+        className="relative w-full h-[530px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
       >
         <img 
           src={heroImg} 
@@ -91,7 +91,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.35 }}
-          className="absolute bottom-[150px] sm:bottom-6 left-4 sm:left-6 lg:left-8 z-30 flex items-center text-white"
+          className="absolute bottom-[130px] sm:bottom-6 left-4 sm:left-6 lg:left-8 z-30 flex items-center text-white"
         >
           <div className="bg-[#524f46]/95 backdrop-blur-md flex items-center justify-center p-1.5 sm:p-2 rounded-[12px] sm:rounded-[14px] shadow-xl w-max hover:bg-[#524f46] transition-all cursor-pointer group">
             <div className="relative shrink-0 flex items-center justify-center mr-2.5 sm:mr-3">

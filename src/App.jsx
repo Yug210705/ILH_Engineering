@@ -20,9 +20,10 @@ function App() {
   const [currentView, setCurrentView] = useState('home');
 
   return (
-    <div className="min-h-screen bg-white w-full overflow-x-hidden relative text-[#0a0a0a]">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden relative text-[#0a0a0a] flex flex-col">
       <Navbar currentView={currentView} setCurrentView={setCurrentView} />
       
+      <div className="flex-1 flex flex-col">
       {currentView === 'home' ? (
         <>
           <Hero />
@@ -47,6 +48,7 @@ function App() {
           <CaseStudyGallery />
         </>
       )}
+      </div>
       <Footer showTopRow={currentView === 'home'} />
     </div>
   );
