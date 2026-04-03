@@ -82,8 +82,8 @@ export default function ScopeOfWork() {
             <motion.div 
               key={index}
               whileHover={{ backgroundColor: '#fafffe' }}
-              className={`p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col items-start gap-6 sm:gap-10 bg-white relative overflow-hidden group transition-colors duration-500 
-                ${index === features.length - 1 ? 'col-span-2 md:col-span-1' : 'col-span-1'} 
+              className={`p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col gap-6 sm:gap-10 bg-white relative overflow-hidden group transition-colors duration-500 
+                ${index === features.length - 1 ? 'col-span-2 md:col-span-1 items-center text-center md:items-start md:text-left' : 'col-span-1 items-start text-left'} 
                 ${index !== features.length - 1 ? 'md:border-r border-[#f0f0f0]' : ''}
                 ${index === 0 ? 'border-r md:border-r-0' : ''}`}
             >
@@ -93,7 +93,7 @@ export default function ScopeOfWork() {
               </div>
 
               {/* Text Area */}
-              <div className="flex flex-col gap-4 mt-auto">
+              <div className={`flex flex-col gap-4 mt-auto ${index === features.length - 1 ? 'items-center md:items-start' : 'items-start'}`}>
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
                   className="text-[17px] sm:text-[22px] lg:text-[24px] xl:text-[26px] font-[800] text-[#0a0a0a] tracking-tight leading-tight transition-colors duration-300 group-hover:text-[#3e976c]"
