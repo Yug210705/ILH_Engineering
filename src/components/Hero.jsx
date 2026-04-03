@@ -8,15 +8,14 @@ export default function Hero() {
     <section className="relative w-full max-w-[1600px] mx-auto mt-2 lg:mt-4 px-4 sm:px-8 lg:px-12">
       {/* Container for the Hero with Image inside */}
       <motion.div 
-        initial={{ opacity: 0.9, scale: 0.995 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
         className="relative w-full h-[420px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
       >
         <img 
           src={heroImg} 
           alt="Industrial Facility Aerial View" 
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         
