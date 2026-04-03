@@ -39,23 +39,23 @@ export default function CaseStudyPage() {
             </div>
           </div>
 
-          {/* Left White Overlay Box with inverse inner curves using standard box shadow approach */}
-          <div className="absolute top-[8%] lg:top-[12%] bottom-[8%] lg:bottom-[12%] left-0 w-[90%] md:w-[60%] lg:w-[48%] xl:w-[45%] bg-white rounded-r-[40px] z-10 flex flex-col justify-center px-6 md:px-10 lg:px-20 py-10 shadow-2xl">
+          {/* Left White Overlay Box with architectural cutout curves */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[48%] xl:w-[46%] bg-white h-auto py-16 sm:py-24 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24 xl:px-28">
             
-            {/* Top Inverse Curve Pseudo-element logic inline */}
-            <div className="absolute top-[-40px] left-0 w-[40px] h-[40px] bg-transparent rounded-bl-[40px] shadow-[-20px_20px_0_20px_white] pointer-events-none hidden lg:block"></div>
+            {/* Top Inverse Curve Pseudo-element */}
+            <div className="absolute top-[-48px] left-0 w-[48px] h-[48px] bg-transparent rounded-bl-[48px] shadow-[-24px_24px_0_24px_white] pointer-events-none hidden lg:block"></div>
             {/* Bottom Inverse Curve */}
-            <div className="absolute bottom-[-40px] left-0 w-[40px] h-[40px] bg-transparent rounded-tl-[40px] shadow-[-20px_-20px_0_20px_white] pointer-events-none hidden lg:block"></div>
+            <div className="absolute bottom-[-48px] left-0 w-[48px] h-[48px] bg-transparent rounded-tl-[48px] shadow-[-24px_-24px_0_24px_white] pointer-events-none hidden lg:block"></div>
 
             {/* Breadcrumb */}
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex items-center gap-2 text-[14px] lg:text-[15px] font-[600] mb-8"
+              className="flex items-center gap-1.5 text-[13px] sm:text-[14px] font-[600] mb-6 sm:mb-8 tracking-tight"
             >
-              <span className="text-[#a0abbd]">Experience</span>
-              <span className="text-[#a0abbd]">/</span>
-              <span className="text-[#3e976c]">Large-Scale Infrastructure E...</span>
+              <span className="text-[#94a3b8] hover:text-[#3e976c] cursor-pointer transition-colors">Experience</span>
+              <span className="text-[#cbd5e1]">/</span>
+              <span className="text-brand-green line-clamp-1">Large-Scale Infrastructure Environment...</span>
             </motion.div>
 
             {/* Title */}
@@ -64,7 +64,7 @@ export default function CaseStudyPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              className="text-[44px] md:text-[54px] lg:text-[68px] xl:text-[84px] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a]"
+              className="text-[32px] sm:text-[54px] lg:text-[68px] xl:text-[80px] font-[800] leading-[1.02] tracking-tight text-[#0a0a0a]"
             >
               Large-Scale <br /> Infrastructure <br /> Environments
             </motion.h1>
