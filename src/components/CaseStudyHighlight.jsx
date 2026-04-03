@@ -68,7 +68,7 @@ export default function CaseStudyHighlight({ setCurrentView }) {
                 </div>
 
                 {/* Button - RESTORED TO EXACT MAXIMUM EDGE ANCHOR */}
-                <div className="absolute bottom-[1%] right-[-1%] sm:bottom-[-2.5%] sm:right-[-5%] lg:bottom-[0.5%] lg:right-[0%]">
+                <div className="absolute bottom-[2%] right-[4%] sm:bottom-[-2.5%] sm:right-[-2%] lg:bottom-[0.5%] lg:right-[0%]">
                   <motion.button 
                     onClick={() => setCurrentView('caseStudy')}
                     whileHover={{ scale: 1.02 }}
