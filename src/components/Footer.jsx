@@ -80,15 +80,15 @@ export default function Footer({ showTopRow = true }) {
                 </ul>
               </div>
 
-              {/* Logo / Badge Area - Compact for mobile */}
-              <div className="flex flex-col items-start lg:items-end gap-6 sm:gap-12">
+              {/* Logo / Badge Area - Horizontal on mobile, vertical on desktop */}
+              <div className="flex flex-row lg:flex-col items-center lg:items-end gap-6 sm:gap-12">
                 <div className="flex flex-col items-center">
                    <div className="flex flex-col items-center gap-3">
-                     <img src={siteLogo} alt="ILH" className="h-[90px] w-auto brightness-0 invert opacity-100" />
+                     <img src={siteLogo} alt="ILH" className="h-[60px] sm:h-[90px] w-auto brightness-0 invert opacity-100" />
                    </div>
                 </div>
                 {/* Secondary Badge Mockup */}
-                <div className="w-[90px] h-[90px] p-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-[20px] border border-blue-400/30 flex items-center justify-center text-[8px] text-blue-200 font-bold text-center leading-[1.3] uppercase tracking-tighter">
+                <div className="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] p-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-[16px] sm:rounded-[20px] border border-blue-400/30 flex items-center justify-center text-[6.5px] sm:text-[8px] text-blue-200 font-bold text-center leading-[1.3] uppercase tracking-tighter shrink-0">
                   MIAMI-DADE DISADVANTAGED BUSINESS ENTERPRISE
                 </div>
               </div>
