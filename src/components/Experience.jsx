@@ -96,7 +96,7 @@ export default function Experience() {
       <div className="w-full bg-transparent relative z-20">
         
         <motion.div 
-          className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
+          className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-2 xl:grid-cols-4"
         >
           {cards.map((card, index) => {
             const isActive = activeCard === index;
@@ -105,13 +105,13 @@ export default function Experience() {
             return (
               <motion.div 
                 key={card.id}
-                className="relative z-10 w-full min-h-[160px] sm:min-h-[260px]"
+                className="relative z-10 w-full min-h-[140px] sm:min-h-[260px]"
                 onMouseEnter={() => setActiveCard(index)}
                 onMouseLeave={() => setActiveCard(null)}
               >
                 <div 
                   className={`
-                    absolute inset-x-[-1px] inset-y-0 flex flex-col px-8 lg:px-10 z-20 
+                    absolute inset-x-[-1px] inset-y-0 flex flex-col px-4 sm:px-8 lg:px-10 z-20 
                     border transition-all duration-300 ease-in-out cursor-pointer
                     ${isActive 
                       ? 'md:-top-6 md:-bottom-6 bg-white shadow-2xl border-[#e2e8f0] z-40' 
@@ -120,11 +120,11 @@ export default function Experience() {
                   `}
                 >
                   <div className={`transition-all duration-300 flex items-center md:items-start justify-center md:justify-start ${isActive ? 'mt-8 sm:mt-14' : 'mt-6 sm:mt-12'}`}>
-                    <ActIcon size={40} className="text-brand-green" strokeWidth={1.5} />
+                    <ActIcon className="w-8 h-8 sm:w-10 sm:h-10 text-brand-green" strokeWidth={1.5} />
                   </div>
                   
-                  <div className={`mt-4 md:mt-auto whitespace-pre-line transition-all duration-300 text-center md:text-left ${isActive ? 'mb-6 sm:mb-12' : 'mb-6 sm:mb-10'}`}>
-                    <h3 className="font-[800] text-[18px] sm:text-[20px] lg:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
+                  <div className={`mt-3 md:mt-auto whitespace-pre-line transition-all duration-300 text-center md:text-left ${isActive ? 'mb-6 sm:mb-12' : 'mb-6 sm:mb-10'}`}>
+                    <h3 className="font-[800] text-[15px] sm:text-[20px] lg:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
                     <p className="text-[#a1a1aa] text-[13px] sm:text-[14px] mt-1.5 sm:mt-2 font-[600] leading-snug">{card.subtitle}</p>
                   </div>
                 </div>
