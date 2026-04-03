@@ -46,10 +46,6 @@ export default function Capabilities() {
         
         {/* Header Area */}
         <motion.div 
-          initial={{ opacity: 0.8, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex flex-col md:flex-row justify-between items-center md:items-start mb-16 gap-12 w-full lg:w-[95%]"
         >
           
@@ -92,21 +88,10 @@ export default function Capabilities() {
 
         {/* Cards list Container with 'group/list' for sibling fade effects */}
         <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.1 } },
-            hidden: {}
-          }}
           className="flex flex-col gap-4 w-full relative z-10 w-full lg:w-[95%] group/list"
         >
           {capabilitiesList.map((item, index) => (
             <motion.div 
-              variants={{
-                hidden: { opacity: 0.7, y: 10 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
-              }}
               key={index}
               className="bg-white rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
             >

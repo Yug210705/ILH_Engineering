@@ -6,10 +6,6 @@ export default function EngineeringNetwork() {
     <section className="w-full relative overflow-hidden bg-white pt-8 lg:pt-12 pb-0">
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <motion.div 
-          initial={{ opacity: 0.8, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex justify-center lg:justify-start mb-4"
         >
           {/* Pill */}
@@ -20,10 +16,6 @@ export default function EngineeringNetwork() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0.8, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
           className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 lg:gap-10 mb-10 text-center lg:text-left"
         >
           {/* Title */}
@@ -42,10 +34,6 @@ export default function EngineeringNetwork() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0.7, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           className="w-full relative"
         >
           <div className="w-full overflow-hidden">

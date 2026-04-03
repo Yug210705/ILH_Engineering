@@ -67,10 +67,6 @@ export default function Experience() {
 
         {/* Content Container */}
         <motion.div 
-          initial={{ opacity: 0.8, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
           className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pb-8 sm:pb-16 lg:pb-24"
         >
           <div className="flex flex-col md:flex-row justify-between items-center lg:items-center gap-6 md:gap-12">
@@ -100,13 +96,6 @@ export default function Experience() {
       <div className="w-full bg-transparent relative z-20">
         
         <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.15 } },
-            hidden: {}
-          }}
           className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4"
         >
           {cards.map((card, index) => {
@@ -115,10 +104,6 @@ export default function Experience() {
 
             return (
               <motion.div 
-                variants={{
-                  hidden: { opacity: 0.7, y: 15 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
-                }}
                 key={card.id}
                 className="relative z-10 w-full min-h-[160px] sm:min-h-[260px]"
                 onMouseEnter={() => setActiveCard(index)}

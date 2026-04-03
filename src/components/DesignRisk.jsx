@@ -7,10 +7,6 @@ export default function DesignRisk() {
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col items-center">
         
         <motion.div 
-          initial={{ opacity: 0.8, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
           {/* Tag */}
@@ -36,10 +32,6 @@ export default function DesignRisk() {
           
           {/* Left Card: Fragmented Infrastructure */}
           <motion.div 
-            initial={{ opacity: 0.7, x: -15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="bg-white/80 backdrop-blur-md border border-[#fecaca] p-5 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[28px] sm:rounded-[32px] overflow-hidden"
           >
             {/* Image */}
@@ -74,10 +66,6 @@ export default function DesignRisk() {
 
           {/* Right Card: Engineered Infrastructure */}
           <motion.div 
-            initial={{ opacity: 0.7, x: 15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
             className="bg-white/80 backdrop-blur-md border border-[#bbf7d0] p-5 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[28px] sm:rounded-[32px] overflow-hidden"
           >
             {/* Image */}

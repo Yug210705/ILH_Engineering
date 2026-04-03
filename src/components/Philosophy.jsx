@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 
 export default function Philosophy() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -56,10 +56,6 @@ export default function Philosophy() {
       </div>
       
       <motion.div 
-        initial={{ opacity: 0.8, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
         className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center"
       >
         
