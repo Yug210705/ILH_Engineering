@@ -50,18 +50,18 @@ export default function Capabilities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="flex flex-col md:flex-row justify-between items-start mb-16 gap-12 w-full lg:w-[95%]"
+          className="flex flex-col md:flex-row justify-between items-center md:items-start mb-16 gap-12 w-full lg:w-[95%]"
         >
           
           {/* Left / Center Column */}
-          <div className="flex-[1.8] flex flex-col items-start">
-            <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3 py-1.5 rounded-[8px] text-[12.5px] font-[600] tracking-tight border border-[#d2efe2] mb-12 shadow-sm">
+          <div className="flex-[1.8] flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3 py-1.5 rounded-[8px] text-[12.5px] font-[600] tracking-tight border border-[#d2efe2] mb-12 shadow-sm mx-auto md:mx-0">
               <div className="w-[5.5px] h-[5.5px] rounded-full bg-brand-green mb-[0px]"></div>
               Core Engineering Capabilities
             </div>
             
             <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                className="text-[clamp(32px,10vw,72px)] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] ml-0 lg:ml-10 break-words whitespace-normal px-2">
+                className="text-[clamp(32px,10vw,72px)] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] ml-0 lg:ml-10 break-words whitespace-normal px-2 text-center md:text-left">
               Critical<br />
               Infrastructure<br />
               Engineering
@@ -69,8 +69,8 @@ export default function Capabilities() {
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 flex flex-col md:items-start justify-start pt-2 lg:pt-24 w-full">
-            <p className="text-[#848484] text-[15px] font-[500] leading-[1.5] tracking-tight mb-6 max-w-[340px]">
+          <div className="flex-1 flex flex-col items-center md:items-start justify-start pt-2 lg:pt-24 w-full">
+            <p className="text-[#848484] text-[15px] font-[500] leading-[1.5] tracking-tight mb-6 max-w-[340px] text-center md:text-left">
               ILH Engineering Designs and<br/>
               Supports the infrastructure<br/>
               systems that enable<br/>
@@ -79,7 +79,7 @@ export default function Capabilities() {
             </p>
             
             {/* Split Button */}
-            <div className="flex items-stretch shadow-md rounded-[8px] overflow-hidden group cursor-pointer w-max transition-transform border border-[#3e976c] hover:-translate-y-0.5">
+            <div className="flex items-stretch shadow-md rounded-[8px] overflow-hidden group cursor-pointer w-max transition-transform border border-[#3e976c] hover:-translate-y-0.5 mx-auto md:mx-0">
               <div className="bg-[#3e976c] text-white font-[600] tracking-wide text-[14.5px] px-5 py-3 flex items-center justify-center transition-colors group-hover:bg-[#34835d]">
                 View All Capabilities
               </div>
