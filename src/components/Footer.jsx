@@ -44,7 +44,7 @@ export default function Footer({ showTopRow = true }) {
 
       {/* Main Footer Content */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pb-24">
-        <div className="flex flex-col xl:flex-row gap-8 items-stretch">
+        <div className="flex flex-col-reverse xl:flex-row gap-8 items-stretch">
           
           {/* Left Dark Card */}
           <div className="flex-[1.5] bg-[#0a120b] rounded-[40px] p-10 lg:p-16 text-white flex flex-col justify-between">
