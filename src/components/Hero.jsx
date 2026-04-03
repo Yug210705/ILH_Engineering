@@ -101,7 +101,7 @@ export default function Hero() {
                 <Play size={16} fill="#ffffff" stroke="transparent" className="ml-0.5 opacity-90" />
               </div>
             </div>
-            </div>
+
             <div className="flex flex-col justify-center pr-4 md:pr-6">
               <span className="font-bold text-[13px] md:text-[14px] leading-tight mb-[1px] tracking-tight whitespace-nowrap">Hear from Ralph</span>
               <span className="text-[#a1a1aa] text-[10px] md:text-[12px] leading-[1.2] font-[500] max-w-[130px] md:max-w-[150px] line-clamp-2 overflow-hidden">
