@@ -122,3 +122,12 @@ body {
   animation: fadeUpText 0.8s ease-out forwards;
   animation-delay: 1.8s;
 }
+
+/* Custom Scroll Utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

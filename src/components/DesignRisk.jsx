@@ -27,12 +27,12 @@ export default function DesignRisk() {
           </p>
         </motion.div>
 
-        {/* Cards Container */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 xl:gap-12">
+        {/* Cards Container - Sliding on Mobile, Grid on Desktop */}
+        <div className="w-full flex lg:grid lg:grid-cols-2 gap-6 sm:gap-8 xl:gap-12 overflow-x-auto snap-x snap-mandatory pb-6 lg:pb-0 px-4 sm:px-0 scrollbar-hide">
           
           {/* Left Card: Fragmented Infrastructure */}
           <motion.div 
-            className="bg-white/80 backdrop-blur-md border border-[#fecaca] p-5 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[28px] sm:rounded-[32px] overflow-hidden"
+            className="min-w-[88vw] lg:min-w-0 snap-center bg-white/80 backdrop-blur-md border border-[#fecaca] p-5 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[28px] sm:rounded-[32px] overflow-hidden"
           >
             {/* Image */}
             <div className="w-full h-[200px] sm:h-[320px] bg-slate-100 overflow-hidden mb-6 sm:mb-10 relative">
@@ -66,7 +66,7 @@ export default function DesignRisk() {
 
           {/* Right Card: Engineered Infrastructure */}
           <motion.div 
-            className="bg-white/80 backdrop-blur-md border border-[#bbf7d0] p-5 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[28px] sm:rounded-[32px] overflow-hidden"
+            className="min-w-[88vw] lg:min-w-0 snap-center bg-white/80 backdrop-blur-md border border-[#bbf7d0] p-5 sm:p-10 flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-500 rounded-[28px] sm:rounded-[32px] overflow-hidden"
           >
             {/* Image */}
             <div className="w-full h-[200px] sm:h-[320px] bg-slate-100 overflow-hidden mb-6 sm:mb-10 relative">
