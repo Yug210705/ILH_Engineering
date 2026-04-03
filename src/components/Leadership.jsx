@@ -14,7 +14,7 @@ export default function Leadership() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="hidden lg:flex flex-1 flex flex-col items-start text-left order-1"
+            className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1"
           >
             {/* Pill */}
             <div className="inline-flex items-center gap-[6px] bg-[#e8f2ee] text-[#1f2937] px-4 py-[6px] rounded-full text-[13px] font-[500] tracking-tight border border-[#d2efe2] mb-6">
@@ -22,13 +22,13 @@ export default function Leadership() {
               Engineering Leadership
             </div>
 
-            {/* Title */}
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(36px,10vw,76px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] break-words whitespace-normal px-2">
+            {/* Title - Hidden on mobile, shown on desktop */}
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="hidden lg:block text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(36px,10vw,76px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] break-words whitespace-normal px-2">
               Engineering<br/>Leadership
             </h2>
 
-            {/* CTA Button */}
-            <div className="flex items-center gap-[8px] mt-10">
+            {/* CTA Button - Hidden on mobile, shown on desktop */}
+            <div className="hidden lg:flex items-center gap-[8px] mt-10">
               <div className="bg-[#3e976c] text-white font-[500] tracking-wide text-[16px] px-12 h-[52px] rounded-[6px] flex items-center justify-center transition-all cursor-pointer hover:bg-[#34835d] shadow-[0_10px_20px_rgba(55,151,104,0.18)] hover:-translate-y-0.5 hover:shadow-[0_12px_24px_rgba(55,151,104,0.25)]">
                 Learn More
               </div>
