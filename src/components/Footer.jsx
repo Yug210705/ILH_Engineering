@@ -47,7 +47,7 @@ export default function Footer({ showTopRow = true }) {
         <div className="flex flex-col-reverse xl:flex-row gap-8 items-stretch">
           
           {/* Left Dark Card */}
-          <div className="flex-[1.5] bg-[#0a120b] rounded-[40px] p-10 lg:p-16 text-white flex flex-col justify-between">
+          <div className="flex-[1.5] bg-[#0a120b] rounded-[32px] sm:rounded-[40px] p-8 sm:p-10 lg:p-16 text-white flex flex-col justify-between">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12">
               {/* Capabilities */}
               <div className="flex flex-col">
@@ -136,21 +136,21 @@ export default function Footer({ showTopRow = true }) {
           </div>
 
           {/* Right Mint CTA Card */}
-          <div className="flex-1 bg-[#e8f2ee] rounded-[40px] p-10 lg:p-16 flex flex-col justify-between">
+          <div className="flex-1 bg-[#e8f2ee] rounded-[32px] sm:rounded-[40px] p-8 sm:p-10 lg:p-16 flex flex-col justify-between">
             <div>
-               <div className="inline-flex items-center gap-2 bg-[#d7e9e1] text-[#1f2937] px-4.5 py-1.5 rounded-full text-[13px] font-[800] tracking-tight border border-white/30 mb-10">
+               <div className="inline-flex items-center gap-2 bg-[#d7e9e1] text-[#1f2937] px-4 py-1.5 rounded-full text-[12px] sm:text-[13px] font-[800] tracking-tight border border-white/30 mb-6 sm:mb-10">
                 <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
                 Start the Conversation
               </div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(32px,10vw,76px)] font-[800] text-[#0a0a0a] leading-[1.05] tracking-[-0.04em] mb-10 break-words whitespace-normal px-1">
-                Discuss Your<br className="hidden sm:block"/>Infrastructure<br className="hidden sm:block"/>Challenges With <span className="text-[#94a3b8] font-[500] italic">an</span><br className="hidden sm:block"/>Engineer
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(32px,10vw,76px)] font-[800] text-[#0a0a0a] leading-[1.05] tracking-tight mb-6 sm:mb-10 break-words whitespace-normal px-1">
+                Discuss Your<br className="hidden sm:block"/>Infrastructure<br />Challenges With <br className="sm:hidden"/><span className="text-[#94a3b8] font-[500] italic">an</span> <br className="sm:hidden"/>Engineer
               </h2>
-              <p className="text-[#6b7280] text-[18px] font-medium leading-[1.6] max-w-[460px]">
+              <p className="text-[#6b7280] text-[15.5px] sm:text-[18px] font-medium leading-[1.6] max-w-[460px]">
                 ILH Engineering helps organizations design resilient infrastructure for environments where reliability matters.
               </p>
             </div>
 
-            <div className="mt-20">
+            <div className="mt-10 sm:mt-20">
               <button className="w-full bg-brand-green hover:bg-[#2e8451] text-white font-[800] py-4 sm:py-6 px-4 rounded-xl text-[14px] sm:text-[18px] transition-all shadow-xl shadow-brand-green/20 mb-6 leading-tight break-words whitespace-normal">
                 Schedule Infrastructure Consultation
               </button>
