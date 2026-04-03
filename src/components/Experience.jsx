@@ -33,7 +33,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-white to-[#f4f7f6] pt-16 sm:pt-24 pb-12">
+    <section className="w-full bg-gradient-to-b from-white to-[#f4f7f6] pt-10 sm:pt-24 pb-8 sm:pb-12">
       
       {/* Top Section: Hero/Header area */}
       <div className="relative w-full z-10 flex flex-col items-center">
@@ -71,24 +71,24 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pb-16 lg:pb-24"
+          className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pb-8 sm:pb-16 lg:pb-24"
         >
-          <div className="flex flex-col md:flex-row justify-between items-start lg:items-center gap-8 md:gap-12">
+          <div className="flex flex-col md:flex-row justify-between items-center lg:items-center gap-6 md:gap-12">
             {/* Left Header */}
-            <div className="w-full md:flex-[1.5]">
-              <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-xl text-[12px] font-[800] tracking-wide border border-[#d2efe2] mb-6">
+            <div className="w-full md:flex-[1.5] flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-xl text-[12px] font-[800] tracking-wide border border-[#d2efe2] mb-4 sm:mb-6 mx-auto md:mx-0">
                 <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
                 Engineering Experience
               </div>
               
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(32px,10vw,72px)] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] mt-2 break-words whitespace-normal pr-2">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(32px,10vw,72px)] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] mt-2 break-words whitespace-normal px-2 md:px-0 text-center md:text-left">
                 Infrastructure <span className="text-[#a1a1aa] font-[800]">that</span><br/>Must Perform
               </h2>
             </div>
             
             {/* Right Paragraph */}
-            <div className="w-full md:flex-1 md:mt-16 lg:mt-24 max-w-[500px]">
-              <p className="text-[#64748b] text-[16px] lg:text-[18px] leading-[1.7] font-medium">
+            <div className="w-full md:flex-1 md:mt-16 lg:mt-24 max-w-[500px] text-center md:text-left mt-0">
+              <p className="text-[#64748b] text-[15px] sm:text-[16px] lg:text-[18px] leading-[1.6] sm:leading-[1.7] font-[500] px-4 md:px-0">
                 Supporting Electrical and Low Voltage Infrastructure, Mission-Critical operations, and large scale facilities where downtime is not acceptable.
               </p>
             </div>
@@ -120,7 +120,7 @@ export default function Experience() {
                   visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
                 }}
                 key={card.id}
-                className="relative z-10 w-full min-h-[220px] sm:min-h-[260px]"
+                className="relative z-10 w-full min-h-[160px] sm:min-h-[260px]"
                 onMouseEnter={() => setActiveCard(index)}
                 onMouseLeave={() => setActiveCard(null)}
               >
@@ -134,13 +134,13 @@ export default function Experience() {
                     }
                   `}
                 >
-                  <div className={`transition-all duration-300 ${isActive ? 'mt-12 sm:mt-14' : 'mt-10 sm:mt-12'}`}>
+                  <div className={`transition-all duration-300 flex items-center md:items-start justify-center md:justify-start ${isActive ? 'mt-8 sm:mt-14' : 'mt-6 sm:mt-12'}`}>
                     <ActIcon size={40} className="text-brand-green" strokeWidth={1.5} />
                   </div>
                   
-                  <div className={`mt-auto whitespace-pre-line transition-all duration-300 ${isActive ? 'mb-10 sm:mb-12' : 'mb-8 sm:mb-10'}`}>
-                    <h3 className="font-[800] text-[20px] sm:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
-                    <p className="text-[#a1a1aa] text-[14px] mt-2 font-semibold leading-snug">{card.subtitle}</p>
+                  <div className={`mt-4 md:mt-auto whitespace-pre-line transition-all duration-300 text-center md:text-left ${isActive ? 'mb-6 sm:mb-12' : 'mb-6 sm:mb-10'}`}>
+                    <h3 className="font-[800] text-[18px] sm:text-[20px] lg:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
+                    <p className="text-[#a1a1aa] text-[13px] sm:text-[14px] mt-1.5 sm:mt-2 font-[600] leading-snug">{card.subtitle}</p>
                   </div>
                 </div>
               </motion.div>

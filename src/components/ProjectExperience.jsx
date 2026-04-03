@@ -21,7 +21,7 @@ export default function ProjectExperience() {
   ];
 
   return (
-    <section className="w-full bg-[#f8faf9] relative overflow-hidden pt-12 pb-12 sm:pb-16 lg:pb-20">
+    <section className="w-full bg-[#f8faf9] relative overflow-hidden pt-8 sm:pt-12 pb-10 sm:pb-16 lg:pb-20">
       
       {/* 1. Background Grid Area - Ultra-smooth responsive mask */}
       <div className="absolute inset-x-0 top-0 h-full pointer-events-none z-0">
@@ -39,7 +39,7 @@ export default function ProjectExperience() {
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center">
         
         {/* Tag - Aligned with Hero style */}
-        <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-lg text-[11px] sm:text-[13px] font-[700] tracking-tight border border-[#d2efe2] mb-8 sm:mb-12">
+        <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-lg text-[11px] sm:text-[13px] font-[700] tracking-tight border border-[#d2efe2] mb-4 sm:mb-12">
           <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
           Project Experience
         </div>
@@ -47,13 +47,13 @@ export default function ProjectExperience() {
         {/* Heading - Responsively Sized */}
         <h2 
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-          className="text-[clamp(28px,7.5vw,84px)] font-[800] leading-[1.05] sm:leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1200px] mb-8 sm:mb-12 break-words whitespace-normal px-2"
+          className="text-[clamp(28px,7.5vw,84px)] font-[800] leading-[1.05] sm:leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1200px] mb-4 sm:mb-12 break-words whitespace-normal px-2"
         >
           Engineering Infrastructure <br className="hidden sm:block"/> <span className="text-[#a1a1aa] font-[400]">for</span> Critical Environments
         </h2>
 
         {/* Description - Responsively Spaced */}
-        <p className="text-[#71717a] text-[15px] sm:text-[18px] leading-[1.65] max-w-[800px] font-[500] text-center mb-12 sm:mb-24 px-4 sm:px-0">
+        <p className="text-[#71717a] text-[15px] sm:text-[18px] leading-[1.65] max-w-[800px] font-[500] text-center mb-8 sm:mb-24 px-4 sm:px-0">
           Selected work supporting enterprise systems, large-scale facilities, and mission-critical operations where reliability is essential.
         </p>
 
@@ -78,14 +78,14 @@ export default function ProjectExperience() {
               </div>
 
               {/* Text Area - Responsively Padded */}
-              <div className="px-8 sm:px-10 lg:px-12 pt-8 sm:pt-10 pb-8 flex flex-col bg-white">
+              <div className="px-6 sm:px-10 lg:px-12 pt-6 sm:pt-10 pb-6 sm:pb-8 flex flex-col bg-white text-center sm:text-left items-center sm:items-start">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                  className="text-[20px] sm:text-[22px] lg:text-[26px] font-[800] text-[#0a0a0a] mb-3 tracking-tight leading-tight transition-colors duration-300 group-hover:text-brand-green"
+                  className="text-[18px] sm:text-[22px] lg:text-[26px] font-[800] text-[#0a0a0a] mb-2 sm:mb-3 tracking-tight leading-tight transition-colors duration-300 group-hover:text-brand-green"
                 >
                   {project.title}
                 </h3>
-                <p className="text-[#71717a] text-[15px] sm:text-[16px] leading-[1.65] font-[500]">
+                <p className="text-[#71717a] text-[14.5px] sm:text-[16px] leading-[1.6] sm:leading-[1.65] font-[500] px-2 sm:px-0">
                   {project.desc}
                 </p>
               </div>
@@ -97,7 +97,7 @@ export default function ProjectExperience() {
         </div>
 
         {/* CTA Button - Responsively Padded and Sized */}
-        <div className="flex justify-center mt-10 sm:mt-16 lg:mt-20 w-full px-4 sm:px-0">
+        <div className="flex justify-center mt-6 sm:mt-16 lg:mt-20 w-full px-4 sm:px-0">
           <button className="bg-brand-green hover:bg-[#2d7d56] text-white font-[800] text-[14px] sm:text-[16px] px-6 sm:px-14 py-4 sm:py-5 rounded-[12px] transition-all duration-300 shadow-xl shadow-brand-green/20 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-brand-green/30 w-full sm:w-auto">
             View Project Experience
           </button>

@@ -36,7 +36,7 @@ export default function Philosophy() {
   );
 
   return (
-    <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-28 pb-16 overflow-hidden">
+    <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-16 sm:pt-28 pb-10 sm:pb-16 overflow-hidden">
       
       {/* Background Vignette Grid - Restored for local depth with ultra-smooth radial mask */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none w-full max-w-[100vw]">
@@ -64,18 +64,18 @@ export default function Philosophy() {
       >
         
         {/* Tag */}
-        <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-[14px] text-[14px] font-bold tracking-wide border border-[#d2efe2] mb-8 shadow-sm shadow-[#379768]/10">
+        <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-[14px] text-[13px] sm:text-[14px] font-bold tracking-wide border border-[#d2efe2] mb-6 sm:mb-8 shadow-sm shadow-[#379768]/10">
           <div className="w-[6px] h-[6px] rounded-full bg-brand-green mb-[1px]"></div>
           Our Engineering Philosophy
         </div>
 
         {/* Heading */}
-        <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[34px] sm:text-[52px] lg:text-[72px] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1200px] mb-8">
+        <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] sm:text-[52px] lg:text-[72px] font-[800] leading-[1.05] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1200px] mb-4 sm:mb-8 px-4">
           Reliability Is Not Luck. <br className="hidden md:block"/> It Is Engineered.
         </h2>
 
         {/* Paragraph */}
-        <p className="text-[#64748b] text-[16px] md:text-[18px] xl:text-[20px] leading-[1.7] font-medium text-center max-w-[1000px] mb-12 mix-blend-multiply">
+        <p className="text-[#64748b] text-[15px] sm:text-[16px] md:text-[18px] xl:text-[20px] leading-[1.7] font-medium text-center max-w-[1000px] mb-8 sm:mb-12 mix-blend-multiply px-4">
           At ILH Engineering, infrastructure is designed as an integrated system.<br className="hidden md:block"/>
           Electrical power, communications networks, life-safety systems, & operational technologies<br className="hidden lg:block"/>
           must work together under failure conditions. At the lowest cost possible.
@@ -83,7 +83,7 @@ export default function Philosophy() {
       </motion.div>
 
       {/* Graphic Container */}
-      <div className="relative w-full pb-12">
+      <div className="relative w-full pb-4 sm:pb-12">
         <div className="relative w-full aspect-[1200/600] max-w-[1400px] mx-auto mt-6 pointer-events-auto sm:px-12">
           
           <svg viewBox="0 100 1200 600" className="absolute inset-0 w-full h-full z-0 overflow-visible pointer-events-none">
@@ -159,8 +159,8 @@ export default function Philosophy() {
       </div>
 
       {/* Bottom Text and CTA */}
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col items-center mt-12">
-        <p className="text-[#64748b] text-[16px] md:text-[17px] font-medium text-center max-w-[800px] mb-8 mix-blend-multiply">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col items-center mt-6 sm:mt-12">
+        <p className="text-[#64748b] text-[15px] sm:text-[16px] md:text-[17px] font-medium text-center max-w-[800px] mb-6 sm:mb-8 mix-blend-multiply px-2">
           Our approach prioritizes redundancy, system integration, and disciplined infrastructure <br className="hidden md:block"/>
           planning to ensure critical operations remain online when disruption occurs.
         </p>
