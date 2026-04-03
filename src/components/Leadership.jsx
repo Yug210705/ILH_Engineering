@@ -46,7 +46,7 @@ export default function Leadership() {
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="flex flex-col items-center w-full max-w-[480px]"
           >
-            <div className="w-full h-[580px] bg-slate-100 overflow-hidden mb-4 relative flex items-center justify-center rounded-[20px] shadow-lg">
+            <div className="w-full aspect-[48/58] sm:h-[580px] bg-slate-100 overflow-hidden mb-4 relative flex items-center justify-center rounded-[20px] shadow-lg">
               <img 
                 src={ralphImg} 
                 alt="Ralph F. Iles III" 
