@@ -48,10 +48,10 @@ export default function Footer({ showTopRow = true }) {
           
           {/* Left Dark Card */}
           <div className="flex-[1.5] bg-[#0a120b] rounded-[32px] sm:rounded-[40px] p-8 sm:p-10 lg:p-16 text-white flex flex-col justify-between">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-16 gap-x-12">
               {/* Capabilities */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-8">Capabilities</h4>
+                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Capabilities</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">Electrical Power Systems</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Mission Critical Infrastructure</li>
@@ -63,7 +63,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* Get in Touch */}
               <div className="flex flex-col order-last lg:order-none">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-8">Get in Touch</h4>
+                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Get in Touch</h4>
                 <ul className="flex flex-col gap-6 text-[14.5px] text-[#9ca3af] font-medium">
                   <li className="flex items-start gap-3.5 transition-colors">
                     <Phone size={18} className="shrink-0 mt-0.5 text-[#379768]" />
@@ -80,8 +80,8 @@ export default function Footer({ showTopRow = true }) {
                 </ul>
               </div>
 
-              {/* Logo / Badge */}
-              <div className="flex flex-col items-start lg:items-end gap-12">
+              {/* Logo / Badge Area - Compact for mobile */}
+              <div className="flex flex-col items-start lg:items-end gap-6 sm:gap-12">
                 <div className="flex flex-col items-center">
                    <div className="flex flex-col items-center gap-3">
                      <img src={siteLogo} alt="ILH" className="h-[90px] w-auto brightness-0 invert opacity-100" />
@@ -95,7 +95,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* Insights */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-8">Insights</h4>
+                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Insights</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">Technical Insights</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Infrastructure Briefings</li>
@@ -105,7 +105,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* Experience */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-8">Experience</h4>
+                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Experience</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">Projects</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Case Studies</li>
@@ -114,7 +114,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* The Firm */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-8">The Firm</h4>
+                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">The Firm</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">About ILH Eng.</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Founder</li>
@@ -124,7 +124,7 @@ export default function Footer({ showTopRow = true }) {
             </div>
 
             {/* Bottom Section */}
-            <div className="pt-12 border-t border-dashed border-white/10 mt-20 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="pt-8 sm:pt-12 border-t border-dashed border-white/10 mt-10 sm:mt-20 flex flex-col md:flex-row items-center justify-between gap-8">
               <span className="text-[#64748b] text-[13px] font-[600]">© 2026 ILH Engineering. All rights reserved.</span>
               <div className="flex items-center gap-8">
                 <div className="w-[18px] h-[18px] bg-white/20 rounded-full cursor-pointer hover:bg-white/40 transition-colors"></div>
