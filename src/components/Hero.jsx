@@ -11,7 +11,7 @@ export default function Hero() {
         initial={{ opacity: 0.9, scale: 0.995 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative w-full h-[530px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
+        className="relative w-full h-[420px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
       >
         <img 
           src={heroImg} 
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         
         {/* The White Overlay containing text blocks */}
-        <div className="absolute top-0 left-0 h-full flex flex-col items-center sm:items-start justify-start sm:justify-center pointer-events-none z-10 w-full pt-16 sm:pt-0 pb-16 lg:pb-24">
+        <div className="absolute top-0 left-0 h-full flex flex-col items-center sm:items-start justify-start sm:justify-center pointer-events-none z-10 w-full pt-10 sm:pt-0 pb-16 lg:pb-24">
           
           {/* Block 0: Pill (Short) */}
           <motion.div 
@@ -88,7 +88,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.35 }}
-          className="absolute bottom-[130px] sm:bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:left-8 z-30 flex items-center text-white"
+          className="absolute bottom-[100px] sm:bottom-6 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:left-8 z-30 flex items-center text-white"
         >
           <div className="bg-[#524f46]/95 backdrop-blur-md flex items-center justify-center p-1.5 sm:p-2 rounded-[12px] sm:rounded-[14px] shadow-xl w-max hover:bg-[#524f46] transition-all cursor-pointer group">
             <div className="relative shrink-0 flex items-center justify-center mr-2.5 sm:mr-3">
