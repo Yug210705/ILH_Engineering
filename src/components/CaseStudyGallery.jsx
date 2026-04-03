@@ -32,7 +32,7 @@ const projects = [
 
 export default function CaseStudyGallery() {
   return (
-    <section className="w-full bg-[#fafafa] relative pt-12 pb-20 border-t border-[#f0f0f0]">
+    <section className="w-full bg-[#fafafa] relative pt-8 pb-12 border-t border-[#f0f0f0]">
       
       {/* 1. Header Area */}
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 text-center mb-12 lg:mb-16">
@@ -43,7 +43,7 @@ export default function CaseStudyGallery() {
 
         <h2 
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-          className="text-[clamp(32px,10vw,84px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mb-6 break-words whitespace-normal px-2"
+          className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,84px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mb-6 break-words whitespace-normal px-2"
         >
           Explore <span className="text-[#c8cfd6]">Infrastructure</span> <br className="hidden sm:block"/> Case Studies
         </h2>
@@ -59,10 +59,6 @@ export default function CaseStudyGallery() {
           {projects.map((project, index) => (
             <motion.div 
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
               className={`group flex flex-col bg-white overflow-hidden transition-all duration-500 ${index !== projects.length - 1 ? 'md:border-r border-[#f0f0f0]' : ''}`}
             >
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -78,7 +74,7 @@ export default function CaseStudyGallery() {
                 </div>
               </div>
 
-              <div className="p-6 md:p-10 lg:p-12 flex flex-col gap-4">
+              <div className="p-5 sm:p-10 lg:p-12 flex flex-col gap-4">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                   className="text-[20px] lg:text-[24px] xl:text-[28px] font-[800] text-[#0a0a0a] leading-tight group-hover:text-[#3e976c] transition-colors break-words whitespace-normal"

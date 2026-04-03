@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ExperienceHero() {
   return (
-    <section className="w-full bg-white relative overflow-hidden pt-4 pb-16 lg:pb-24">
+    <section className="w-full bg-white relative overflow-hidden pt-2 pb-8 lg:pb-16">
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative">
         <div className="relative w-full rounded-[40px]">
           {/* Main Image Base */}
@@ -12,6 +12,8 @@ export default function ExperienceHero() {
             src={experienceImg} 
             alt="Infrastructure Case Studies" 
             className="w-full h-auto block object-cover rounded-[40px]"
+            loading="eager"
+            fetchpriority="high"
           />
 
           {/* ===== TEXT positioned securely inside the built-in white cutout area ===== */}
@@ -28,10 +30,10 @@ export default function ExperienceHero() {
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
               className="leading-[1.0] lg:leading-[0.95] tracking-tight w-full pl-1 sm:pl-4 lg:pl-6"
             >
-              <span className="block text-[#c8cfd6] font-[500] text-[clamp(24px,8vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight">
+              <span className="block text-[#c8cfd6] font-[500] text-[clamp(22px,7.5vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight">
                 Infrastructure
               </span>
-              <span className="block text-[#0a0a0a] font-[800] text-[clamp(26px,9vw,84px)] xl:text-[84px] mt-1 lg:mt-2 break-words whitespace-normal leading-[0.95]">
+              <span className="block text-[#0a0a0a] font-[800] text-[clamp(24px,8.5vw,84px)] xl:text-[84px] mt-1 lg:mt-2 break-words whitespace-normal leading-[0.95]">
                 Case Studies.
               </span>
             </h1>

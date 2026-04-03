@@ -8,16 +8,13 @@ import linesDecoration from '../assets/lines.png';
 
 export default function CaseStudyHighlight({ setCurrentView }) {
   return (
-    <section className="w-full bg-white relative pt-20 lg:pt-32 pb-12 border-t border-[#f0f0f0]">
+    <section className="w-full bg-white relative pt-10 lg:pt-20 pb-8 border-t border-[#f0f0f0]">
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
           {/* Left Side - Featured Image */}
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
             className="w-full aspect-[4/3] lg:aspect-square overflow-hidden rounded-[32px] shadow-2xl shadow-gray-200"
           >
             <img 
@@ -64,7 +61,7 @@ export default function CaseStudyHighlight({ setCurrentView }) {
                   
                   <h2 
                     style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                    className="text-[30px] sm:text-[40px] lg:text-[48px] xl:text-[56px] font-[800] leading-[1.05] tracking-[-0.04em] text-[#0a0a0a] max-w-[450px] sm:max-w-[550px] lg:max-w-[650px]"
+                    className="text-[clamp(24px,7.5vw,32px)] sm:text-[40px] lg:text-[48px] xl:text-[56px] font-[800] leading-[1.05] tracking-[-0.04em] text-[#0a0a0a] max-w-[450px] sm:max-w-[550px] lg:max-w-[650px]"
                   >
                     Large-Scale <br /> Infrastructure <br /> Environments
                   </h2>
