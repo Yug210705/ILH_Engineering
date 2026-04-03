@@ -43,7 +43,7 @@ export default function Hero() {
             transition={{ duration: 0.35, delay: 0.1 }}
             className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-20"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '20px' }}>
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               Infrastructure
             </h1>
           </motion.div>
@@ -55,7 +55,7 @@ export default function Hero() {
             transition={{ duration: 0.35, delay: 0.15 }}
             className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-30"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '20px' }}>
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               that <span className="text-brand-green">Performs</span>
             </h1>
           </motion.div>
@@ -67,7 +67,7 @@ export default function Hero() {
             transition={{ duration: 0.35, delay: 0.2 }}
             className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-40"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '20px' }}>
-             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
                when Failure isn&#39;t
              </h1>
           </motion.div>
@@ -79,7 +79,7 @@ export default function Hero() {
             transition={{ duration: 0.35, delay: 0.25 }}
             className="bg-[#ffffff] pr-[20px] sm:pr-[32px] lg:pr-[48px] pl-[16px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-50"
             style={{ borderTopRightRadius: '20px', borderBottomRightRadius: '24px' }}>
-             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(26px,8.5vw,64px)] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+             <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
                an <span className="text-brand-green">Option.</span>
              </h1>
           </motion.div>
