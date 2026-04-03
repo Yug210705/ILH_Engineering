@@ -73,10 +73,10 @@ export default function CaseStudyHighlight({ setCurrentView }) {
                     onClick={() => setCurrentView('caseStudy')}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="bg-[#3e976c] hover:bg-[#347d5a] text-white flex items-center justify-center gap-2.5 sm:gap-4 px-5 sm:px-[62px] py-2.5 sm:py-6 rounded-[10px] lg:rounded-[18px] text-[13px] sm:text-[18px] lg:text-[19px] font-[800] transition-all shadow-xl shadow-[#3e976c]/30 sm:min-w-[315px] lg:min-w-[355px]"
+                    className="bg-[#3e976c] hover:bg-[#347d5a] text-white flex items-center justify-center gap-2 sm:gap-4 px-4 sm:px-[62px] py-1.5 sm:py-6 rounded-[10px] lg:rounded-[18px] text-[11px] sm:text-[18px] lg:text-[19px] font-[800] transition-all shadow-xl shadow-[#3e976c]/30 sm:min-w-[315px] lg:min-w-[355px]"
                   >
                     <span className="tracking-tight">Explore Case Study</span>
-                    <ArrowRight size={16} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2.5} />
+                    <ArrowRight size={14} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2.5} />
                   </motion.button>
                 </div>
 
