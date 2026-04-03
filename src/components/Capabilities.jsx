@@ -61,7 +61,7 @@ export default function Capabilities() {
             </div>
             
             <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                className="text-[clamp(32px,10vw,72px)] font-[700] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] ml-0 lg:ml-10 break-words whitespace-normal px-2 text-center md:text-left">
+                className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] ml-0 lg:ml-10 break-words whitespace-normal px-2 text-center md:text-left">
               Critical<br />
               Infrastructure<br />
               Engineering

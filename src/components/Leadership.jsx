@@ -23,7 +23,7 @@ export default function Leadership() {
             </div>
 
             {/* Title */}
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(36px,10vw,76px)] font-[700] leading-[1.05] tracking-[-0.03em] text-[#0a0a0a] break-words whitespace-normal px-2">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(36px,10vw,76px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] break-words whitespace-normal px-2">
               Engineering<br/>Leadership
             </h2>
 

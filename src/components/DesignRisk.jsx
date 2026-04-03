@@ -20,7 +20,7 @@ export default function DesignRisk() {
           </div>
 
           {/* Heading */}
-          <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(30px,8vw,72px)] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] text-center max-w-[1100px] mb-4 sm:mb-8 break-words whitespace-normal px-2">
+          <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] text-center max-w-[1100px] mb-4 sm:mb-8 break-words whitespace-normal px-2">
             Most Infrastructure Failures <br className="hidden md:block"/> Start With Design.
           </h2>
 

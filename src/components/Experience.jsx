@@ -81,7 +81,7 @@ export default function Experience() {
                 Engineering Experience
               </div>
               
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(32px,10vw,72px)] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a] mt-2 break-words whitespace-normal px-2 md:px-0 text-center md:text-left">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mt-2 break-words whitespace-normal px-2 md:px-0 text-center md:text-left">
                 Infrastructure <span className="text-[#a1a1aa] font-[800]">that</span><br/>Must Perform
               </h2>
             </div>
