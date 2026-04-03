@@ -14,7 +14,7 @@ export default function Leadership() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1"
+            className="hidden lg:flex flex-1 flex flex-col items-start text-left order-1"
           >
             {/* Pill */}
             <div className="inline-flex items-center gap-[6px] bg-[#e8f2ee] text-[#1f2937] px-4 py-[6px] rounded-full text-[13px] font-[500] tracking-tight border border-[#d2efe2] mb-6">
@@ -63,6 +63,16 @@ export default function Leadership() {
               </div>
               <div className="bg-white/80 backdrop-blur-sm shadow-sm border border-slate-100 text-[#0a0a0a] text-[11px] sm:text-[12px] font-[700] px-3 sm:px-4 py-2.5 sm:py-3 rounded-[6px] tracking-tight flex-1 sm:flex-1 text-center whitespace-normal sm:whitespace-nowrap break-words min-w-[30%]">
                 Veteran
+              </div>
+            </div>
+
+            {/* MOBILE ONLY: Learn More Button shifted here */}
+            <div className="flex lg:hidden items-center gap-[8px] mt-8 w-full px-4">
+              <div className="flex-1 bg-[#3e976c] text-white font-[700] tracking-wide text-[15px] h-[52px] rounded-[10px] flex items-center justify-center transition-all cursor-pointer shadow-[0_10px_20px_rgba(55,151,104,0.18)]">
+                Learn More
+              </div>
+              <div className="bg-[#3e976c] text-white w-[52px] h-[52px] rounded-[10px] flex items-center justify-center transition-all cursor-pointer shadow-[0_10px_20px_rgba(55,151,104,0.18)]">
+                <ArrowUpRight size={22} strokeWidth={2.5} />
               </div>
             </div>
             
