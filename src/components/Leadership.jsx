@@ -14,7 +14,7 @@ export default function Leadership() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left"
+            className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1"
           >
             {/* Pill */}
             <div className="inline-flex items-center gap-[6px] bg-[#e8f2ee] text-[#1f2937] px-4 py-[6px] rounded-full text-[13px] font-[500] tracking-tight border border-[#d2efe2] mb-6">
@@ -44,7 +44,7 @@ export default function Leadership() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
-            className="flex flex-col items-center w-full max-w-[480px]"
+            className="flex flex-col items-center w-full max-w-[480px] order-3 lg:order-2"
           >
             <div className="w-full aspect-[48/58] sm:h-[580px] bg-slate-100 overflow-hidden mb-4 relative flex items-center justify-center rounded-[20px] shadow-lg">
               <img 
@@ -73,7 +73,7 @@ export default function Leadership() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: 0.15, ease: "easeOut" }}
-            className="flex-none w-full lg:w-[400px] flex flex-col text-center lg:text-left pt-6 lg:pt-[190px] px-4 sm:px-8 lg:px-0"
+            className="flex-none w-full lg:w-[400px] flex flex-col text-center lg:text-left pt-0 lg:pt-[190px] px-4 sm:px-8 lg:px-0 order-2 lg:order-3"
           >
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[34px] lg:text-[38px] font-[700] text-[#0a0a0a] tracking-[-0.02em] leading-[1.0] mb-4">
               Ralph F. Iles III
