@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         
         {/* The White Overlay containing text blocks */}
-        <div className="absolute top-0 left-0 h-full flex flex-col items-center sm:items-start justify-center pointer-events-none z-10 w-full pb-16 lg:pb-24">
+        <div className="absolute top-0 left-0 h-full flex flex-col items-center sm:items-start justify-start sm:justify-center pointer-events-none z-10 w-full pt-16 sm:pt-0 pb-16 lg:pb-24">
           
           {/* Block 0: Pill (Short) */}
           <motion.div 
