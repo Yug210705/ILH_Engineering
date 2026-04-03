@@ -11,7 +11,7 @@ export default function Hero() {
         initial={{ opacity: 0.9, scale: 0.995 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative w-full h-[620px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
+        className="relative w-full h-[680px] sm:h-[620px] lg:h-[700px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#2a2a2a]"
       >
         <img 
           src={heroImg} 
@@ -91,12 +91,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.35 }}
-          className="absolute bottom-6 left-6 lg:left-8 z-30 flex items-center text-white"
+          className="absolute bottom-[150px] sm:bottom-6 left-4 sm:left-6 lg:left-8 z-30 flex items-center text-white"
         >
-          <div className="bg-[#524f46]/95 backdrop-blur-md flex items-center justify-center p-2 rounded-[14px] shadow-xl w-max hover:bg-[#524f46] transition-all cursor-pointer group">
-            <div className="relative shrink-0 flex items-center justify-center mr-3">
+          <div className="bg-[#524f46]/95 backdrop-blur-md flex items-center justify-center p-1.5 sm:p-2 rounded-[12px] sm:rounded-[14px] shadow-xl w-max hover:bg-[#524f46] transition-all cursor-pointer group">
+            <div className="relative shrink-0 flex items-center justify-center mr-2.5 sm:mr-3">
               <img src={ralphImg} 
-                   alt="Ralph" className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] rounded-[10px] object-cover" />
+                   alt="Ralph" className="w-[36px] sm:w-[40px] md:w-[50px] h-[36px] sm:h-[40px] md:h-[50px] rounded-[8px] sm:rounded-[10px] object-cover" />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <Play size={16} fill="#ffffff" stroke="transparent" className="ml-0.5 opacity-90" />
               </div>
@@ -129,12 +129,12 @@ export default function Hero() {
           transition={{ duration: 0.4, delay: 0.45 }}
           className="absolute bottom-0 right-0 z-20 pointer-events-auto w-full sm:w-auto"
         >
-          <div className="bg-[#ffffff] px-6 sm:px-10 py-6 sm:py-8 rounded-t-[20px] sm:rounded-tl-[32px] sm:rounded-tr-none flex justify-center">
+          <div className="bg-[#ffffff] px-4 sm:px-10 py-5 sm:py-8 rounded-t-[20px] sm:rounded-tl-[32px] sm:rounded-tr-none flex justify-center">
              <div className="flex flex-col items-start w-full max-w-[100%] sm:max-w-none">
-                <button className="bg-brand-green hover:bg-[#328b58] text-white font-[800] text-[13px] sm:text-[16px] px-4 sm:px-6 py-3.5 sm:py-4 rounded-[10px] w-full transition-all tracking-wide shadow-lg shadow-brand-green/20">
+                <button className="bg-brand-green hover:bg-[#328b58] text-white font-[800] text-[clamp(12px,3.8vw,16px)] sm:text-[16px] px-2 sm:px-6 py-3.5 sm:py-4 rounded-[10px] w-full transition-all tracking-wide shadow-lg shadow-brand-green/20 leading-tight whitespace-normal break-words flex items-center justify-center">
                   Schedule Infrastructure Consultation
                 </button>
-                <p className="mt-4 text-[#6b7280] text-[11px] sm:text-[13.5px] text-center sm:text-left font-semibold w-full">
+                <p className="mt-3.5 sm:mt-4 text-[#6b7280] text-[11px] sm:text-[13.5px] text-center sm:text-left font-semibold w-full">
                   Speak directly with an infrastructure engineer.
                 </p>
              </div>
