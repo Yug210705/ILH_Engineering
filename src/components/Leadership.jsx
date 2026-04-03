@@ -4,7 +4,7 @@ import ralphImg from '../assets/ralph.png';
 
 export default function Leadership() {
   return (
-    <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f8faf9] to-white pt-24 lg:pt-32 pb-8">
+    <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f8faf9] to-white pt-12 lg:pt-32 pb-8">
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-16 lg:gap-10">
           

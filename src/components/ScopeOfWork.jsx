@@ -43,8 +43,8 @@ export default function ScopeOfWork() {
       </div>
 
       {/* Header Container - 1:1 Proportional Match */}
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pt-24 lg:pt-32 pb-16">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-16">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pt-12 lg:pt-32 pb-8 sm:pb-16">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-16">
           
           {/* Tag on Left - Exact pill styling */}
           <div className="shrink-0 pt-1">
@@ -55,10 +55,10 @@ export default function ScopeOfWork() {
           </div>
 
           {/* Heading - Shifted Left, Ultra-Bold, 2 Lines exactly */}
-          <div className="flex-1 flex justify-start lg:pl-4">
+          <div className="flex-1 flex justify-start lg:pl-4 text-center lg:text-left">
             <h2 
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-              className="text-[clamp(28px,8.5vw,64px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] text-left max-w-none break-words whitespace-normal px-2 sm:px-0"
+              className="text-[clamp(28px,8.5vw,64px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] text-center lg:text-left max-w-none break-words whitespace-normal px-2 sm:px-0"
             >
               <span className="lg:whitespace-nowrap">Infrastructure Across</span> <br className="hidden sm:block" /> 
               <span className="lg:whitespace-nowrap">Complex Environments</span>
@@ -66,8 +66,8 @@ export default function ScopeOfWork() {
           </div>
 
           {/* Description - Right aligned, light gray tight line-height */}
-          <div className="lg:w-[320px] shrink-0 pt-2">
-            <p className="text-[#8e9aaf] text-[15.5px] xl:text-[16px] leading-[1.6] font-[500] text-left lg:text-left opacity-90">
+          <div className="lg:w-[320px] shrink-0 pt-2 text-center lg:text-left">
+            <p className="text-[#8e9aaf] text-[15.5px] xl:text-[16px] leading-[1.6] font-[500] text-center lg:text-left opacity-90 px-4 lg:px-0">
               Our work spans enterprise systems, large-scale facilities, & mission-critical environments where infrastructure performance is essential.
             </p>
           </div>

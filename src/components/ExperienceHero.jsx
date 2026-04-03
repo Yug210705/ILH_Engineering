@@ -16,7 +16,7 @@ export default function ExperienceHero() {
 
           {/* ===== TEXT positioned securely inside the built-in white cutout area ===== */}
           {/* Re-aligned precisely to the image cutout's physical boundaries based on accurate constraints */}
-          <div className="absolute top-[8%] sm:top-[6%] lg:top-[3%] left-[5%] sm:left-[8%] lg:left-[10%] z-10 flex flex-col items-start w-full max-w-[90%] sm:max-w-[75%] lg:max-w-[55%]">
+          <div className="absolute top-[8%] sm:top-[6%] lg:top-[3%] left-0 sm:left-[8%] lg:left-[10%] z-10 flex flex-col items-center sm:items-start w-full sm:max-w-[75%] lg:max-w-[55%] text-center sm:text-left">
             
             {/* Project Experience Tag */}
             <div className="inline-flex items-center gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-4 sm:px-6 py-1.5 sm:py-1.5 rounded-full text-[11px] sm:text-[15px] lg:text-[16px] font-[500] tracking-tight border border-[#cfe2d9] mb-2 sm:mb-5 lg:mb-6 sm:ml-4 lg:ml-6 ml-1">
