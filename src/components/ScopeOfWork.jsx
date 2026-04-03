@@ -43,7 +43,7 @@ export default function ScopeOfWork() {
       </div>
 
       {/* Header Container - 1:1 Proportional Match */}
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pt-12 lg:pt-32 pb-8 sm:pb-16">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 pt-8 lg:pt-16 pb-4 sm:pb-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-16">
           
           {/* Tag on Left - Exact pill styling */}

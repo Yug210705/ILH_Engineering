@@ -22,13 +22,13 @@ export default function Footer({ showTopRow = true }) {
   ];
 
   return (
-    <footer className="w-full bg-white pt-20">
+    <footer className="w-full bg-white pt-10">
       {/* Top Features Row */}
       {showTopRow && (
-        <div className="w-full border-y border-gray-100 mb-20">
+        <div className="w-full border-y border-gray-100 mb-10">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           {features.map((f, i) => (
-            <div key={i} className="px-8 lg:px-14 py-16 flex flex-col items-start gap-5">
+            <div key={i} className="px-8 lg:px-14 py-8 lg:py-12 flex flex-col items-start gap-5">
               <div className="p-3 rounded-xl bg-[#f0f9f4]">
                 <f.Icon className="w-7 h-7 text-brand-green" strokeWidth={1.5} />
               </div>

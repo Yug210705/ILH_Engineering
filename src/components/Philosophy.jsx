@@ -36,7 +36,7 @@ export default function Philosophy() {
   );
 
   return (
-    <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-16 sm:pt-28 pb-10 sm:pb-16 overflow-hidden">
+    <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-10 sm:pt-16 pb-8 sm:pb-10 overflow-hidden">
       
       {/* Background Vignette Grid - Restored for local depth with ultra-smooth radial mask */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none w-full max-w-[100vw]">

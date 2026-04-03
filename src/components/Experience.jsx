@@ -33,7 +33,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-white to-[#f4f7f6] pt-10 sm:pt-24 pb-8 sm:pb-12">
+    <section className="w-full bg-gradient-to-b from-white to-[#f4f7f6] pt-10 sm:pt-16 pb-8 sm:pb-12">
       
       {/* Top Section: Hero/Header area */}
       <div className="relative w-full z-10 flex flex-col items-center">
