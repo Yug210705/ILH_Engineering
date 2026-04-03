@@ -40,7 +40,7 @@ export default function CaseStudyPage() {
           </div>
 
           {/* Left White Overlay Box with architectural cutout curves */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[48%] xl:w-[46%] bg-white h-auto py-10 lg:py-16 xl:py-20 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24">
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[52%] xl:w-[50%] bg-white h-auto py-12 sm:py-24 lg:py-32 xl:py-40 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24">
             
             {/* Top Inverse Curve Pseudo-element */}
             <div className="absolute top-[-48px] left-0 w-[48px] h-[48px] bg-transparent rounded-bl-[48px] shadow-[-24px_24px_0_24px_white] pointer-events-none hidden lg:block"></div>
@@ -51,10 +51,10 @@ export default function CaseStudyPage() {
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex items-center gap-1.5 text-[13px] sm:text-[14px] font-[600] mb-6 sm:mb-8 tracking-tight"
+              className="flex items-center gap-1.5 text-[11.5px] sm:text-[13px] font-[600] mb-6 sm:mb-8 tracking-wide uppercase"
             >
-              <span className="text-[#94a3b8] hover:text-[#3e976c] cursor-pointer transition-colors">Experience</span>
-              <span className="text-[#cbd5e1]">/</span>
+              <span className="text-[#cbd5e1] hover:text-[#3e976c] cursor-pointer transition-colors">Experience</span>
+              <span className="text-[#e2e8f0]">/</span>
               <span className="text-brand-green line-clamp-1">Large-Scale Infrastructure Environment...</span>
             </motion.div>
 
@@ -64,7 +64,7 @@ export default function CaseStudyPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              className="text-[32px] sm:text-[54px] lg:text-[68px] xl:text-[80px] font-[800] leading-[1.02] tracking-tight text-[#0a0a0a]"
+              className="text-[32px] sm:text-[54px] lg:text-[72px] xl:text-[84px] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a]"
             >
               Large-Scale <br /> Infrastructure <br /> Environments
             </motion.h1>
