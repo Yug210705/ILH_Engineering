@@ -6,17 +6,17 @@ export default function ScopeOfWork() {
     {
       title: "Large-Scale Facilities",
       desc: "Coordinated systems across complex environments.",
-      icon: <Building className="text-[#3e976c]" size={36} strokeWidth={1.5} />
+      icon: <Building className="text-[#3e976c] w-[28px] sm:w-[36px] h-[28px] sm:h-[36px]" strokeWidth={1.5} />
     },
     {
       title: "Enterprise Infrastructure",
       desc: "Systems supporting large-scale business operations.",
-      icon: <Server className="text-[#3e976c]" size={36} strokeWidth={1.5} />
+      icon: <Server className="text-[#3e976c] w-[28px] sm:w-[36px] h-[28px] sm:h-[36px]" strokeWidth={1.5} />
     },
     {
       title: "Mission-Critical Systems",
       desc: "Infrastructure where downtime is unacceptable.",
-      icon: <ShieldCheck className="text-[#3e976c]" size={36} strokeWidth={1.5} />
+      icon: <ShieldCheck className="text-[#3e976c] w-[28px] sm:w-[36px] h-[28px] sm:h-[36px]" strokeWidth={1.5} />
     }
   ];
 
@@ -77,12 +77,12 @@ export default function ScopeOfWork() {
 
       {/* 2. Feature Cards Section - Divider-based architecture */}
       <div className="w-full border-t border-[#f0f0f0] bg-white relative z-20">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-1 md:grid-cols-3 border-x border-[#f0f0f0]">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-2 md:grid-cols-3 border-x-0 sm:border-x border-[#f0f0f0]">
           {features.map((item, index) => (
             <motion.div 
               key={index}
               whileHover={{ backgroundColor: '#fafffe' }}
-              className={`p-10 lg:p-12 xl:p-14 flex flex-col items-start gap-10 bg-white relative overflow-hidden group transition-colors duration-500 ${index !== features.length - 1 ? 'md:border-r border-[#f0f0f0]' : ''}`}
+              className={`p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col items-start gap-6 sm:gap-10 bg-white relative overflow-hidden group transition-colors duration-500 ${index !== features.length - 1 ? 'md:border-r border-[#f0f0f0]' : ''}`}
             >
               {/* Icon Area - Dynamic Scale on hover */}
               <div className="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(62,151,108,0.15)]">
@@ -93,13 +93,13 @@ export default function ScopeOfWork() {
               <div className="flex flex-col gap-4 mt-auto">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                  className="text-[20px] sm:text-[22px] lg:text-[24px] xl:text-[26px] font-[800] text-[#0a0a0a] tracking-tight leading-tight transition-colors duration-300 group-hover:text-[#3e976c]"
+                  className="text-[17px] sm:text-[22px] lg:text-[24px] xl:text-[26px] font-[800] text-[#0a0a0a] tracking-tight leading-tight transition-colors duration-300 group-hover:text-[#3e976c]"
                 >
                   {item.title}
                 </h3>
                 <p 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  className="text-[#8e9aaf] text-[14.5px] sm:text-[15px] xl:text-[15.5px] leading-[1.65] font-[500] max-w-[340px] opacity-90"
+                  className="text-[#8e9aaf] text-[13px] sm:text-[15px] xl:text-[15.5px] leading-[1.65] font-[500] max-w-[340px] opacity-90"
                 >
                   {item.desc}
                 </p>
