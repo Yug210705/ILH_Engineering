@@ -65,6 +65,16 @@ export default function Leadership() {
                 Veteran
               </div>
             </div>
+            
+            {/* MOBILE ONLY: Paragraphs Split Below Image */}
+            <div className="flex lg:hidden flex-col text-center mt-10 px-2">
+              <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7] mb-5">
+                With over 25+ yrs of experience in electrical and technology infrastructure, Ralph founded ILH Engineering to bring senior-level expertise directly to every project.
+              </p>
+              <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7]">
+                His hands-on approach ensures that every design is precise, compliant, & built to perform.
+              </p>
+            </div>
           </motion.div>
 
           {/* Right Column: Text block */}
@@ -78,15 +88,17 @@ export default function Leadership() {
             <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[34px] lg:text-[38px] font-[700] text-[#0a0a0a] tracking-[-0.02em] leading-[1.0] mb-4">
               Ralph F. Iles III
             </h3>
-            <h4 className="text-[18px] lg:text-[20px] font-[500] text-[#6b7280] leading-[1.4] mb-8 lg:pr-10 mix-blend-multiply">
+            <h4 className="text-[18px] lg:text-[20px] font-[500] text-[#6b7280] leading-[1.4] mb-0 lg:mb-8 lg:pr-10 mix-blend-multiply">
               Founding Director & Principal<br/>Engineer of ILH Engineering
             </h4>
-            <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7] mb-5 lg:pr-6">
-              With over 25+ yrs of experience in electrical and technology infrastructure, Ralph founded ILH Engineering to bring senior-level expertise directly to every project.
-            </p>
-            <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7] lg:pr-6">
-              His hands-on approach ensures that every design is precise, compliant, & built to perform.
-            </p>
+            <div className="hidden lg:flex flex-col">
+              <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7] mb-5 lg:pr-6">
+                With over 25+ yrs of experience in electrical and technology infrastructure, Ralph founded ILH Engineering to bring senior-level expertise directly to every project.
+              </p>
+              <p className="text-[#9ca3af] text-[15.5px] font-[400] leading-[1.7] lg:pr-6">
+                His hands-on approach ensures that every design is precise, compliant, & built to perform.
+              </p>
+            </div>
           </motion.div>
 
         </div>
