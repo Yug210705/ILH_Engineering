@@ -40,7 +40,7 @@ export default function CaseStudyPage() {
           </div>
 
           {/* Left White Overlay Box with architectural cutout curves */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[52%] xl:w-[50%] bg-white h-auto py-8 sm:py-12 lg:py-18 xl:py-24 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24">
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[88%] sm:w-[65%] lg:w-[52%] xl:w-[50%] bg-white h-auto py-10 sm:py-12 lg:py-18 xl:py-24 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-8 sm:px-16 lg:px-24">
             
             {/* Top Inverse Curve Pseudo-element */}
             <div className="absolute top-[-48px] left-0 w-[48px] h-[48px] bg-transparent rounded-bl-[48px] shadow-[-24px_24px_0_24px_white] pointer-events-none hidden lg:block"></div>
