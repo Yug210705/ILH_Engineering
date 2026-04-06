@@ -52,7 +52,7 @@ export default function ExperienceHero() {
 
           {/* ===== Green Button - bottom right cutout area ===== */}
           {/* Positioning and Scale adjusted for higher prominence with clean edge spacing */}
-          <div className="absolute bottom-[2.5%] right-[2.5%] z-30 hidden lg:block">
+          <div className="absolute bottom-[1.8%] right-[1%] z-30 hidden lg:block">
             <button
               onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-[#3e976c] hover:bg-[#2d7d56] text-white p-9 rounded-[24px] shadow-2xl shadow-[#3e976c]/40 transition-all duration-300 transform active:scale-95"
