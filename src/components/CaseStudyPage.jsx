@@ -16,7 +16,7 @@ export default function CaseStudyPage() {
       
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 mb-8 sm:mb-20 lg:mb-24">
-        <div className="w-full relative h-[380px] sm:h-[450px] lg:h-[550px] rounded-[32px] overflow-hidden flex justify-end bg-[#0a0a0a]">
+        <div className="w-full relative h-[340px] sm:h-[400px] lg:h-[500px] rounded-[32px] overflow-hidden flex justify-end bg-[#0a0a0a]">
           
           {/* Main Image Base */}
           <div className="absolute inset-0 w-full h-full">
@@ -40,7 +40,7 @@ export default function CaseStudyPage() {
           </div>
 
           {/* Left White Overlay Box with architectural cutout curves */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[52%] xl:w-[50%] bg-white h-auto py-8 sm:py-16 lg:py-24 xl:py-32 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24">
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[52%] xl:w-[50%] bg-white h-auto py-8 sm:py-12 lg:py-18 xl:py-24 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24">
             
             {/* Top Inverse Curve Pseudo-element */}
             <div className="absolute top-[-48px] left-0 w-[48px] h-[48px] bg-transparent rounded-bl-[48px] shadow-[-24px_24px_0_24px_white] pointer-events-none hidden lg:block"></div>
@@ -51,7 +51,7 @@ export default function CaseStudyPage() {
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex items-center gap-1.5 text-[11.5px] sm:text-[13px] font-[600] mb-6 sm:mb-8 tracking-wide uppercase"
+              className="flex items-center gap-1.5 text-[11.5px] sm:text-[13px] font-[600] mb-5 sm:mb-5 tracking-wide uppercase"
             >
               <span className="text-[#cbd5e1] hover:text-[#3e976c] cursor-pointer transition-colors">Experience</span>
               <span className="text-[#e2e8f0]">/</span>
@@ -64,7 +64,7 @@ export default function CaseStudyPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              className="text-[30px] sm:text-[54px] lg:text-[72px] xl:text-[84px] font-[800] leading-[1.0] tracking-[-0.04em] text-[#0a0a0a]"
+              className="text-[30px] sm:text-[54px] lg:text-[72px] xl:text-[84px] font-[800] leading-[0.95] tracking-[-0.04em] text-[#0a0a0a]"
             >
               Large-Scale <br /> Infrastructure <br /> Environments
             </motion.h1>
