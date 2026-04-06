@@ -43,8 +43,10 @@ export default function Footer({ showTopRow = true }) {
       )}
 
       {/* Main Footer Content */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pb-24">
-        <div className="flex flex-col-reverse xl:flex-row gap-8 items-stretch">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pb-8 sm:pb-24">
+        
+        {/* --- DESKTOP/TABLET FOOTER --- */}
+        <div className="hidden lg:flex flex-col-reverse xl:flex-row gap-8 items-stretch">
           
           {/* Left Dark Card */}
           <div className="flex-[1.5] bg-[#0a120b] rounded-[32px] sm:rounded-[40px] p-8 sm:p-10 lg:p-16 text-white flex flex-col justify-between">
@@ -161,6 +163,110 @@ export default function Footer({ showTopRow = true }) {
           </div>
 
         </div>
+
+        {/* --- MOBILE FOOTER --- */}
+        <div className="flex lg:hidden flex-col gap-6">
+          {/* Right Mint CTA Card (Mobile) */}
+          <div className="bg-[#e8f2ee] rounded-[32px] p-6 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+             <div className="absolute top-0 right-0 w-[150px] h-[150px] bg-[#d7e9e1] rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3"></div>
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-1.5 bg-white/60 backdrop-blur-sm text-[#1f2937] px-3.5 py-1.5 rounded-full text-[11px] font-[800] tracking-tight border border-white/50 mb-8 w-fit shadow-sm">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
+                Start the Conversation
+              </div>
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[32px] sm:text-[40px] font-[800] text-[#0a0a0a] leading-[1.1] tracking-tight mb-5">
+                Discuss Your Infrastructure Challenges
+              </h2>
+              <p className="text-[#4b5563] text-[14px] font-medium leading-[1.6]">
+                ILH Engineering helps organizations design resilient infrastructure for environments where reliability matters.
+              </p>
+            </div>
+
+            <div className="mt-10 relative z-10">
+              <button className="w-full bg-[#0a0a0a] hover:bg-[#3e976c] text-white font-[800] py-4 rounded-[14px] text-[14px] transition-all shadow-xl shadow-black/10 mb-4 tracking-wide">
+                Schedule Consultation
+              </button>
+              <p className="text-[#6b7280] text-[12px] font-semibold text-center opacity-80">
+                Speak directly with an engineer.
+              </p>
+            </div>
+          </div>
+
+          {/* Left Dark Card (Mobile) */}
+          <div className="bg-[#0a120b] rounded-[32px] p-6 sm:p-10 text-white flex flex-col gap-10 border border-[#1b2620]">
+            {/* Logo & Info */}
+            <div className="flex flex-col gap-6 border-b border-white/10 pb-8">
+              <img src={siteLogo} alt="ILH" className="h-[42px] w-auto brightness-0 invert self-start" />
+              <div className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium mt-2">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                    <Phone size={14} className="text-[#3e976c]" />
+                  </div>
+                  786-297-8226
+                </div>
+                <div className="flex items-center gap-3.5">
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                    <Mail size={14} className="text-[#3e976c]" />
+                  </div>
+                  ILHEngineering.com
+                </div>
+                <div className="flex items-start gap-3.5">
+                  <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 mt-0.5">
+                     <MapPin size={14} className="text-[#3e976c]" />
+                  </div>
+                  <span className="leading-relaxed">333 SE 2nd Ave Suite #2000,<br/>Miami, Florida 33131</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links Grid */}
+            <div className="grid grid-cols-2 gap-y-12 gap-x-6">
+              <div className="flex flex-col col-span-2">
+                <h4 className="text-[10px] font-[800] uppercase tracking-[0.16em] text-[#64748b] mb-5">Capabilities</h4>
+                <ul className="flex flex-col gap-3.5 text-[13.5px] text-[#cbd5e1] font-medium leading-snug">
+                  <li>Electrical Power Systems</li>
+                  <li>Mission Critical Infrastructure</li>
+                  <li>Communication & Network Resilience</li>
+                  <li>Life Safety & Security Systems</li>
+                  <li>Project Management</li>
+                </ul>
+              </div>
+              <div className="flex flex-col">
+                <h4 className="text-[10px] font-[800] uppercase tracking-[0.16em] text-[#64748b] mb-5">Insights</h4>
+                <ul className="flex flex-col gap-3.5 text-[13.5px] text-[#cbd5e1] font-medium">
+                  <li>Technical Insights</li>
+                  <li>Briefings</li>
+                  <li>Capability Statement</li>
+                </ul>
+              </div>
+              <div className="flex flex-col">
+                <h4 className="text-[10px] font-[800] uppercase tracking-[0.16em] text-[#64748b] mb-5">The Firm</h4>
+                <ul className="flex flex-col gap-3.5 text-[13.5px] text-[#cbd5e1] font-medium">
+                  <li>About ILH Eng.</li>
+                  <li>Founder</li>
+                  <li>Approach</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Badge & Copyright */}
+            <div className="flex flex-col gap-8 pt-8 border-t border-dashed border-white/10 mt-2">
+              <div className="w-full p-4 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-transparent rounded-[16px] border border-blue-400/20 flex items-center justify-center text-[9.5px] text-blue-200 font-bold text-center leading-[1.5] uppercase tracking-[0.1em]">
+                Miami-Dade Disadvantaged<br/>Business Enterprise
+              </div>
+              
+              <div className="flex flex-col items-center gap-6 mt-2">
+                <div className="flex items-center gap-5">
+                  <div className="w-[32px] h-[32px] bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-[#3e976c] transition-colors cursor-pointer"></div>
+                  <div className="w-[32px] h-[32px] bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-[#3e976c] transition-colors cursor-pointer"></div>
+                  <div className="w-[32px] h-[32px] bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-[#3e976c] transition-colors cursor-pointer"></div>
+                </div>
+                <span className="text-[#64748b] text-[12px] font-[500] tracking-tight">© 2026 ILH Engineering. All rights reserved.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </footer>
   );
