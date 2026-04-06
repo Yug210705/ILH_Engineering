@@ -1,22 +1,25 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Frame_1 from '../assets/Frame_1.png';
+import Frame_2 from '../assets/Frame_2.png';
+import Frame_3 from '../assets/Frame_3.png';
 
 export default function ProjectExperience() {
   const projects = [
     {
       title: "Large-Scale Infrastructure Environments",
       desc: "Systems integration across complex operational facilities.",
-      img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop"
+      img: Frame_1
     },
     {
       title: "Enterprise Infrastructure Modernization",
       desc: "Infrastructure upgrades supporting redundancy and centralized systems.",
-      img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000&auto=format&fit=crop"
+      img: Frame_2
     },
     {
       title: "Mission-Critical Communications Infrastructure",
       desc: "Infrastructure designed for continuous global operations.",
-      img: "https://images.unsplash.com/photo-1563770660941-20978e87081b?q=80&w=2000&auto=format&fit=crop"
+      img: Frame_3
     }
   ];
 
