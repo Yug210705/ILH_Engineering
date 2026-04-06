@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ExperienceHero() {
   return (
-    <section className="w-full bg-white relative overflow-hidden pt-1 pb-8 lg:pb-16">
+    <section className="w-full bg-white relative overflow-hidden -mt-2 sm:mt-0 pt-0 pb-8 lg:pb-16">
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative">
         <div className="relative w-full rounded-[40px]">
           {/* Main Image Base */}
