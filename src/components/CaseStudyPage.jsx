@@ -12,7 +12,7 @@ export default function CaseStudyPage() {
   }, []);
 
   return (
-    <div className="w-full bg-white relative pb-0 pt-[75px] xl:pt-[85px]">
+    <div className="w-full bg-white relative pb-0 pt-[70px] xl:pt-[80px]">
       
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-[1600px] mx-auto mt-2 lg:mt-4 px-6 sm:px-10 lg:px-12 mb-8 sm:mb-20 lg:mb-24">
