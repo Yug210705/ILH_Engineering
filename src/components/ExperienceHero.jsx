@@ -62,7 +62,7 @@ export default function ExperienceHero() {
           </div>
 
           {/* Mobile Green Button */}
-          <div className="absolute bottom-[2%] right-[2%] z-30 lg:hidden">
+          <div className="absolute bottom-[0.2%] right-[0.2%] z-30 lg:hidden">
             <button
               onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-[#3e976c] text-white p-2.5 rounded-[12px] shadow-xl transform active:scale-95"
