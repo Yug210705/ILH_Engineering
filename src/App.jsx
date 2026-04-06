@@ -1,20 +1,21 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
-import DesignRisk from './components/DesignRisk';
-import Philosophy from './components/Philosophy';
-import Capabilities from './components/Capabilities';
-import ProjectExperience from './components/ProjectExperience';
-import Testimonials from './components/Testimonials';
-import Leadership from './components/Leadership';
-import EngineeringNetwork from './components/EngineeringNetwork';
-import Footer from './components/Footer';
 import ExperienceHero from './components/ExperienceHero';
-import ScopeOfWork from './components/ScopeOfWork';
-import CaseStudyHighlight from './components/CaseStudyHighlight';
-import CaseStudyGallery from './components/CaseStudyGallery';
-import CaseStudyPage from './components/CaseStudyPage';
+
+const Experience = lazy(() => import('./components/Experience'));
+const DesignRisk = lazy(() => import('./components/DesignRisk'));
+const Philosophy = lazy(() => import('./components/Philosophy'));
+const Capabilities = lazy(() => import('./components/Capabilities'));
+const ProjectExperience = lazy(() => import('./components/ProjectExperience'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Leadership = lazy(() => import('./components/Leadership'));
+const EngineeringNetwork = lazy(() => import('./components/EngineeringNetwork'));
+const Footer = lazy(() => import('./components/Footer'));
+const ScopeOfWork = lazy(() => import('./components/ScopeOfWork'));
+const CaseStudyHighlight = lazy(() => import('./components/CaseStudyHighlight'));
+const CaseStudyGallery = lazy(() => import('./components/CaseStudyGallery'));
+const CaseStudyPage = lazy(() => import('./components/CaseStudyPage'));
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -27,29 +28,35 @@ function App() {
       {currentView === 'home' ? (
         <>
           <Hero />
-          <Experience />
-          <DesignRisk />
-          <Philosophy />
-          <Capabilities />
-          <ProjectExperience />
-          <Testimonials />
-          <Leadership />
-          <EngineeringNetwork />
+          <Suspense fallback={<div className="min-h-[50vh] bg-white w-full animate-pulse" />}>
+            <Experience />
+            <DesignRisk />
+            <Philosophy />
+            <Capabilities />
+            <ProjectExperience />
+            <Testimonials />
+            <Leadership />
+            <EngineeringNetwork />
+          </Suspense>
         </>
       ) : currentView === 'caseStudy' ? (
-        <>
+        <Suspense fallback={<div className="min-h-screen bg-white w-full animate-pulse" />}>
           <CaseStudyPage />
-        </>
+        </Suspense>
       ) : (
         <>
           <ExperienceHero />
-          <ScopeOfWork />
-          <CaseStudyHighlight setCurrentView={setCurrentView} />
-          <CaseStudyGallery />
+          <Suspense fallback={<div className="min-h-[50vh] bg-white w-full animate-pulse" />}>
+            <ScopeOfWork />
+            <CaseStudyHighlight setCurrentView={setCurrentView} />
+            <CaseStudyGallery />
+          </Suspense>
         </>
       )}
       </div>
-      <Footer showTopRow={currentView === 'home'} />
+      <Suspense fallback={<div className="h-100" />}>
+        <Footer showTopRow={currentView === 'home'} />
+      </Suspense>
     </div>
   );
 }

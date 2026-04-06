@@ -46,7 +46,7 @@ Resolved critical production blockers and optimized the project for lightning-fa
 - **Build Performance**: 
     - Moving complex CSS keyframes from component-level `<style>` blocks to the global `index.css` to reduce build-time memory pressure.
 - **Asset Integrity**: 
-    - Standardized asset imports (`heroimg.jpg`, `Logo.png`, `groupphoto.png`) to ensure Vite correctly hashes filenames for production caching.
+    - Standardized asset imports (`heroimg.webp`, `Logo.png`, `groupphoto.png`) to ensure Vite correctly hashes filenames for production caching.
 - **Node v20+ Alignment**: Configured the build environment engines to guarantee compatibility with React 19 and Vite 8's advanced features.
 
 ---

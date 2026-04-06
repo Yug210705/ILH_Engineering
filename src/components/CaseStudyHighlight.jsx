@@ -54,7 +54,7 @@ export default function CaseStudyHighlight({ setCurrentView }) {
                 
                 {/* Header Info - Locked into the Top Left Cutout area */}
                 <div className="absolute top-[0%] left-[1%] sm:top-[0.5%] sm:left-[1%] lg:top-[1%] lg:left-[1%] max-w-[60%] sm:max-w-[55%]">
-                  <div className="inline-flex items-center gap-1.5 bg-[#f0f7f4] text-[#3e976c] px-2.5 sm:px-4 py-0.5 sm:py-2 rounded-lg text-[9.5px] sm:text-[13px] font-[700] tracking-tight border border-[#cfe2d9] mb-4 lg:mb-10">
+                  <div className="inline-flex items-center gap-1.5 bg-[#f0f7f4] text-[#3e976c] px-2.5 sm:px-4 py-0.5 sm:py-2 rounded-lg text-[9.5px] sm:text-[13px] font-[700] tracking-tight border border-[#cfe2d9] mb-4 lg:mb-10 -translate-y-1 sm:translate-y-0">
                     <div className="w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#3e976c]"></div>
                     Featured
                   </div>
