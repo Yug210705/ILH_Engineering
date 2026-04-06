@@ -16,7 +16,7 @@ export default function CaseStudyPage() {
       
       {/* 1. HERO SECTION */}
       <section className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 mb-8 sm:mb-20 lg:mb-24">
-        <div className="w-full relative h-[380px] sm:h-[550px] lg:h-[650px] rounded-[32px] overflow-hidden flex justify-end bg-[#0a0a0a]">
+        <div className="w-full relative h-[380px] sm:h-[450px] lg:h-[550px] rounded-[32px] overflow-hidden flex justify-end bg-[#0a0a0a]">
           
           {/* Main Image Base */}
           <div className="absolute inset-0 w-full h-full">
@@ -40,7 +40,7 @@ export default function CaseStudyPage() {
           </div>
 
           {/* Left White Overlay Box with architectural cutout curves */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[52%] xl:w-[50%] bg-white h-auto py-8 sm:py-24 lg:py-32 xl:py-40 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24">
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[95%] sm:w-[65%] lg:w-[52%] xl:w-[50%] bg-white h-auto py-8 sm:py-16 lg:py-24 xl:py-32 rounded-r-[40px] lg:rounded-r-[48px] z-10 flex flex-col justify-center px-10 sm:px-16 lg:px-24">
             
             {/* Top Inverse Curve Pseudo-element */}
             <div className="absolute top-[-48px] left-0 w-[48px] h-[48px] bg-transparent rounded-bl-[48px] shadow-[-24px_24px_0_24px_white] pointer-events-none hidden lg:block"></div>
