@@ -12,10 +12,10 @@ export default function CaseStudyPage() {
   }, []);
 
   return (
-    <div className="w-full bg-white relative pb-0 pt-1 sm:pt-[65px] xl:pt-[70px]">
+    <div className="w-full bg-white relative pb-0 pt-5 sm:pt-[65px] xl:pt-[70px]">
       
       {/* 1. HERO SECTION */}
-      <section className="w-full max-w-[1600px] mx-auto -mt-2 sm:mt-2 lg:mt-4 px-6 sm:px-10 lg:px-12 mb-8 sm:mb-20 lg:mb-24">
+      <section className="w-full max-w-[1600px] mx-auto mt-2 sm:mt-2 lg:mt-4 px-6 sm:px-10 lg:px-12 mb-8 sm:mb-20 lg:mb-24">
         <div className="w-full relative h-[340px] sm:h-[400px] lg:h-[500px] rounded-[32px] overflow-hidden flex justify-end bg-[#0a0a0a]">
           
           {/* Main Image Base */}
