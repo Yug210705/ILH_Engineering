@@ -2,9 +2,9 @@ import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Asset imports
-import expImage from '../assets/exp_image.png';
+import expImage from '../../assets/exp_image.png';
 // Using the generated image from previous step
-import modernizationImg from '../assets/modernization.png';
+import modernizationImg from '../../assets/modernization.png';
 
 const projects = [
   {

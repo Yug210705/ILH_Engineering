@@ -1,18 +1,86 @@
-# React + Vite
+# ILH Engineering — Corporate Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Mission-critical infrastructure engineering — designed for performance, built for resilience.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Layer        | Technology                                    |
+|-------------|----------------------------------------------|
+| Framework    | [React 19](https://react.dev) + [Vite 6](https://vite.dev) |
+| Styling      | [Tailwind CSS 4](https://tailwindcss.com)    |
+| Animations   | [Framer Motion](https://motion.dev)          |
+| Icons        | [Lucide React](https://lucide.dev)           |
+| Font         | Plus Jakarta Sans + Inter (Google Fonts)     |
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── assets/                    # Static images, logos, icons
+├── constants/                 # Centralized config & design tokens
+│   ├── brand.js               #   Colors, typography, company info
+│   ├── navigation.js          #   Nav links & view constants
+│   └── index.js               #   Barrel export
+├── components/
+│   ├── ui/                    # Shared, reusable UI primitives
+│   │   ├── SectionPill.jsx    #   Green label badge
+│   │   ├── SplitButton.jsx    #   Green CTA with arrow
+│   │   ├── SectionHeading.jsx #   Consistent headings
+│   │   ├── ScrollIndicator.jsx#   Mouse-scroll animation
+│   │   ├── GridBackground.jsx #   Blueprint grid overlay
+│   │   └── index.js           #   Barrel export
+│   ├── layout/                # App-level chrome
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── index.js
+│   ├── home/                  # Homepage sections (render order)
+│   │   ├── Hero.jsx
+│   │   ├── Experience.jsx
+│   │   ├── DesignRisk.jsx
+│   │   ├── Philosophy.jsx
+│   │   ├── Capabilities.jsx
+│   │   ├── ProjectExperience.jsx
+│   │   ├── Testimonials.jsx
+│   │   ├── Leadership.jsx
+│   │   ├── EngineeringNetwork.jsx
+│   │   └── index.js
+│   ├── experience/            # Experience page sections
+│   │   ├── ExperienceHero.jsx
+│   │   ├── ScopeOfWork.jsx
+│   │   ├── CaseStudyHighlight.jsx
+│   │   ├── CaseStudyGallery.jsx
+│   │   └── index.js
+│   ├── capabilities/          # Capabilities detail page
+│   │   ├── CapabilitiesPage.jsx
+│   │   └── index.js
+│   └── casestudy/             # Case study detail page
+│       ├── CaseStudyPage.jsx
+│       └── index.js
+├── App.jsx                    # Root component & view router
+├── main.jsx                   # React entry point
+└── index.css                  # Global styles, animations, Tailwind
+```
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
 
-# ILH_Engineering
+# Start dev server (http://localhost:5173)
+npm run dev
+
+# Production build
+npm run build
+```
+
+## Architecture Decisions
+
+- **Code-splitting** — Only `Hero` + `Navbar` ship in the initial bundle. All other sections are lazy-loaded via `React.lazy()` + `Suspense`.
+- **Mobile-first** — Separate mobile DOM structures for complex sections (Footer, Experience grid, Capabilities list) using `hidden lg:flex` / `flex lg:hidden` display utilities.
+- **Constants over magic strings** — All brand colors, nav config, and view identifiers live in `src/constants/` so changes propagate everywhere.
+- **Barrel exports** — Every directory exposes an `index.js` for clean imports: `import { Hero } from './components/home'`.
+
+## License
+
+Proprietary — © 2026 ILH Engineering. All rights reserved.

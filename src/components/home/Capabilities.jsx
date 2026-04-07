@@ -1,5 +1,6 @@
-import { ArrowUpRight, ChevronsRight } from 'lucide-react';
+import { ChevronsRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SectionPill, SplitButton, SectionHeading, GridBackground } from '../ui';
 
 export default function Capabilities() {
   const capabilitiesList = [
@@ -26,21 +27,13 @@ export default function Capabilities() {
     {
       title: "Project Management for Critical Deployments",
       desc: "End-to-End management of mission critical installations.",
-      img: "https://images.unsplash.com/photo-1504307651254-35680f356f12?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600&auto=format&fit=crop"
     }
   ];
 
   return (
     <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f4f7f6] to-white pt-16 pb-12">
-      {/* Absolute Grid Background - Expanded super-smooth fade */}
-      <div className="absolute inset-0 pointer-events-none" 
-           style={{ 
-             backgroundImage: `linear-gradient(to right, #e2e8e4 1px, transparent 1px), linear-gradient(to bottom, #e2e8e4 1px, transparent 1px)`, 
-             backgroundSize: '48px 48px',
-             maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 10%, black 35%, black 65%, transparent 90%, transparent 100%)',
-             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent 10%, black 35%, black 65%, transparent 90%, transparent 100%)'
-           }}>
-      </div>
+      <GridBackground />
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         
@@ -51,17 +44,15 @@ export default function Capabilities() {
           
           {/* Left / Center Column */}
           <div className="flex-[1.8] flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-3 py-1.5 rounded-[8px] text-[12.5px] font-[600] tracking-tight border border-[#d2efe2] mb-12 shadow-sm mx-auto md:mx-0">
-              <div className="w-[5.5px] h-[5.5px] rounded-full bg-brand-green mb-[0px]"></div>
+            <SectionPill className="mb-12 mx-auto md:mx-0">
               Core Engineering Capabilities
-            </div>
+            </SectionPill>
             
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] ml-0 lg:ml-10 break-words whitespace-normal px-2 text-center md:text-left">
+            <SectionHeading className="ml-0 lg:ml-10 text-center md:text-left">
               Critical<br />
               Infrastructure<br />
               Engineering
-            </h2>
+            </SectionHeading>
           </div>
 
           {/* Right Column */}
@@ -75,20 +66,16 @@ export default function Capabilities() {
             </p>
             
             {/* Split Button */}
-            <div className="flex items-stretch shadow-md rounded-[8px] overflow-hidden group cursor-pointer w-max transition-transform border border-[#3e976c] hover:-translate-y-0.5 mx-auto md:mx-0">
-              <div className="bg-[#3e976c] text-white font-[600] tracking-wide text-[14.5px] px-5 py-3 flex items-center justify-center transition-colors group-hover:bg-[#34835d]">
-                View All Capabilities
-              </div>
-              <div className="bg-[#2f855a] text-white px-3 flex items-center justify-center border-l border-white/20 transition-colors group-hover:bg-[#276e4a]">
-                <ArrowUpRight size={18} strokeWidth={2.5} />
-              </div>
-            </div>
+            <SplitButton className="mx-auto md:mx-0">
+              View All Capabilities
+            </SplitButton>
           </div>
         </motion.div>
 
         {/* Cards list Container with 'group/list' for sibling fade effects */}
+        {/* --- DESKTOP CAPABILITIES LIST --- */}
         <motion.div 
-          className="flex flex-col gap-4 w-full relative z-10 w-full lg:w-[95%] group/list"
+          className="hidden lg:flex flex-col gap-4 w-full relative z-10 w-[95%] group/list"
         >
           {capabilitiesList.map((item, index) => (
             <motion.div 
@@ -118,6 +105,29 @@ export default function Capabilities() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* --- MOBILE CAPABILITIES LIST --- */}
+        <div className="flex lg:hidden flex-col gap-5 w-full relative z-10 mt-6 md:mt-12">
+          {capabilitiesList.map((item, index) => (
+            <div key={index} className="bg-white rounded-[24px] p-5 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-gray-100/80 flex flex-col gap-4 relative overflow-hidden group">
+               {/* Decorative Gradient Blob */}
+               <div className="absolute -top-10 -right-10 w-[120px] h-[120px] bg-brand-green/5 blur-3xl rounded-full"></div>
+               
+               <div className="w-full h-[140px] rounded-2xl overflow-hidden shadow-sm relative z-10 border border-gray-100">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+               </div>
+               
+               <div className="flex flex-col mt-1 relative z-10">
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[800] text-[#0a0a0a] tracking-tight mb-2 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#64748b] text-[14px] font-[500] tracking-tight leading-[1.6]">
+                    {item.desc}
+                  </p>
+               </div>
+            </div>
+          ))}
+        </div>
 
       </div>
     </section>

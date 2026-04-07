@@ -1,5 +1,5 @@
 import { ArrowDown } from 'lucide-react';
-import experienceImg from '../assets/Subtract.png';
+import experienceImg from '../../assets/Subtract.png';
 import { motion } from 'framer-motion';
 
 export default function ExperienceHero() {

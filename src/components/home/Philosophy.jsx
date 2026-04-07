@@ -1,6 +1,7 @@
 import { Zap, Share2, Shield, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
+import { SectionPill, SectionHeading, GridBackground } from '../ui';
 
 export default function Philosophy() {
   const [isVisible, setIsVisible] = useState(true);
@@ -38,37 +39,21 @@ export default function Philosophy() {
   return (
     <section ref={sectionRef} className="w-full relative bg-gradient-to-b from-white via-[#f4f7f6] to-[#f4f7f6] pt-10 sm:pt-16 pb-8 sm:pb-10 overflow-hidden">
       
-      {/* Background Vignette Grid - Restored for local depth with ultra-smooth radial mask */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none w-full max-w-[100vw]">
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(55,151,104,0.14) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(55,151,104,0.14) 1px, transparent 1px)
-            `,
-            backgroundSize: '48px 48px',
-            backgroundPosition: 'center center',
-            maskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 10%, transparent 90%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 10%, transparent 90%)'
-          }}
-        ></div>
-      </div>
+      <GridBackground maskType="radial" />
       
       <motion.div 
         className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center"
       >
         
         {/* Tag */}
-        <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-[14px] text-[13px] sm:text-[14px] font-bold tracking-wide border border-[#d2efe2] mb-6 sm:mb-8 shadow-sm shadow-[#379768]/10">
-          <div className="w-[6px] h-[6px] rounded-full bg-brand-green mb-[1px]"></div>
+        <SectionPill className="mb-6 sm:mb-8">
           Our Engineering Philosophy
-        </div>
+        </SectionPill>
 
         {/* Heading */}
-        <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] text-center max-w-[1200px] mb-4 sm:mb-8 px-4">
+        <SectionHeading className="text-center max-w-[1200px] mb-4 sm:mb-8">
           Reliability Is Not Luck. <br className="hidden md:block"/> It Is Engineered.
-        </h2>
+        </SectionHeading>
 
         {/* Paragraph */}
         <p className="text-[#64748b] text-[15px] sm:text-[16px] md:text-[18px] xl:text-[20px] leading-[1.7] font-medium text-center max-w-[1000px] mb-8 sm:mb-12 mix-blend-multiply px-4">

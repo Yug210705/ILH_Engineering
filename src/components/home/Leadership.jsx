@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import ralphImg from '../assets/ralph.png';
+import ralphImg from '../../assets/ralph.png';
 
 export default function Leadership() {
   return (

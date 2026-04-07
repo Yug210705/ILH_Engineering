@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import groupPhoto from '../assets/groupphoto.png';
+import groupPhoto from '../../assets/groupphoto.png';
+import { SectionPill, SectionHeading } from '../ui';
 
 export default function EngineeringNetwork() {
   return (
@@ -9,10 +10,9 @@ export default function EngineeringNetwork() {
           className="flex justify-center lg:justify-start mb-4"
         >
           {/* Pill */}
-          <div className="inline-flex items-center gap-[6px] bg-[#e8f2ee] text-[#1f2937] px-4 py-[5px] rounded-full text-[13px] font-[500] tracking-tight border border-[#d2efe2]">
-            <div className="w-[5px] h-[5px] rounded-full bg-brand-green"></div>
+          <SectionPill>
             Engineering Network
-          </div>
+          </SectionPill>
         </motion.div>
 
         <motion.div 
@@ -20,9 +20,9 @@ export default function EngineeringNetwork() {
         >
           {/* Title */}
           <div className="flex-[3]">
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,80px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] whitespace-normal break-words z-10 relative text-center lg:text-left">
+            <SectionHeading className="text-center lg:text-left">
               Expertise for Complex<br className="hidden sm:block"/> Infrastructure Projects
-            </h2>
+            </SectionHeading>
           </div>
           
           {/* Description */}

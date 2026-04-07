@@ -1,6 +1,6 @@
 import { Users, HardHat, Puzzle, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import siteLogo from '../assets/Logo.png';
+import siteLogo from '../../assets/Logo.png';
 
 export default function Footer({ showTopRow = true }) {
   const features = [

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
-import expImage from '../assets/exp_image.png';
-import modernizationImg from '../assets/modernization.png';
+import expImage from '../../assets/exp_image.png';
+import modernizationImg from '../../assets/modernization.png';
 
 export default function CaseStudyPage() {
   const [activeSection, setActiveSection] = useState('problem');

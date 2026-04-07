@@ -1,6 +1,5 @@
-import { Building2, Server, Network, ShieldCheck } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { SectionPill, SectionHeading, GridBackground } from '../ui';
 
 export default function Experience() {
   const [activeCard, setActiveCard] = useState(null); 
@@ -37,20 +36,8 @@ export default function Experience() {
       
       {/* Top Section: Hero/Header area */}
       <div className="relative w-full z-10 flex flex-col items-center">
+        <GridBackground opacity={1} />
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-          <div 
-            className="absolute inset-x-0 top-0 h-[120%] w-full pointer-events-none z-0"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgba(55,151,104,0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(55,151,104,0.1) 1px, transparent 1px)
-              `,
-              backgroundSize: '48px 48px',
-              backgroundPosition: 'top 32px center',
-              maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 12%, black 40%, black 60%, transparent 88%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent 12%, black 40%, black 60%, transparent 88%, transparent 100%)'
-            }}
-          ></div>
           <div 
             className="absolute rounded-full"
             style={{
@@ -72,14 +59,13 @@ export default function Experience() {
           <div className="flex flex-col md:flex-row justify-between items-center lg:items-center gap-6 md:gap-12">
             {/* Left Header */}
             <div className="w-full md:flex-[1.5] flex flex-col items-center md:items-start text-center md:text-left">
-              <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-xl text-[12px] font-[800] tracking-wide border border-[#d2efe2] mb-4 sm:mb-6 mx-auto md:mx-0">
-                <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
+              <SectionPill className="mb-4 sm:mb-6 mx-auto md:mx-0">
                 Engineering Experience
-              </div>
+              </SectionPill>
               
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mt-2 break-words whitespace-normal px-2 md:px-0 text-center md:text-left">
+              <SectionHeading className="mt-2 text-center md:text-left">
                 Infrastructure <span className="text-[#a1a1aa] font-[800]">that</span><br/>Must Perform
-              </h2>
+              </SectionHeading>
             </div>
             
             {/* Right Paragraph */}
@@ -95,8 +81,9 @@ export default function Experience() {
       {/* Bottom Section: Cards Strip Area */}
       <div className="w-full bg-transparent relative z-20">
         
+        {/* --- DESKTOP/TABLET GRID --- */}
         <motion.div 
-          className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid grid-cols-2 xl:grid-cols-4"
+          className="hidden md:grid w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 grid-cols-4"
         >
           {cards.map((card, index) => {
             const isActive = activeCard === index;
@@ -105,7 +92,7 @@ export default function Experience() {
             return (
               <motion.div 
                 key={card.id}
-                className="relative z-10 w-full min-h-[140px] sm:min-h-[260px]"
+                className="relative z-10 w-full min-h-[260px]"
                 onMouseEnter={() => setActiveCard(index)}
                 onMouseLeave={() => setActiveCard(null)}
               >
@@ -114,24 +101,45 @@ export default function Experience() {
                     absolute inset-x-[-1px] inset-y-0 flex flex-col px-4 sm:px-8 lg:px-10 z-20 
                     border transition-all duration-300 ease-in-out cursor-pointer
                     ${isActive 
-                      ? 'md:-top-6 md:-bottom-6 bg-white shadow-2xl border-[#e2e8f0] z-40' 
+                      ? '-top-6 -bottom-6 bg-white shadow-2xl border-[#e2e8f0] z-40' 
                       : 'top-0 bottom-0 hover:bg-white/50 border-transparent border-r-[#e2e8f0]'
                     }
                   `}
                 >
-                  <div className={`transition-all duration-300 flex items-center md:items-start justify-center md:justify-start ${isActive ? 'mt-8 sm:mt-14' : 'mt-6 sm:mt-12'}`}>
-                    <ActIcon className="w-8 h-8 sm:w-10 sm:h-10 text-brand-green" strokeWidth={1.5} />
+                  <div className={`transition-all duration-300 flex items-start justify-start ${isActive ? 'mt-14' : 'mt-12'}`}>
+                    <ActIcon className="w-10 h-10 text-brand-green" strokeWidth={1.5} />
                   </div>
                   
-                  <div className={`mt-3 md:mt-auto whitespace-pre-line transition-all duration-300 text-center md:text-left ${isActive ? 'mb-6 sm:mb-12' : 'mb-6 sm:mb-10'}`}>
-                    <h3 className="font-[800] text-[15px] sm:text-[20px] lg:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
-                    <p className="text-[#a1a1aa] text-[13px] sm:text-[14px] mt-1.5 sm:mt-2 font-[600] leading-snug">{card.subtitle}</p>
+                  <div className={`mt-auto whitespace-pre-line transition-all duration-300 text-left ${isActive ? 'mb-12' : 'mb-10'}`}>
+                    <h3 className="font-[800] text-[20px] lg:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
+                    <p className="text-[#a1a1aa] text-[14px] mt-2 font-[600] leading-snug">{card.subtitle}</p>
                   </div>
                 </div>
               </motion.div>
             );
           })}
         </motion.div>
+
+        {/* --- MOBILE STACK --- */}
+        <div className="flex md:hidden flex-col gap-4 w-full px-4 mt-6">
+          {cards.map((card, index) => {
+             const ActIcon = card.Icon;
+             return (
+               <div key={card.id} className="relative overflow-hidden bg-white rounded-[20px] p-6 border border-[#e2e8f0]/60 shadow-lg shadow-[#379768]/5 flex items-start gap-5">
+                  {/* Subtle Background Glow per card */}
+                  <div className="absolute top-0 right-0 w-[100px] h-[100px] bg-[#d7e9e1] rounded-full blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+                  
+                  <div className="w-[48px] h-[48px] rounded-xl bg-[#f0f7f4] flex items-center justify-center shrink-0 border border-[#cfe2d9]/50 relative z-10">
+                     <ActIcon className="w-6 h-6 text-brand-green" strokeWidth={2} />
+                  </div>
+                  <div className="flex flex-col relative z-10">
+                     <h3 className="font-[800] text-[16px] text-[#0f172a] leading-tight tracking-tight">{card.title.replace('\n', ' ')}</h3>
+                     <p className="text-[#64748b] text-[13.5px] font-[500] mt-1.5 leading-[1.4]">{card.subtitle}</p>
+                  </div>
+               </div>
+             );
+          })}
+        </div>
       </div>
     </section>
   );

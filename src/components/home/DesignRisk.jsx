@@ -1,5 +1,5 @@
-import { XCircle, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { SectionPill, SectionHeading } from '../ui';
 
 export default function DesignRisk() {
   return (
@@ -10,15 +10,14 @@ export default function DesignRisk() {
           className="flex flex-col items-center"
         >
           {/* Tag */}
-          <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-brand-green px-4 py-2 rounded-xl text-[13px] font-[800] tracking-wide border border-[#d2efe2] mb-8">
-            <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
+          <SectionPill className="mb-8">
             The Risk Most Organizations Overlook
-          </div>
+          </SectionPill>
 
           {/* Heading */}
-          <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] text-center max-w-[1100px] mb-4 sm:mb-8 break-words whitespace-normal px-2">
+          <SectionHeading className="text-center max-w-[1100px] mb-4 sm:mb-8">
             Most Infrastructure Failures <br className="hidden md:block"/> Start With Design.
-          </h2>
+          </SectionHeading>
 
           {/* Paragraph */}
           <p className="text-[#64748b] text-[15px] sm:text-[16px] md:text-[18px] leading-[1.65] font-medium text-center max-w-[900px] mb-10 md:mb-20 px-4">

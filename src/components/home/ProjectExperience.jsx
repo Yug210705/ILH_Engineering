@@ -1,8 +1,8 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Frame_1 from '../assets/Frame_1.png';
-import Frame_2 from '../assets/Frame_2.png';
-import Frame_3 from '../assets/Frame_3.png';
+import Frame_1 from '../../assets/Frame_1.png';
+import Frame_2 from '../../assets/Frame_2.png';
+import Frame_3 from '../../assets/Frame_3.png';
 
 export default function ProjectExperience() {
   const projects = [
@@ -60,35 +60,35 @@ export default function ProjectExperience() {
           Selected work supporting enterprise systems, large-scale facilities, and mission-critical operations where reliability is essential.
         </p>
 
-        {/* Project Cards Grid - Matching Hero corner radius and responsive sizing */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#e2e8f0] bg-white rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-2xl">
+        {/* --- DESKTOP GRID CONTAINER --- */}
+        <div className="hidden md:grid w-full grid-cols-3 gap-0 border border-[#e2e8f0] bg-white rounded-[32px] overflow-hidden shadow-2xl">
           {projects.map((project, index) => (
             <motion.div 
               key={index}
-              className={`group relative flex flex-col bg-white overflow-hidden ${index !== projects.length - 1 ? 'md:border-r border-[#e2e8f0]' : ''}`}
+              className={`group relative flex flex-col bg-white overflow-hidden ${index !== projects.length - 1 ? 'border-r border-[#e2e8f0]' : ''}`}
             >
               {/* Image Area */}
-              <div className="relative w-full aspect-[16/11] sm:aspect-[16/10] overflow-hidden">
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
                 <img 
                   src={project.img} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-[800ms] group-hover:scale-110"
                 />
                 {/* Arrow up right on image overlay */}
-                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-[#0f172a]/80 backdrop-blur-md rounded-xl flex items-center justify-center text-white opacity-100 transition-all duration-300 group-hover:bg-brand-green group-hover:shadow-lg group-hover:shadow-brand-green/20">
-                  <ArrowUpRight size={20} className="sm:w-6 sm:h-6" strokeWidth={2.5} />
+                <div className="absolute top-6 right-6 w-12 h-12 bg-[#0f172a]/80 backdrop-blur-md rounded-xl flex items-center justify-center text-white opacity-100 transition-all duration-300 group-hover:bg-brand-green group-hover:shadow-lg group-hover:shadow-brand-green/20">
+                  <ArrowUpRight size={24} strokeWidth={2.5} />
                 </div>
               </div>
 
-              {/* Text Area - Responsively Padded */}
-              <div className="px-6 sm:px-10 lg:px-12 pt-6 sm:pt-10 pb-6 sm:pb-8 flex flex-col bg-white text-center sm:text-left items-center sm:items-start">
+              {/* Text Area */}
+              <div className="px-8 lg:px-12 pt-10 pb-10 flex flex-col bg-white items-start text-left">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                  className="text-[18px] sm:text-[22px] lg:text-[26px] font-[800] text-[#0a0a0a] mb-2 sm:mb-3 tracking-tight leading-tight transition-colors duration-300 group-hover:text-brand-green"
+                  className="text-[22px] lg:text-[26px] font-[800] text-[#0a0a0a] mb-3 tracking-tight leading-tight transition-colors duration-300 group-hover:text-brand-green"
                 >
                   {project.title}
                 </h3>
-                <p className="text-[#71717a] text-[14.5px] sm:text-[16px] leading-[1.6] sm:leading-[1.65] font-[500] px-2 sm:px-0">
+                <p className="text-[#71717a] text-[16px] leading-[1.65] font-[500]">
                   {project.desc}
                 </p>
               </div>
@@ -97,6 +97,33 @@ export default function ProjectExperience() {
               <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-brand-green transition-all duration-700 ease-out group-hover:w-full"></div>
             </motion.div>
           ))}
+        </div>
+
+        {/* --- MOBILE STACK CONTAINER --- */}
+        <div className="flex md:hidden flex-col gap-6 w-full mt-2">
+           {projects.map((project, index) => (
+              <div key={index} className="flex flex-col bg-white rounded-[24px] overflow-hidden border border-[#e2e8f0]/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative group">
+                 {/* Image Area */}
+                 <div className="relative w-full aspect-[16/11] overflow-hidden">
+                   <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <div className="absolute top-4 right-4 w-[42px] h-[42px] bg-white/90 backdrop-blur-md rounded-[12px] flex items-center justify-center text-[#0a0a0a] shadow-sm">
+                     <ArrowUpRight size={20} strokeWidth={2.5} />
+                   </div>
+                 </div>
+                 
+                 {/* Content Area */}
+                 <div className="p-6 flex flex-col relative bg-white">
+                    <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[800] text-[#0a0a0a] mb-2 leading-snug tracking-tight">
+                       {project.title}
+                    </h3>
+                    <p className="text-[#64748b] text-[14.5px] leading-[1.6] font-[500]">
+                       {project.desc}
+                    </p>
+                 </div>
+                 
+                 <div className="absolute bottom-0 left-0 w-full h-[4px] bg-brand-green opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+           ))}
         </div>
 
         {/* CTA Button - Responsively Padded and Sized */}

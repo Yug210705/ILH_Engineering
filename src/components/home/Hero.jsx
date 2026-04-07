@@ -1,6 +1,6 @@
 import { Play } from 'lucide-react';
-import heroImg from '../assets/heroimg.webp';
-import ralphImg from '../assets/ralph.png';
+import heroImg from '../../assets/heroimg.webp';
+import ralphImg from '../../assets/ralph.png';
 import { motion } from 'framer-motion';
 
 export default function Hero() {

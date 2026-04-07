@@ -1,7 +1,8 @@
 import { ChevronDown, Menu, X } from 'lucide-react';
-import siteLogo from '../assets/Logo.png';
+import siteLogo from '../../assets/Logo.png';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NAV_LINKS, VIEWS } from '../../constants';
 
 export default function Navbar({ currentView, setCurrentView }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,13 +13,6 @@ export default function Navbar({ currentView, setCurrentView }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: 'Capabilities', hasDropdown: true, view: 'home' },
-    { name: 'Experience', hasDropdown: false, view: 'experience' },
-    { name: 'The Firm', hasDropdown: true, view: 'home' },
-    { name: 'Geographic Coverage', hasDropdown: true, view: 'home' }
-  ];
 
   const handleLinkClick = (view) => {
     setCurrentView(view);
@@ -35,14 +29,14 @@ export default function Navbar({ currentView, setCurrentView }) {
       >
         <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between px-4 sm:px-8 lg:px-12">
           {/* Logos side */}
-          <div className="flex-1 flex items-center justify-start cursor-pointer transition-opacity hover:opacity-80" onClick={() => handleLinkClick('home')}>
+          <div className="flex-1 flex items-center justify-start cursor-pointer transition-opacity hover:opacity-80" onClick={() => handleLinkClick(VIEWS.HOME)}>
             <img src={siteLogo} alt="ILH Engineering" className="h-[45px] sm:h-[55px] lg:h-[60px] w-auto object-contain" />
           </div>
           
           {/* Desktop Center Links */}
           <div className="hidden xl:flex shrink-0 items-center justify-center gap-1.5 lg:gap-2">
-            {navLinks.map((link) => {
-              const isActive = (currentView === link.view || (currentView === 'caseStudy' && link.view === 'experience')) && link.name === 'Experience';
+            {NAV_LINKS.map((link) => {
+              const isActive = (currentView === link.view || (currentView === VIEWS.CASE_STUDY && link.view === VIEWS.EXPERIENCE)) && link.name === 'Experience';
               return (
                 <button 
                   key={link.name}
@@ -87,7 +81,7 @@ export default function Navbar({ currentView, setCurrentView }) {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-[90] bg-white pt-24 px-6 flex flex-col gap-6"
           >
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <button 
                 key={link.name}
                 onClick={() => handleLinkClick(link.view)}

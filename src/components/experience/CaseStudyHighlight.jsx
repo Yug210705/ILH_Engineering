@@ -2,9 +2,9 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Asset imports - matching user-specified paths
-import expImage from '../assets/exp_image.png';
-import subtractShape from '../assets/Subtract (1).png';
-import linesDecoration from '../assets/lines.png';
+import expImage from '../../assets/exp_image.png';
+import subtractShape from '../../assets/Subtract (1).png';
+import linesDecoration from '../../assets/lines.png';
 
 export default function CaseStudyHighlight({ setCurrentView }) {
   return (
