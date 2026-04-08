@@ -1,6 +1,6 @@
 import { ArrowUpRight, CircleCheck, Clipboard, File, FileText, Layers, Network, Search } from 'lucide-react';
 import capImage from '../../assets/cap1.jpg';
-import img1 from '../../assets/img1.jpg';
+import Mosaic1 from '../../assets/Mosaic1.png';
 
 export default function CapabilitiesPage() {
   const powerGrid = [
@@ -197,17 +197,17 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* 3. The Problem Section — FIXED IMAGE MOSAIC */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24 relative isolate">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+      <section className="w-full max-w-[1200px] mx-auto px-12 sm:px-8 lg:px-12 py-16 sm:py-24 relative isolate">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-4">
 
           {/* Text Block */}
-          <div className="flex-[0.85] flex flex-col items-start w-full order-2 lg:order-1 pt-0 lg:pt-8 xl:pt-12">
+          <div className="flex-[1] flex flex-col items-start w-full order-2 lg:order-1 pt-0 lg:pt-8 xl:pt-12">
             <div className="inline-flex items-center gap-2 bg-[#f0f7f4] text-[#0a0a0a] px-3.5 py-1.5 rounded-[6px] text-[12.5px] font-[600] tracking-tight border border-[#cfe2d9] mb-8">
               <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
               The Problem
             </div>
 
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[34px] sm:text-[46px] lg:text-[48px] xl:text-[54px] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[36px] sm:text-[46px] lg:text-[48px] xl:text-[45px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6">
               Most Power <span className="text-[#3e976c]">Failures</span> Are<br />
               <span className="text-[#3e976c]">Designed</span> In
             </h2>
@@ -226,60 +226,11 @@ export default function CapabilitiesPage() {
             </div>
           </div>
 
-          {/* ── FIXED IMAGE MOSAIC ── */}
-          <div className="flex-[1.15] w-full relative order-1 lg:order-2 flex justify-end items-center">
-            <div className="relative w-[320px] sm:w-[380px] h-[400px] sm:h-[460px]">
-
-              {/* Top-left small floating block */}
-              <div
-                className="absolute rounded-[14px] sm:rounded-[18px] overflow-hidden"
-                style={{ top: 0, left: 0, width: '23%', height: '18%' }}
-              >
-                <img src={img1} alt="" className="w-full h-full object-cover" style={{ objectPosition: '20% 30%' }} />
-              </div>
-
-              {/* Main large block — top right */}
-              <div
-                className="absolute rounded-[14px] sm:rounded-[20px] overflow-hidden"
-                style={{ top: 0, left: '27%', right: 0, height: '47%' }}
-              >
-                <img src={img1} alt="Engineer inspecting panel" className="w-full h-full object-cover" style={{ objectPosition: '60% 20%' }} />
-              </div>
-
-              {/* Tall left panel — starts below small block */}
-              <div
-                className="absolute rounded-[14px] sm:rounded-[20px] overflow-hidden"
-                style={{ top: '22%', left: 0, width: '42%', bottom: 0 }}
-              >
-                <img src={img1} alt="Control panel wiring" className="w-full h-full object-cover" style={{ objectPosition: '10% 50%' }} />
-              </div>
-
-              {/* Middle-right square */}
-              <div
-                className="absolute rounded-[12px] sm:rounded-[16px] overflow-hidden"
-                style={{ top: '51%', left: '46%', width: '25%', height: '21%' }}
-              >
-                <img src={img1} alt="" className="w-full h-full object-cover" style={{ objectPosition: '50% 70%' }} />
-              </div>
-
-              {/* Right-edge small block */}
-              <div
-                className="absolute rounded-[12px] sm:rounded-[16px] overflow-hidden"
-                style={{ top: '51%', right: 0, width: '23%', height: '19%' }}
-              >
-                <img src={img1} alt="" className="w-full h-full object-cover" style={{ objectPosition: '80% 50%' }} />
-              </div>
-
-              {/* Bottom-right tall block */}
-              <div
-                className="absolute rounded-[12px] sm:rounded-[16px] overflow-hidden"
-                style={{ bottom: 0, left: '46%', right: 0, height: '26%' }}
-              >
-                <img src={img1} alt="" className="w-full h-full object-cover" style={{ objectPosition: '70% 80%' }} />
-              </div>
-
-            </div>
+          {/* Image Mosaic */}
+          <div className="flex-[1] w-full relative order-1 lg:order-2 flex justify-end items-start">
+            <img src={Mosaic1} alt="" /> 
           </div>
+
         </div>
       </section>
 
