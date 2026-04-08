@@ -1,15 +1,16 @@
 import { ArrowUpRight, CircleCheck, Clipboard, File, FileText, Layers, Network, Search } from 'lucide-react';
 import capImage from '../../assets/cap1.jpg';
 import Mosaic1 from '../../assets/Mosaic1.png';
+import ClientsEnvironmentSection from './components/ClientsEnvironmentSection';
 
 export default function CapabilitiesPage() {
-  const powerGrid = [
+const powerGrid = [
     {
       title: "Power Distribution",
       desc: "System Design",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-[#3e976c] mb-6">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinejoin="round" strokeLinecap="round" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-[#3e976c] mb-8">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
         </svg>
       )
     },
@@ -17,10 +18,11 @@ export default function CapabilitiesPage() {
       title: "Generator & Backup",
       desc: "Power Systems",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-[#3e976c] mb-6">
-          <rect x="3" y="6" width="14" height="12" rx="2" />
-          <path d="M17 10h4v4h-4" />
-          <circle cx="9" cy="12" r="2" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
+          {/* Engine/motor icon */}
+          <path d="M3 12h1m16 0h1M6 6l1.5 1.5M16.5 7.5L18 6M6 18l1.5-1.5m9 0L18 18" />
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 8V6m0 12v-2" />
         </svg>
       )
     },
@@ -28,8 +30,10 @@ export default function CapabilitiesPage() {
       title: "Load Calculations",
       desc: "& Panel Schedules",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-[#3e976c] mb-6">
-          <path d="M18 20V10" /><path d="M12 20V4" /><path d="M6 20v-6" /><path d="M4 20h16" />
+        <svg viewBox="0 0 24 24" fill="#3e976c" className="w-10 h-10 mb-8">
+          <rect x="3" y="12" width="4" height="9" rx="1" />
+          <rect x="10" y="7" width="4" height="14" rx="1" />
+          <rect x="17" y="3" width="4" height="18" rx="1" />
         </svg>
       )
     },
@@ -37,9 +41,9 @@ export default function CapabilitiesPage() {
       title: "Short Circuit",
       desc: "& Voltage Drop Analysis",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-[#3e976c] mb-6">
-          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" strokeLinejoin="round" />
-          <path d="M12 9v4" strokeLinejoin="round" /><path d="M12 17h.01" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+          <path d="M12 9v4" /><path d="M12 17h.01" />
         </svg>
       )
     },
@@ -47,8 +51,12 @@ export default function CapabilitiesPage() {
       title: "Grounding & Bonding",
       desc: "System Design",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-[#3e976c] mb-6">
-          <path d="M12 2v8" /><path d="M8 10h8" /><path d="M12 10v12" /><path d="M4 22h16" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
+          {/* Anchor icon */}
+          <circle cx="12" cy="5" r="3" />
+          <path d="M12 8v13" />
+          <path d="M5 10a7 7 0 0 0 14 0" />
+          <path d="M5 10H3m18 0h-2" />
         </svg>
       )
     },
@@ -56,9 +64,9 @@ export default function CapabilitiesPage() {
       title: "Arc Flash Analysis",
       desc: "& Code Compliance",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-[#3e976c] mb-6">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinejoin="round" />
-          <path d="M9 12l2 2 4-4" strokeLinejoin="round" />
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" />
         </svg>
       )
     }
@@ -147,7 +155,7 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* 2. What We Do Grid */}
-      <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24 relative isolate overflow-hidden">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24 relative isolate overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40 pointer-events-none"
           style={{
             backgroundImage: `linear-gradient(to right, #cedfde 1px, transparent 1px), linear-gradient(to bottom, #cedfde 1px, transparent 1px)`,
@@ -155,7 +163,7 @@ export default function CapabilitiesPage() {
             maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 10%, black 50%, transparent 90%, transparent 100%)'
           }}>
         </div>
-        <div className="relative z-10">
+        <div className="relative z-10 px-8">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-12 mb-12 sm:mb-20">
             <div className="flex-1 flex flex-col md:flex-row gap-6 md:gap-10 items-start">
               <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-[#0a0a0a] px-3 py-1.5 rounded-[8px] text-[12px] font-[600] tracking-tight border border-[#cfe2d9] whitespace-nowrap shrink-0">
@@ -233,6 +241,7 @@ export default function CapabilitiesPage() {
 
         </div>
       </section>
+    
 
       {/* 4. Engineering Methodology — FIXED TIMELINE (matches Image 4) */}
       <section className="w-full max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24 relative isolate overflow-hidden">
@@ -343,7 +352,7 @@ export default function CapabilitiesPage() {
 
           </div>
         </div>
-
+        
         {/* ── MOBILE TIMELINE ── */}
         <div className="flex sm:hidden flex-col gap-0 relative">
           {/* Vertical line */}
@@ -375,6 +384,8 @@ export default function CapabilitiesPage() {
         </div>
 
       </section>
+      <ClientsEnvironmentSection />
     </div>
+    
   );
 }
