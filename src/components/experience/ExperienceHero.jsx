@@ -13,7 +13,7 @@ export default function ExperienceHero() {
             alt="Infrastructure Case Studies"
             className="w-full h-auto block object-cover rounded-[40px]"
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
           />
 
           {/* ===== TEXT positioned securely inside the built-in white cutout area ===== */}
