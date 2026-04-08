@@ -15,7 +15,7 @@ export default function Hero() {
           alt="Industrial Facility Aerial View"
           className="w-full h-full object-cover"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 

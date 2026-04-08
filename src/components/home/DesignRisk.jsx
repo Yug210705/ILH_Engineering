@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { XCircle, CheckCircle2 } from 'lucide-react';
 import { SectionPill, SectionHeading } from '../ui';
 
 export default function DesignRisk() {

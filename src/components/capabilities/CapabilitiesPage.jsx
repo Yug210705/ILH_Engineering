@@ -217,34 +217,36 @@ export default function CapabilitiesPage() {
 
            {/* Image Block with Exact Custom Cutout Vector Mask */}
            <div className="flex-[1.15] w-full relative order-1 lg:order-2 flex justify-end items-center">
-             <svg viewBox="0 0 100 100" className="w-[100%] max-w-[620px] h-auto aspect-square overflow-visible drop-shadow-2xl" preserveAspectRatio="none">
+             <svg viewBox="0 0 78 95" className="w-[100%] max-w-[500px] h-auto overflow-visible drop-shadow-2xl" preserveAspectRatio="none">
                 <defs>
                   <clipPath id="exactProblemMask">
                      {/* 1. Top Left Floating Box */}
-                     <rect x="22" y="5" width="16" height="13" rx="4.5" />
+                     <rect x="0" y="0" width="16" height="13" rx="4.5" />
                      
                      {/* 2. Main Body - Horizontal Top Segment */}
-                     <rect x="42" y="5" width="58" height="45" rx="4.5" />
+                     <rect x="20" y="0" width="58" height="45" rx="4.5" />
                      
                      {/* 3. Main Body - Vertical Left Segment */}
-                     <rect x="22" y="22" width="35" height="78" rx="4.5" />
+                     <rect x="0" y="17" width="35" height="78" rx="4.5" />
                      
                      {/* 4. Middle Right Floating Box (Sleeve) */}
-                     <rect x="61" y="54" width="18" height="18" rx="4.5" />
+                     <rect x="39" y="49" width="18" height="18" rx="4.5" />
                      
                      {/* 5. Right Edge Floating A (Small Box) */}
-                     <rect x="83" y="54" width="17" height="16" rx="4.5" />
+                     <rect x="61" y="49" width="17" height="16" rx="4.5" />
                      
                      {/* 6. Bottom Right Floating B (Meter) */}
-                     <rect x="76" y="74" width="19" height="26" rx="4.5" />
+                     <rect x="54" y="69" width="19" height="26" rx="4.5" />
                   </clipPath>
                 </defs>
                 
                 {/* Apply the mask seamlessly to the requested image */}
                 <image 
                   href={img1} 
-                  width="100%" 
-                  height="100%" 
+                  x="0"
+                  y="0"
+                  width="78" 
+                  height="95" 
                   preserveAspectRatio="xMidYMid slice" 
                   clipPath="url(#exactProblemMask)" 
                 />

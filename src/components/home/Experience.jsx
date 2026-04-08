@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Building2, Server, Network, ShieldCheck } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { SectionPill, SectionHeading, GridBackground } from '../ui';
 
 export default function Experience() {
