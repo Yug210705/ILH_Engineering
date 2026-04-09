@@ -1,5 +1,5 @@
 import { ArrowUpRight, BatteryCharging, CircleCheck, Clipboard, FileText, Layers, Network, ShieldCheckIcon, Zap, Thermometer, ChartNoAxesColumnIncreasing } from 'lucide-react';
-import capImage from '../../assets/cap1.jpg';
+import subtract from '../../assets/subtract.png';
 import Mosaic2 from '../../assets/Mosaic2.png';
 import ClientsEnvironmentSection from './components/ClientsEnvironmentSection';
 
@@ -112,7 +112,7 @@ export default function CapabilitiesPage() {
       {/* 1. Hero Section */}
       <section className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pt-4 relative isolate">
         <div className="relative w-full h-[500px] sm:h-[700px] lg:h-[800px] rounded-[24px] sm:rounded-[40px] overflow-hidden bg-[#2a2a2a]">
-          <img src={capImage} alt="Electrical Infrastructure" className="w-full h-full object-cover" loading="eager" />
+          <img src={subtract} alt="Electrical Infrastructure" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
           <div className="absolute top-0 left-0 bg-white rounded-br-[20px] sm:rounded-br-[40px] pr-6 sm:pr-12 pb-6 sm:pb-10 pt-6 sm:pt-8 pl-4 sm:pl-8 lg:pl-10 z-20">
