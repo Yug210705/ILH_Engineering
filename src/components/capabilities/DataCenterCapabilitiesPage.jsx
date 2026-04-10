@@ -135,7 +135,7 @@ export default function CapabilitiesPage() {
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
                 Data Center Engineering . Mission-Critical Infrastructure
               </div>
-              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[30px] sm:text-[48px] lg:text-[64px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] m-0 p-0 text-left whitespace-nowrap">
+              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[30px] sm:text-[48px] lg:text-[64px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] m-0 p-0 text-left whitespace-nowrap">
                 Data Center &amp;<br />
                 <span className="text-[#3e976c]">Mission-Critical </span>
                 <span className="text-[#0a0a0a]">Infrastructure</span>
@@ -148,7 +148,7 @@ export default function CapabilitiesPage() {
             </div>
 
             <div className="absolute bottom-0 right-0 bg-white rounded-tl-[20px] sm:rounded-tl-[40px] pl-6 sm:pl-10 pt-6 sm:pt-8 pb-4 sm:pb-6 pr-4 sm:pr-8 z-20 text-center sm:text-right">
-              <button className="bg-[#3e976c] hover:bg-[#34835d] text-white font-[800] text-[15px] sm:text-[18px] px-6 sm:px-10 py-3.5 sm:py-5 rounded-[12px] shadow-lg shadow-[#3e976c]/30 transition-all active:-translate-y-1 w-full sm:w-auto">
+              <button className="bg-[#3e976c] hover:bg-[#34835d] text-white font-[600] text-[15px] sm:text-[18px] px-6 sm:px-10 py-3.5 sm:py-5 rounded-[12px] shadow-lg shadow-[#3e976c]/30 transition-all active:-translate-y-1 w-full sm:w-auto">
                 Schedule a Consultation
               </button>
               <p className="text-[#a1a1aa] text-[12px] sm:text-[14px] font-[500] mt-3 tracking-tight">
@@ -178,7 +178,7 @@ export default function CapabilitiesPage() {
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
                 What We Do
               </div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] mt-6 sm:text-[42px] lg:text-[46px] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] max-w-[700px] flex-[2]">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] mt-6 sm:text-[42px] lg:text-[46px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] max-w-[700px] flex-[2]">
                 Data Center &amp; <br className="hidden sm:block" />
                 Mission-Critical Infrastructure <br className="hidden sm:block" />
                 We <span className="text-[#3e976c]">Design</span> and <span className="text-[#3e976c]">Deliver.</span>
@@ -210,7 +210,7 @@ export default function CapabilitiesPage() {
                     ${whatIn ? visible : hidden}`}
                 >
                   {item.icon}
-                  <h3 className="font-[800] text-[20px] lg:text-[22px] text-[#0a0a0a] tracking-tight leading-none mb-1.5">{item.title}</h3>
+                  <h3 className="font-[600] text-[20px] lg:text-[22px] text-[#0a0a0a] tracking-tight leading-none mb-1.5">{item.title}</h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px]">{item.desc}</p>
                 </div>
               ))}
@@ -232,7 +232,7 @@ export default function CapabilitiesPage() {
                   className={`p-6 bg-white rounded-none shadow-sm border border-gray-100 flex flex-col pt-8 ${whatIn ? visible : hidden}`}
                 >
                   {item.icon}
-                  <h3 className="font-[800] text-[18px] text-[#0a0a0a] tracking-tight leading-tight mb-1">{item.title}</h3>
+                  <h3 className="font-[600] text-[18px] text-[#0a0a0a] tracking-tight leading-tight mb-1">{item.title}</h3>
                   <p className="text-[#a1a1aa] font-[500] text-[14px]">{item.desc}</p>
                 </div>
               ))}
@@ -297,7 +297,7 @@ export default function CapabilitiesPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
               Engineering Methodology
             </div>
-            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[32px] sm:text-[46px] lg:text-[54px] font-[800] leading-[1.05] tracking-tight text-[#0f172a] max-w-[800px]">
+            <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[32px] sm:text-[46px] lg:text-[54px] font-[600] leading-[1.05] tracking-tight text-[#0f172a] max-w-[800px]">
               From First Assessment to <br className="hidden sm:block" />
               Final Sign-Off.
             </h2>
@@ -316,8 +316,8 @@ export default function CapabilitiesPage() {
                 className={`flex items-start w-full min-h-[180px] pb-6 ${methodIn ? visible : hidden}`}
               >
                 <div className="w-1/2 pr-16 flex flex-col items-end text-right pt-1">
-                  <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[800] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">1</div>
-                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[800] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
+                  <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[600] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">1</div>
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
                     Facility &amp; Risk Assessment
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
@@ -338,8 +338,8 @@ export default function CapabilitiesPage() {
                   <Network size={68} strokeWidth={1} className="text-[#3e976c] opacity-25" />
                 </div>
                 <div className="w-1/2 pl-16 flex flex-col items-start text-left pt-1">
-                  <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[800] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">2</div>
-                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[800] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
+                  <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[600] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">2</div>
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
                     Redundancy Architecture
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
@@ -354,8 +354,8 @@ export default function CapabilitiesPage() {
                 className={`flex items-start w-full min-h-[180px] pb-6 ${methodIn ? visible : hidden}`}
               >
                 <div className="w-1/2 pr-16 flex flex-col items-end text-right pt-1">
-                  <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[800] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">3</div>
-                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[800] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
+                  <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[600] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">3</div>
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
                     Integrated System Design
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
@@ -381,7 +381,7 @@ export default function CapabilitiesPage() {
                       <path d="M20 6L9 17l-5-5" />
                     </svg>
                   </div>
-                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[800] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
                     Commissioning &amp; Handoff
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
@@ -409,7 +409,7 @@ export default function CapabilitiesPage() {
                 style={{ animationDelay: `${i * 100}ms` }}
                 className={`flex items-start pl-12 relative pb-10 last:pb-0 z-10 ${methodIn ? visible : hidden}`}
               >
-                <div className={`absolute left-0 top-0 ${step.isCheck ? 'w-[40px] h-[40px] border-[3px] border-white ring-1 ring-[#d2efe2]' : 'w-[38px] h-[38px]'} rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[800] text-[16px] z-20 shadow-sm`}>
+                <div className={`absolute left-0 top-0 ${step.isCheck ? 'w-[40px] h-[40px] border-[3px] border-white ring-1 ring-[#d2efe2]' : 'w-[38px] h-[38px]'} rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[600] text-[16px] z-20 shadow-sm`}>
                   {step.isCheck ? (
                     <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                       <path d="M20 6L9 17l-5-5" />
@@ -417,7 +417,7 @@ export default function CapabilitiesPage() {
                   ) : step.num}
                 </div>
                 <div>
-                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[800] text-[20px] text-[#3e976c] tracking-tight mb-2 leading-tight">
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[20px] text-[#3e976c] tracking-tight mb-2 leading-tight">
                     {step.title}
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[14px] leading-relaxed">{step.body}</p>
