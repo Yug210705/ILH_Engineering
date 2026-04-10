@@ -21,6 +21,7 @@ const ScopeOfWork        = lazy(() => import('./components/experience/ScopeOfWor
 const CaseStudyHighlight = lazy(() => import('./components/experience/CaseStudyHighlight'));
 const CaseStudyGallery   = lazy(() => import('./components/experience/CaseStudyGallery'));
 const DataCenterPage     = lazy(() => import('./components/capabilities/DataCenterCapabilitiesPage'));
+const ConnectivityPage   = lazy(() => import('./components/capabilities/ConnectivityAndNetworkCapabilities'));
 
 // Standalone
 const CaseStudyPage    = lazy(() => import('./components/casestudy/CaseStudyPage'));
@@ -55,6 +56,12 @@ const VIEW_COMPONENTS = {
   [VIEWS.CASE_STUDY]: () => (
     <Suspense fallback={<PageLoader />}>
       <CaseStudyPage />
+    </Suspense>
+  ),
+
+  [VIEWS.CONNECTIVITY]: ({ setCurrentView }) => (
+    <Suspense fallback={<PageLoader />}>
+      <ConnectivityPage setCurrentView={setCurrentView} />
     </Suspense>
   ),
 

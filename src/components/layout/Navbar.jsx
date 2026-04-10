@@ -16,7 +16,7 @@ export default function Navbar({ currentView, setCurrentView }) {
     },
     {
       name: 'Connectivity & Network Resilience',
-      view: null,
+      view: VIEWS.CONNECTIVITY,
     },
     {
       name: 'Life Safety & Security Systems',
@@ -32,6 +32,7 @@ export default function Navbar({ currentView, setCurrentView }) {
   const [capDropOpen, setCapDropOpen] = useState(false);
   const [mobileCapOpen, setMobileCapOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const hoverTimeoutRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -39,19 +40,19 @@ export default function Navbar({ currentView, setCurrentView }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setCapDropOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const handleMouseEnter = () => {
+    clearTimeout(hoverTimeoutRef.current);
+    setCapDropOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setCapDropOpen(false);
+    }, 100);
+  };
 
   const handleLinkClick = (view) => {
-    if (!view) return; // # links — do nothing
+    if (!view) return;
     setCurrentView(view);
     window.scrollTo(0, 0);
     setIsMenuOpen(false);
@@ -90,12 +91,16 @@ export default function Navbar({ currentView, setCurrentView }) {
                   (currentView === VIEWS.CASE_STUDY && link.view === VIEWS.EXPERIENCE)) &&
                 link.name === 'Experience';
 
-              // Capabilities gets a dropdown
               if (link.name === 'Capabilities') {
                 return (
-                  <div key={link.name} className="relative" ref={dropdownRef}>
+                  <div
+                    key={link.name}
+                    className="relative"
+                    ref={dropdownRef}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
                     <button
-                      onClick={() => setCapDropOpen((prev) => !prev)}
                       className={`flex items-center gap-1.5 cursor-pointer transition-all px-4 lg:px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold ${
                         isCapabilitiesActive || capDropOpen
                           ? 'bg-[#e8f2ee] text-brand-green border border-[#d2efe2]'
