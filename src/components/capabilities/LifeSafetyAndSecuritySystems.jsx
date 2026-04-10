@@ -1,7 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, BatteryCharging, CircleCheck, Clipboard, FileText, Layers, Network, ShieldCheckIcon, Zap, Thermometer, ChartNoAxesColumnIncreasing, Megaphone, Split, Workflow } from 'lucide-react';
-import ConnectivityAndNetworkCapabilities from '../../assets/ConnectivityAndNetworkCapabilities.png';
-import Mosaic3 from '../../assets/Mosaic3.png';
+import {
+  ArrowUpRight,
+  CircleCheck,
+  Clipboard,
+  FileText,
+  Network,
+  ShieldCheck,
+  Zap,
+  Megaphone,
+  KeyRound,
+  Cctv,
+  BellRing,
+  MonitorCog,
+  FileSearch,
+  Radio,
+} from 'lucide-react';
+import LifeSafetyAndSecuritySystems from '../../assets/LifeSafetyAndSecuritySystems.png';
+import Mosaic4 from '../../assets/Mosaic4.png';
 import ClientsEnvironmentSection from './components/ClientsEnvironmentSection';
 
 /* ─── Reusable hook: fires once when element enters viewport ─── */
@@ -68,17 +83,19 @@ export default function CapabilitiesPage({ setCurrentView }) {
           className={`w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pt-4 relative isolate transition-none ${heroIn ? visible : hidden}`}
         >
           <div className="relative w-full h-[500px] sm:h-[700px] lg:h-[800px] rounded-[24px] sm:rounded-[40px] overflow-hidden">
-            <img src={ConnectivityAndNetworkCapabilities} alt="Connectivity and Network Infrastructure" className="w-full h-full object-cover" loading="eager" />
+            <img src={LifeSafetyAndSecuritySystems} alt="Life Safety and Security Systems" className="w-full h-full object-cover" loading="eager" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-            <div className="absolute mt-8 top-0 left-0 z-20 w-fit rounded-br-[20px] sm:rounded-br-[40px] pr-6 sm:pr-12 pb-4 sm:pb-10 pt-4 sm:pt-8 pl-4 sm:pl-8 lg:pl-10">
+            <div className="absolute mt-10 top-0 left-0 z-20 w-fit rounded-br-[20px] sm:rounded-br-[40px] pr-6 sm:pr-12 pb-4 sm:pb-10 pt-4 sm:pt-8 pl-4 sm:pl-8 lg:pl-10">
               <div className="inline-flex items-center gap-2 lg:gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-3 sm:px-4 py-2 rounded-[8px] text-[12px] sm:text-[14px] font-[700] tracking-tight border border-[#cfe2d9] mb-4 sm:mb-6 leading-tight whitespace-nowrap">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
-                Network Infrastructure . Communication Engineering
+                Life Safety Engineering . Security Systems Design
               </div>
               <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[30px] sm:text-[48px] lg:text-[64px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] m-0 p-0 text-left whitespace-nowrap">
-                Connectivity &amp; Network<br />
-                <span className="text-[#3e976c]">Resilience</span>
+                <span className="text-[#3e976c]">Life</span>
+                <span className="text-[#0a0a0a]"> Safety</span> &amp;<br />
+                <span className="text-[#3e976c]">Security</span>
+                <span className="text-[#0a0a0a]"> Systems</span>
               </h1>
             </div>
             <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 z-20 hidden sm:flex">
@@ -119,12 +136,11 @@ export default function CapabilitiesPage({ setCurrentView }) {
                 What We Do
               </div>
               <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] mt-6 sm:text-[42px] lg:text-[46px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] max-w-[700px] flex-[2]">
-                Connectivity &amp; Network<br className="hidden sm:block" />
-                Infrastructure We <span className="text-[#3e976c]">Design</span> and <span className="text-[#3e976c]">Deliver.</span>
+                Life Safety &amp; Security Systems We <span className="text-[#3e976c]">Design</span> and <span className="text-[#3e976c]">Deliver.</span>
               </h2>
               <div className="flex-1 lg:max-w-[320px] self-start lg:self-center">
                 <p className="text-[#848484] text-[15px] sm:text-[16px] leading-[1.6] font-[500] tracking-tight">
-                  When communications infrastructure is fragmented or built without redundancy, a single disruption can isolate entire facilities. In critical environments that means delayed emergency response, compliance violations, and operational paralysis.
+                  Integrated safety and security systems engineered for facilities where compliance and protection are non-negotiable.
                 </p>
               </div>
             </div>
@@ -133,57 +149,34 @@ export default function CapabilitiesPage({ setCurrentView }) {
             <div className="hidden md:grid w-full grid-cols-3 border border-gray-100 rounded-none overflow-hidden bg-white/50 backdrop-blur-sm relative z-10 shadow-sm">
               {[
                 {
-                  title: "Structured Cabling",
-                  desc: "& Data Network Design",
-                  icon: (
-                    <Split size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
-                  )
+                  title: "Access Control",
+                  desc: "& Identity Management Systems",
+                  icon: <KeyRound size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
                 },
                 {
-                  title: "Fiber Optic",
-                  desc: "Infrastructure Design",
-                  icon: (
-                    <Network size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
-                  )
+                  title: "CCTV & Surveillance",
+                  desc: "System Design",
+                  icon: <Cctv size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
                 },
                 {
-                  title: "DAS & Wireless",
-                  desc: "Coverage for Safety Communications",
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
-                      <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                      <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                      <circle cx="12" cy="20" r="1" fill="#3e976c" />
-                    </svg>
-                  )
+                  title: "Emergency Communications",
+                  desc: "& Mass Notification",
+                  icon: <Radio size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
                 },
                 {
-                  title: "Failover & Redundant",
-                  desc: "Communications Pathways",
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
-                      <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z" />
-                      <path d="M14 17h2m4 0h-4m0 0V14m0 3v3" />
-                    </svg>
-                  )
+                  title: "Fire Alarm",
+                  desc: "& Detection System Coordination",
+                  icon: <BellRing size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
                 },
                 {
-                  title: "Intercom, Paging",
-                  desc: "& Communication Systems",
-                  icon: (
-                   <Megaphone size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
-                  )
+                  title: "Security Operations",
+                  desc: "Center Design & Layout",
+                  icon: <MonitorCog size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
                 },
                 {
-                  title: "Disaster Readiness",
-                  desc: "& Communications Planning",
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                      <path d="M9 12l2 2 4-4" />
-                    </svg>
-                  )
+                  title: "Compliance Documentation",
+                  desc: "& Code Review",
+                  icon: <FileText size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
                 },
               ].map((item, idx) => (
                 <div
@@ -205,12 +198,12 @@ export default function CapabilitiesPage({ setCurrentView }) {
             {/* Mobile Grid */}
             <div className="flex md:hidden flex-col gap-4 relative z-10">
               {[
-                { title: "Structured Cabling",     desc: "& Data Network Design",                icon: <Network size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
-                { title: "Fiber Optic",             desc: "Infrastructure Design",               icon: <Zap size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
-                { title: "DAS & Wireless",          desc: "Coverage for Safety Communications",  icon: <Layers size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
-                { title: "Failover & Redundant",    desc: "Communications Pathways",             icon: <BatteryCharging size={40} strokeWidth={2} className="text-[#3e976c] mb-6" /> },
-                { title: "Intercom, Paging",        desc: "& Communication Systems",             icon: <ChartNoAxesColumnIncreasing size={40} strokeWidth={2} className="text-[#3e976c] mb-6" /> },
-                { title: "Disaster Readiness",      desc: "& Communications Planning",           icon: <ShieldCheckIcon size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Access Control",             desc: "& Identity Management Systems",       icon: <KeyRound size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "CCTV & Surveillance",        desc: "System Design",                       icon: <Cctv size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Emergency Communications",   desc: "& Mass Notification",                 icon: <Radio size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Fire Alarm",                 desc: "& Detection System Coordination",     icon: <BellRing size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Security Operations",        desc: "Center Design & Layout",              icon: <MonitorCog size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Compliance Documentation",   desc: "& Code Review",                       icon: <FileSearch size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
               ].map((item, idx) => (
                 <div
                   key={idx}
@@ -243,12 +236,12 @@ export default function CapabilitiesPage({ setCurrentView }) {
               </div>
 
               <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[36px] sm:text-[46px] lg:text-[48px] xl:text-[45px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6">
-                Connectivity <span className="text-[#3e976c]">Failure</span> Is<br />
-                an <span className="text-[#3e976c]">Operations</span> Failure
+                Safety Failures Are<br />
+                <span className="text-[#3e976c]">Compliance</span> Failures
               </h2>
 
               <p className="text-[#848484] text-[15px] sm:text-[17px] leading-[1.65] font-[400] max-w-[500px] mb-10">
-                When communications infrastructure is fragmented or built without redundancy, a single disruption can isolate entire facilities. In critical environments that means delayed emergency response, compliance violations, and operational paralysis.
+                Disconnected safety systems, incomplete coverage, and non-compliant installations don't just create operational risk — they create legal exposure. In critical environments, a gap in life safety infrastructure can shut down an entire facility.
               </p>
 
               <div className="flex w-max rounded-lg overflow-hidden shadow-lg shadow-[#3e976c]/20 transition-transform active:scale-95 cursor-pointer group">
@@ -265,7 +258,7 @@ export default function CapabilitiesPage({ setCurrentView }) {
             <div
               className={`flex-[1] w-full relative order-1 lg:order-2 flex justify-end items-start ${problemIn ? 'animate-fadeIn delay-200' : hidden}`}
             >
-              <img src={Mosaic3} alt="" />
+              <img src={Mosaic4} alt="" />
             </div>
 
           </div>
@@ -304,10 +297,10 @@ export default function CapabilitiesPage({ setCurrentView }) {
                 <div className="w-1/2 pr-16 flex flex-col items-end text-right pt-1">
                   <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[600] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">1</div>
                   <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
-                    Coverage &amp; Gap Analysis
+                    Risk &amp; Compliance Assessment
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    We assess existing communications infrastructure and identify coverage and redundancy gaps.
+                    We evaluate existing safety systems against current code requirements and operational risk.
                   </p>
                 </div>
                 <div className="w-1/2 pl-16 flex items-start pt-0">
@@ -326,10 +319,10 @@ export default function CapabilitiesPage({ setCurrentView }) {
                 <div className="w-1/2 pl-16 flex flex-col items-start text-left pt-1">
                   <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[600] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">2</div>
                   <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
-                    Resilience Architecture
+                    Integrated Safety Architecture
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    Communications pathways are designed with failover built in from the ground up.
+                    Life safety and security systems are designed to work as a single coordinated infrastructure.
                   </p>
                 </div>
               </div>
@@ -342,10 +335,10 @@ export default function CapabilitiesPage({ setCurrentView }) {
                 <div className="w-1/2 pr-16 flex flex-col items-end text-right pt-1">
                   <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[600] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">3</div>
                   <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[600] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
-                    Integrated System Design
+                    System Design &amp; Documentation
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    Every network and communications layer is engineered to work together under failure conditions.
+                    Every access point, camera, and emergency system is fully engineered and documented to code.
                   </p>
                 </div>
                 <div className="w-1/2 pl-16 flex items-start pt-0">
@@ -371,7 +364,7 @@ export default function CapabilitiesPage({ setCurrentView }) {
                     Commissioning &amp; Handoff
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    We verify coverage, performance, and compliance before the system goes live.
+                    We verify every system meets compliance and performs as designed before handoff.
                   </p>
                 </div>
               </div>
@@ -385,10 +378,10 @@ export default function CapabilitiesPage({ setCurrentView }) {
             <div className="absolute left-[18px] bottom-0 h-[25%] w-[2px] bg-[#3e976c] z-0" />
 
             {[
-              { num: 1, title: "Coverage & Gap Analysis",    body: "We assess existing communications infrastructure and identify coverage and redundancy gaps.", isCheck: false },
-              { num: 2, title: "Resilience Architecture",    body: "Communications pathways are designed with failover built in from the ground up.", isCheck: false },
-              { num: 3, title: "Integrated System Design",   body: "Every network and communications layer is engineered to work together under failure conditions.", isCheck: false },
-              { num: 4, title: "Commissioning & Handoff",    body: "We verify coverage, performance, and compliance before the system goes live.", isCheck: true },
+              { num: 1, title: "Risk & Compliance Assessment",  body: "We evaluate existing safety systems against current code requirements and operational risk.", isCheck: false },
+              { num: 2, title: "Integrated Safety Architecture", body: "Life safety and security systems are designed to work as a single coordinated infrastructure.", isCheck: false },
+              { num: 3, title: "System Design & Documentation",  body: "Every access point, camera, and emergency system is fully engineered and documented to code.", isCheck: false },
+              { num: 4, title: "Commissioning & Handoff",        body: "We verify every system meets compliance and performs as designed before handoff.", isCheck: true },
             ].map((step, i) => (
               <div
                 key={i}

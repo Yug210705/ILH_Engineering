@@ -20,11 +20,11 @@ export default function Navbar({ currentView, setCurrentView }) {
     },
     {
       name: 'Life Safety & Security Systems',
-      view: null,
+      view: VIEWS.SAFETY,
     },
     {
       name: 'Project Management for Critical Deployments',
-      view: null,
+      view: VIEWS.PROJECT_MANAGEMENT,
     },
   ];
   const [isScrolled, setIsScrolled] = useState(false);

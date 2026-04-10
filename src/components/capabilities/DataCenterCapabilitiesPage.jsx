@@ -27,7 +27,7 @@ const hidden = 'opacity-0';
 // Triggered state: fade + slide up
 const visible = 'animate-fadeSlideUp';
 
-export default function CapabilitiesPage() {
+export default function CapabilitiesPage({ setCurrentView }) {
 
   /* One hook per section / group */
   const [heroRef,      heroIn]      = useInView(0.1);
@@ -428,7 +428,7 @@ export default function CapabilitiesPage() {
 
         </section>
 
-        <ClientsEnvironmentSection />
+        <ClientsEnvironmentSection setCurrentView={setCurrentView} />
       </div>
     </>
   );
