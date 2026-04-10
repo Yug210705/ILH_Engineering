@@ -22,6 +22,8 @@ const CaseStudyHighlight = lazy(() => import('./components/experience/CaseStudyH
 const CaseStudyGallery   = lazy(() => import('./components/experience/CaseStudyGallery'));
 const DataCenterPage     = lazy(() => import('./components/capabilities/DataCenterCapabilitiesPage'));
 const ConnectivityPage   = lazy(() => import('./components/capabilities/ConnectivityAndNetworkCapabilities'));
+const LifeSafetyAndSecuritySystemsPage = lazy(() => import('./components/capabilities/LifeSafetyAndSecuritySystems'));
+const ProjectManagementPage = lazy(() => import('./components/capabilities/ProjectManagementforCriticalDeployments'));
 
 // Standalone
 const CaseStudyPage    = lazy(() => import('./components/casestudy/CaseStudyPage'));
@@ -69,6 +71,18 @@ const VIEW_COMPONENTS = {
   <Suspense fallback={<PageLoader />}>
     <CapabilitiesPage setCurrentView={setCurrentView} />
   </Suspense>
+  ),
+
+  [VIEWS.SAFETY]: ({ setCurrentView }) => (
+    <Suspense fallback={<PageLoader />}>
+      <LifeSafetyAndSecuritySystemsPage setCurrentView={setCurrentView} />
+    </Suspense>
+  ),
+
+  [VIEWS.PROJECT_MANAGEMENT]: ({ setCurrentView }) => (
+    <Suspense fallback={<PageLoader />}>
+      <ProjectManagementPage setCurrentView={setCurrentView} />
+    </Suspense>
   ),
 
   [VIEWS.EXPERIENCE]: ({ setCurrentView }) => (
