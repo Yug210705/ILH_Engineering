@@ -8,29 +8,41 @@ export default function Capabilities({ setCurrentView }) {
     {
       title: "Electrical Power Systems",
       desc: "Resilient power distribution and backup systems.",
-      img: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop",
+      view: VIEWS.CAPABILITIES,
     },
     {
       title: "Data Center & Mission-Critical Infrastructure",
       desc: "Infrastructure engineered for continuous uptime.",
-      img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600&auto=format&fit=crop",
+      view: VIEWS.DATA_CENTER,
     },
     {
       title: "Connectivity & Network Resilience",
       desc: "Redundant communications infrastructure.",
-      img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop",
+      view: VIEWS.CONNECTIVITY,
     },
     {
       title: "Life Safety & Security Systems",
       desc: "Integrated safety and compliance systems.",
-      img: "https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=600&auto=format&fit=crop",
+      view: VIEWS.SAFETY,
     },
     {
       title: "Project Management for Critical Deployments",
       desc: "End-to-End management of mission critical installations.",
-      img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600&auto=format&fit=crop",
+      view: VIEWS.PROJECT_MANAGEMENT,
     }
   ];
+
+  const handleNavigate = (item) => {
+    if (item.view && setCurrentView) {
+      setCurrentView(item.view);
+      window.scrollTo(0, 0);
+    }
+  };
 
   return (
     <section className="w-full relative overflow-hidden bg-gradient-to-b from-[#f4f7f6] to-white pt-16 pb-12">
@@ -66,14 +78,12 @@ export default function Capabilities({ setCurrentView }) {
               continuously and securely.
             </p>
             
-            {/* Split Button */}
             <SplitButton className="mx-auto md:mx-0">
               View All Capabilities
             </SplitButton>
           </div>
         </motion.div>
 
-        {/* Cards list Container with 'group/list' for sibling fade effects */}
         {/* --- DESKTOP CAPABILITIES LIST --- */}
         <motion.div 
           className="hidden lg:flex flex-col gap-4 w-full relative z-10 w-[95%] group/list"
@@ -81,15 +91,11 @@ export default function Capabilities({ setCurrentView }) {
           {capabilitiesList.map((item, index) => (
             <motion.div 
               key={index}
-              onClick={() => {
-                if (item.title.includes("Data Center") && setCurrentView) {
-                  setCurrentView(VIEWS.DATA_CENTER);
-                }
-              }}
+              onClick={() => handleNavigate(item)}
               className="bg-white rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
             >
               
-              {/* External Floating Chevrons icon (Visually placed where the card used to be) */}
+              {/* External Floating Chevrons icon */}
               <div className="absolute left-[-48px] top-1/2 -translate-y-1/2 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 delay-75 hidden sm:block">
                 <ChevronsRight size={26} className="text-[#3e976c]" strokeWidth={2.5} />
               </div>
@@ -117,14 +123,9 @@ export default function Capabilities({ setCurrentView }) {
           {capabilitiesList.map((item, index) => (
             <div 
               key={index} 
-              onClick={() => {
-                if (item.title.includes("Data Center") && setCurrentView) {
-                  setCurrentView(VIEWS.DATA_CENTER);
-                }
-              }}
+              onClick={() => handleNavigate(item)}
               className="bg-white rounded-[24px] p-5 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-gray-100/80 flex flex-col gap-4 relative overflow-hidden group cursor-pointer"
             >
-               {/* Decorative Gradient Blob */}
                <div className="absolute -top-10 -right-10 w-[120px] h-[120px] bg-brand-green/5 blur-3xl rounded-full"></div>
                
                <div className="w-full h-[140px] rounded-2xl overflow-hidden shadow-sm relative z-10 border border-gray-100">
