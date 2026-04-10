@@ -1,8 +1,9 @@
 import { ChevronsRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SectionPill, SplitButton, SectionHeading, GridBackground } from '../ui';
+import { VIEWS } from '../../constants';
 
-export default function Capabilities() {
+export default function Capabilities({ setCurrentView }) {
   const capabilitiesList = [
     {
       title: "Electrical Power Systems",
@@ -80,6 +81,11 @@ export default function Capabilities() {
           {capabilitiesList.map((item, index) => (
             <motion.div 
               key={index}
+              onClick={() => {
+                if (item.title.includes("Data Center") && setCurrentView) {
+                  setCurrentView(VIEWS.DATA_CENTER);
+                }
+              }}
               className="bg-white rounded-[16px] px-8 sm:px-10 py-[22px] shadow-[0_4px_30px_rgb(0,0,0,0.015)] border border-[#eff1f0] hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-[#def0e7] flex items-center cursor-pointer relative group/card group-hover/list:opacity-[0.35] hover:!opacity-100 transition-all duration-400 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:translate-x-[48px]"
             >
               
@@ -109,7 +115,15 @@ export default function Capabilities() {
         {/* --- MOBILE CAPABILITIES LIST --- */}
         <div className="flex lg:hidden flex-col gap-5 w-full relative z-10 mt-6 md:mt-12">
           {capabilitiesList.map((item, index) => (
-            <div key={index} className="bg-white rounded-[24px] p-5 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-gray-100/80 flex flex-col gap-4 relative overflow-hidden group">
+            <div 
+              key={index} 
+              onClick={() => {
+                if (item.title.includes("Data Center") && setCurrentView) {
+                  setCurrentView(VIEWS.DATA_CENTER);
+                }
+              }}
+              className="bg-white rounded-[24px] p-5 shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-gray-100/80 flex flex-col gap-4 relative overflow-hidden group cursor-pointer"
+            >
                {/* Decorative Gradient Blob */}
                <div className="absolute -top-10 -right-10 w-[120px] h-[120px] bg-brand-green/5 blur-3xl rounded-full"></div>
                

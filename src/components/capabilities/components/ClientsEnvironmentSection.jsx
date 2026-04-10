@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Frame_1 from "../../../assets/Frame_1.png";
 import Frame_2 from "../../../assets/Frame_2.png";
+import { VIEWS } from "../../../constants";
 
 const facilityCards = [
   { title: "Data centers and server environments", img: Frame_1 },
@@ -12,22 +13,26 @@ const relatedServices = [
   {
     title: "Data Center & Mission-Critical Infrastructure",
     desc: "Infrastructure engineered for continuous uptime.",
+    view: VIEWS.DATA_CENTER,
   },
   {
     title: "Connectivity & Network Resilience",
     desc: "Redundant communications infrastructure.",
+    view: VIEWS.CONNECTIVITY,
   },
   {
     title: "Life Safety & Security Systems",
     desc: "Integrated safety and compliance systems.",
+    view: VIEWS.SAFETY,
   },
   {
     title: "Project Management for Critical Deployments",
     desc: "End-to-end management of mission-critical installations.",
+    view: VIEWS.PROJECT_MANAGEMENT,
   },
 ];
 
-export default function ClientsEnvironmentSection() {
+export default function ClientsEnvironmentSection({ setCurrentView }) {
   const [startIdx, setStartIdx] = useState(0);
 
   const prev = () =>
@@ -164,6 +169,11 @@ export default function ClientsEnvironmentSection() {
             {relatedServices.map((service, idx) => (
               <div
                 key={idx}
+                onClick={() => {
+                  if (service.view && setCurrentView) {
+                    setCurrentView(service.view);
+                  }
+                }}
                 className="flex items-center justify-between px-5 py-5 bg-white rounded-[14px] border border-gray-100 shadow-sm hover:bg-[#f9fdfb] hover:border-[#cfe2d9] transition-all cursor-pointer"
               >
                 <div className="flex flex-col gap-1">

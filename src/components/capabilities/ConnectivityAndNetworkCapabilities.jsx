@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, BatteryCharging, ChartNoAxesColumnIncreasing, CircleCheck, Clipboard, FileText, Layers, Network, ShieldCheckIcon } from 'lucide-react';
-import Electrical from '../../assets/Electrical.png';
-import Mosaic1 from '../../assets/Mosaic1.png';
+import { ArrowUpRight, BatteryCharging, CircleCheck, Clipboard, FileText, Layers, Network, ShieldCheckIcon, Zap, Thermometer, ChartNoAxesColumnIncreasing, Megaphone, Split, Workflow } from 'lucide-react';
+import ConnectivityAndNetworkCapabilities from '../../assets/ConnectivityAndNetworkCapabilities.png';
+import Mosaic3 from '../../assets/Mosaic3.png';
 import ClientsEnvironmentSection from './components/ClientsEnvironmentSection';
 
 /* ─── Reusable hook: fires once when element enters viewport ─── */
@@ -21,64 +21,16 @@ function useInView(threshold = 0.12) {
   return [ref, inView];
 }
 
-const hidden  = 'opacity-0';
+/* ─── Animation class helpers ─── */
+const hidden = 'opacity-0';
 const visible = 'animate-fadeSlideUp';
 
-export default function CapabilitiesPage({ setCurrentView }) {
+export default function CapabilitiesPage() {
 
   const [heroRef,    heroIn]    = useInView(0.1);
   const [whatRef,    whatIn]    = useInView(0.08);
   const [problemRef, problemIn] = useInView(0.1);
   const [methodRef,  methodIn]  = useInView(0.08);
-
-  const powerGrid = [
-    {
-      title: "Power Distribution",
-      desc: "System Design",
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-[#3e976c] mb-8">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
-      )
-    },
-    {
-      title: "Generator & Backup",
-      desc: "Power Systems",
-      icon: <BatteryCharging size={40} strokeWidth={2} className="text-[#3e976c] mb-8" />
-    },
-    {
-      title: "Load Calculations",
-      desc: "& Panel Schedules",
-      icon: <ChartNoAxesColumnIncreasing size={40} strokeWidth={2} className="text-[#3e976c] mb-8" />
-    },
-    {
-      title: "Short Circuit",
-      desc: "& Voltage Drop Analysis",
-      icon: <BatteryCharging size={40} strokeWidth={2} className="text-[#3e976c] mb-8" />
-    },
-    {
-      title: "Grounding & Bonding",
-      desc: "System Design",
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
-          <circle cx="12" cy="5" r="3" />
-          <path d="M12 8v13" />
-          <path d="M5 10a7 7 0 0 0 14 0" />
-          <path d="M5 10H3m18 0h-2" />
-        </svg>
-      )
-    },
-    {
-      title: "Arc Flash Analysis",
-      desc: "& Code Compliance",
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          <path d="M9 12l2 2 4-4" />
-        </svg>
-      )
-    }
-  ];
 
   return (
     <>
@@ -90,6 +42,12 @@ export default function CapabilitiesPage({ setCurrentView }) {
         .animate-fadeSlideUp {
           animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
+        .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+        .stagger-children > *:nth-child(2) { animation-delay: 80ms; }
+        .stagger-children > *:nth-child(3) { animation-delay: 160ms; }
+        .stagger-children > *:nth-child(4) { animation-delay: 240ms; }
+        .stagger-children > *:nth-child(5) { animation-delay: 320ms; }
+        .stagger-children > *:nth-child(6) { animation-delay: 400ms; }
         @keyframes fadeIn {
           from { opacity: 0; }
           to   { opacity: 1; }
@@ -97,7 +55,9 @@ export default function CapabilitiesPage({ setCurrentView }) {
         .animate-fadeIn {
           animation: fadeIn 0.7s ease both;
         }
+        .delay-100 { animation-delay: 100ms !important; }
         .delay-200 { animation-delay: 200ms !important; }
+        .delay-300 { animation-delay: 300ms !important; }
       `}</style>
 
       <div className="w-full bg-white relative">
@@ -105,24 +65,22 @@ export default function CapabilitiesPage({ setCurrentView }) {
         {/* ── 1. Hero Section ── */}
         <section
           ref={heroRef}
-          className={`w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pt-4 relative isolate ${heroIn ? visible : hidden}`}
+          className={`w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 pt-4 relative isolate transition-none ${heroIn ? visible : hidden}`}
         >
           <div className="relative w-full h-[500px] sm:h-[700px] lg:h-[800px] rounded-[24px] sm:rounded-[40px] overflow-hidden">
-            <img src={Electrical} alt="Electrical Infrastructure" className="w-full h-full object-cover" loading="eager" />
+            <img src={ConnectivityAndNetworkCapabilities} alt="Connectivity and Network Infrastructure" className="w-full h-full object-cover" loading="eager" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-           <div className="absolute top-0 left-0 z-20 mt-8 w-fit rounded-br-[20px] sm:rounded-br-[40px] pr-6 sm:pr-12 pb-4 sm:pb-10 pt-4 sm:pt-8 pl-4 sm:pl-8 lg:pl-10">
+            <div className="absolute mt-8 top-0 left-0 z-20 w-fit rounded-br-[20px] sm:rounded-br-[40px] pr-6 sm:pr-12 pb-4 sm:pb-10 pt-4 sm:pt-8 pl-4 sm:pl-8 lg:pl-10">
               <div className="inline-flex items-center gap-2 lg:gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-3 sm:px-4 py-2 rounded-[8px] text-[12px] sm:text-[14px] font-[700] tracking-tight border border-[#cfe2d9] mb-4 sm:mb-6 leading-tight whitespace-nowrap">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
-                Electrical Engineering . Power Infrastructure
+                Network Infrastructure . Communication Engineering
               </div>
-              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[30px] sm:text-[48px] lg:text-[64px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] m-0 p-0 text-left whitespace-nowrap">
-                Electrical<br />
-                <span className="text-[#3e976c]">Power</span>
-                <span className="text-[#0a0a0a]"> Systems</span>
+              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[30px] sm:text-[48px] lg:text-[64px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] m-0 p-0 text-left whitespace-nowrap">
+                Connectivity &amp; Network<br />
+                <span className="text-[#3e976c]">Resilience</span>
               </h1>
             </div>
-
             <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 z-20 hidden sm:flex">
               <div className="w-[20px] h-[34px] border-2 border-white/70 rounded-full flex justify-center pt-1.5">
                 <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
@@ -154,21 +112,19 @@ export default function CapabilitiesPage({ setCurrentView }) {
           </div>
 
           <div className="relative z-10 px-8">
-            {/* Header */}
-            <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-12 mb-12 sm:mb-20 ${whatIn ? visible : hidden}`}>
-              <div className="flex-1 flex flex-col md:flex-row gap-6 md:gap-10 items-start">
-                <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-[#0a0a0a] px-3 py-1.5 rounded-[8px] text-[12px] font-[600] tracking-tight border border-[#cfe2d9] whitespace-nowrap shrink-0">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
-                  What We Do
-                </div>
-                <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] sm:text-[42px] lg:text-[46px] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] max-w-[600px]">
-                  Electrical Power Systems <br className="hidden sm:block" />
-                  We <span className="text-[#3e976c]">Design</span> and <span className="text-[#3e976c]">Deliver.</span>
-                </h2>
+            {/* Header row */}
+            <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-12 mb-12 sm:mb-20 stagger-children ${whatIn ? visible : hidden}`}>
+              <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-[#0a0a0a] px-3 py-1.5 rounded-[8px] text-[12px] font-[600] tracking-tight border border-[#cfe2d9] whitespace-nowrap shrink-0 self-start lg:self-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
+                What We Do
               </div>
-              <div className="flex-1 lg:max-w-[400px]">
-                <p className="text-[#848484] text-[16px] sm:text-[18px] leading-[1.6] font-[500] tracking-tight">
-                  Electrical infrastructure designed to perform under load and keep operations running without interruption.
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] mt-6 sm:text-[42px] lg:text-[46px] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] max-w-[700px] flex-[2]">
+                Connectivity &amp; Network<br className="hidden sm:block" />
+                Infrastructure We <span className="text-[#3e976c]">Design</span> and <span className="text-[#3e976c]">Deliver.</span>
+              </h2>
+              <div className="flex-1 lg:max-w-[320px] self-start lg:self-center">
+                <p className="text-[#848484] text-[15px] sm:text-[16px] leading-[1.6] font-[500] tracking-tight">
+                  When communications infrastructure is fragmented or built without redundancy, a single disruption can isolate entire facilities. In critical environments that means delayed emergency response, compliance violations, and operational paralysis.
                 </p>
               </div>
             </div>
@@ -177,18 +133,58 @@ export default function CapabilitiesPage({ setCurrentView }) {
             <div className="hidden md:grid w-full grid-cols-3 border border-gray-100 rounded-none overflow-hidden bg-white/50 backdrop-blur-sm relative z-10 shadow-sm">
               {[
                 {
-                  title: "Power Distribution", desc: "System Design",
+                  title: "Structured Cabling",
+                  desc: "& Data Network Design",
                   icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
-                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    <Split size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
+                  )
+                },
+                {
+                  title: "Fiber Optic",
+                  desc: "Infrastructure Design",
+                  icon: (
+                    <Network size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
+                  )
+                },
+                {
+                  title: "DAS & Wireless",
+                  desc: "Coverage for Safety Communications",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
+                      <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                      <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                      <circle cx="12" cy="20" r="1" fill="#3e976c" />
                     </svg>
                   )
                 },
-                { title: "Generator & Backup",      desc: "Power Systems",              icon: <BatteryCharging size={40} strokeWidth={2} className="text-[#3e976c] mb-8" /> },
-                { title: "Load Calculations",        desc: "& Panel Schedules",          icon: <ChartNoAxesColumnIncreasing size={40} strokeWidth={2} className="text-[#3e976c] mb-8" /> },
-                { title: "Short Circuit",            desc: "& Voltage Drop Analysis",    icon: <Layers size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" /> },
-                { title: "Grounding & Bonding",      desc: "System Design",              icon: <ShieldCheckIcon size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" /> },
-                { title: "Arc Flash Analysis",       desc: "& Code Compliance",          icon: <FileText size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" /> },
+                {
+                  title: "Failover & Redundant",
+                  desc: "Communications Pathways",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
+                      <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z" />
+                      <path d="M14 17h2m4 0h-4m0 0V14m0 3v3" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Intercom, Paging",
+                  desc: "& Communication Systems",
+                  icon: (
+                   <Megaphone size={40} strokeWidth={1.75} className="text-[#3e976c] mb-8" />
+                  )
+                },
+                {
+                  title: "Disaster Readiness",
+                  desc: "& Communications Planning",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-8">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <path d="M9 12l2 2 4-4" />
+                    </svg>
+                  )
+                },
               ].map((item, idx) => (
                 <div
                   key={idx}
@@ -209,19 +205,12 @@ export default function CapabilitiesPage({ setCurrentView }) {
             {/* Mobile Grid */}
             <div className="flex md:hidden flex-col gap-4 relative z-10">
               {[
-                {
-                  title: "Power Distribution", desc: "System Design",
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#3e976c" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 mb-6">
-                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                    </svg>
-                  )
-                },
-                { title: "Generator & Backup",  desc: "Power Systems",           icon: <BatteryCharging size={40} strokeWidth={2} className="text-[#3e976c] mb-6" /> },
-                { title: "Load Calculations",    desc: "& Panel Schedules",       icon: <ChartNoAxesColumnIncreasing size={40} strokeWidth={2} className="text-[#3e976c] mb-6" /> },
-                { title: "Short Circuit",        desc: "& Voltage Drop Analysis", icon: <Layers size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
-                { title: "Grounding & Bonding",  desc: "System Design",           icon: <ShieldCheckIcon size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
-                { title: "Arc Flash Analysis",   desc: "& Code Compliance",       icon: <FileText size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Structured Cabling",     desc: "& Data Network Design",                icon: <Network size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Fiber Optic",             desc: "Infrastructure Design",               icon: <Zap size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "DAS & Wireless",          desc: "Coverage for Safety Communications",  icon: <Layers size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
+                { title: "Failover & Redundant",    desc: "Communications Pathways",             icon: <BatteryCharging size={40} strokeWidth={2} className="text-[#3e976c] mb-6" /> },
+                { title: "Intercom, Paging",        desc: "& Communication Systems",             icon: <ChartNoAxesColumnIncreasing size={40} strokeWidth={2} className="text-[#3e976c] mb-6" /> },
+                { title: "Disaster Readiness",      desc: "& Communications Planning",           icon: <ShieldCheckIcon size={40} strokeWidth={1.75} className="text-[#3e976c] mb-6" /> },
               ].map((item, idx) => (
                 <div
                   key={idx}
@@ -245,19 +234,21 @@ export default function CapabilitiesPage({ setCurrentView }) {
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-4">
 
             {/* Text Block */}
-            <div className={`flex-[1] flex flex-col items-start w-full order-2 lg:order-1 pt-0 lg:pt-8 xl:pt-12 ${problemIn ? visible : hidden}`}>
+            <div
+              className={`flex-[1] flex flex-col items-start w-full order-2 lg:order-1 pt-0 lg:pt-8 xl:pt-12 ${problemIn ? visible : hidden}`}
+            >
               <div className="inline-flex items-center gap-2 bg-[#f0f7f4] text-[#0a0a0a] px-3.5 py-1.5 rounded-[6px] text-[12.5px] font-[600] tracking-tight border border-[#cfe2d9] mb-8">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
                 The Problem
               </div>
 
               <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[36px] sm:text-[46px] lg:text-[48px] xl:text-[45px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6">
-                Most Power <span className="text-[#3e976c]">Failures</span> Are<br />
-                <span className="text-[#3e976c]">Designed</span> In
+                Connectivity <span className="text-[#3e976c]">Failure</span> Is<br />
+                an <span className="text-[#3e976c]">Operations</span> Failure
               </h2>
 
               <p className="text-[#848484] text-[15px] sm:text-[17px] leading-[1.65] font-[400] max-w-[500px] mb-10">
-                Undersized distribution systems, missing redundancy, and non-compliant installations don't fail by accident. They fail because they were never engineered for the demands placed on them. The cost is measured in downtime, liability, and unplanned capital expenditure.
+                When communications infrastructure is fragmented or built without redundancy, a single disruption can isolate entire facilities. In critical environments that means delayed emergency response, compliance violations, and operational paralysis.
               </p>
 
               <div className="flex w-max rounded-lg overflow-hidden shadow-lg shadow-[#3e976c]/20 transition-transform active:scale-95 cursor-pointer group">
@@ -270,9 +261,11 @@ export default function CapabilitiesPage({ setCurrentView }) {
               </div>
             </div>
 
-            {/* Image Mosaic — fade in with slight delay */}
-            <div className={`flex-[1] w-full relative order-1 lg:order-2 flex justify-end items-start ${problemIn ? 'animate-fadeIn delay-200' : hidden}`}>
-              <img src={Mosaic1} alt="" />
+            {/* Image Mosaic */}
+            <div
+              className={`flex-[1] w-full relative order-1 lg:order-2 flex justify-end items-start ${problemIn ? 'animate-fadeIn delay-200' : hidden}`}
+            >
+              <img src={Mosaic3} alt="" />
             </div>
 
           </div>
@@ -311,10 +304,10 @@ export default function CapabilitiesPage({ setCurrentView }) {
                 <div className="w-1/2 pr-16 flex flex-col items-end text-right pt-1">
                   <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[800] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">1</div>
                   <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[800] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
-                    Facility &amp; Risk Assessment
+                    Coverage &amp; Gap Analysis
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    We map existing infrastructure, identify single points of failure and compliance gaps.
+                    We assess existing communications infrastructure and identify coverage and redundancy gaps.
                   </p>
                 </div>
                 <div className="w-1/2 pl-16 flex items-start pt-0">
@@ -333,10 +326,10 @@ export default function CapabilitiesPage({ setCurrentView }) {
                 <div className="w-1/2 pl-16 flex flex-col items-start text-left pt-1">
                   <div className="w-[38px] h-[38px] rounded-full bg-[#3e976c] text-white flex items-center justify-center font-[800] text-[17px] shadow-md shadow-[#3e976c]/20 mb-3">2</div>
                   <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="font-[800] text-[22px] text-[#3e976c] tracking-tight mb-2 leading-tight">
-                    Redundancy Architecture
+                    Resilience Architecture
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    Power, cooling, and communications are designed with layered failover from the ground up.
+                    Communications pathways are designed with failover built in from the ground up.
                   </p>
                 </div>
               </div>
@@ -352,7 +345,7 @@ export default function CapabilitiesPage({ setCurrentView }) {
                     Integrated System Design
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    Every subsystem is engineered to work together under both normal and failure conditions.
+                    Every network and communications layer is engineered to work together under failure conditions.
                   </p>
                 </div>
                 <div className="w-1/2 pl-16 flex items-start pt-0">
@@ -378,7 +371,7 @@ export default function CapabilitiesPage({ setCurrentView }) {
                     Commissioning &amp; Handoff
                   </h3>
                   <p className="text-[#a1a1aa] font-[500] text-[15px] leading-snug max-w-[240px]">
-                    We verify every system performs to specification before the facility goes live.
+                    We verify coverage, performance, and compliance before the system goes live.
                   </p>
                 </div>
               </div>
@@ -392,10 +385,10 @@ export default function CapabilitiesPage({ setCurrentView }) {
             <div className="absolute left-[18px] bottom-0 h-[25%] w-[2px] bg-[#3e976c] z-0" />
 
             {[
-              { num: 1, title: "Facility & Risk Assessment",  body: "We map existing infrastructure, identify single points of failure and compliance gaps.", isCheck: false },
-              { num: 2, title: "Redundancy Architecture",      body: "Power, cooling, and communications are designed with layered failover from the ground up.", isCheck: false },
-              { num: 3, title: "Integrated System Design",     body: "Every subsystem is engineered to work together under both normal and failure conditions.", isCheck: false },
-              { num: 4, title: "Commissioning & Handoff",      body: "We verify every system performs to specification before the facility goes live.", isCheck: true },
+              { num: 1, title: "Coverage & Gap Analysis",    body: "We assess existing communications infrastructure and identify coverage and redundancy gaps.", isCheck: false },
+              { num: 2, title: "Resilience Architecture",    body: "Communications pathways are designed with failover built in from the ground up.", isCheck: false },
+              { num: 3, title: "Integrated System Design",   body: "Every network and communications layer is engineered to work together under failure conditions.", isCheck: false },
+              { num: 4, title: "Commissioning & Handoff",    body: "We verify coverage, performance, and compliance before the system goes live.", isCheck: true },
             ].map((step, i) => (
               <div
                 key={i}
@@ -421,7 +414,7 @@ export default function CapabilitiesPage({ setCurrentView }) {
 
         </section>
 
-        <ClientsEnvironmentSection setCurrentView={setCurrentView} />
+        <ClientsEnvironmentSection />
       </div>
     </>
   );
