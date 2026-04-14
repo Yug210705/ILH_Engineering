@@ -66,7 +66,7 @@ export default function Experience() {
               </SectionPill>
               
               <SectionHeading className="mt-2 text-center md:text-left">
-                Infrastructure <span className="text-[#a1a1aa] font-[800]">that</span><br/>Must Perform
+                Infrastructure <span className="text-[#a1a1aa] font-[600]">that</span><br/>Must Perform
               </SectionHeading>
             </div>
             
@@ -113,7 +113,7 @@ export default function Experience() {
                   </div>
                   
                   <div className={`mt-auto whitespace-pre-line transition-all duration-300 text-left ${isActive ? 'mb-12' : 'mb-10'}`}>
-                    <h3 className="font-[800] text-[20px] lg:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
+                    <h3 className="font-[600] text-[20px] lg:text-[22px] tracking-tight text-[#0f172a] leading-[1.2]">{card.title}</h3>
                     <p className="text-[#a1a1aa] text-[14px] mt-2 font-[600] leading-snug">{card.subtitle}</p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function Experience() {
                      <ActIcon className="w-6 h-6 text-brand-green" strokeWidth={2} />
                   </div>
                   <div className="flex flex-col relative z-10">
-                     <h3 className="font-[800] text-[16px] text-[#0f172a] leading-tight tracking-tight">{card.title.replace('\n', ' ')}</h3>
+                     <h3 className="font-[600] text-[16px] text-[#0f172a] leading-tight tracking-tight">{card.title.replace('\n', ' ')}</h3>
                      <p className="text-[#64748b] text-[13.5px] font-[500] mt-1.5 leading-[1.4]">{card.subtitle}</p>
                   </div>
                </div>

@@ -1,6 +1,6 @@
 import { Play } from 'lucide-react';
 import heroImg from '../../assets/heroimg.webp';
-import ralphImg from '../../assets/ralph.png';
+import ralphImg from '../../assets/ralph.webp';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
@@ -25,7 +25,7 @@ export default function Hero() {
           {/* Block 0: Pill (Short) */}
           <div
             className="bg-[#ffffff] px-4 lg:pr-[28px] lg:pl-[48px] relative pointer-events-auto pb-1 pt-3 sm:pt-5 flex items-end shrink-0 w-max max-w-[95vw] sm:max-w-[calc(100vw-32px)] z-10 rounded-[12px] sm:rounded-l-none sm:rounded-r-[12px]">
-            <div className="inline-flex items-center gap-1.5 bg-[#e8f2ee] text-brand-green px-2.5 py-1.5 rounded-[8px] text-[11px] sm:text-[12.5px] font-[700] tracking-tight whitespace-normal break-words leading-tight">
+            <div className="inline-flex items-center gap-1.5 bg-[#e8f2ee] text-brand-green px-2.5 py-1.5 rounded-[8px] text-[11px] sm:text-[12.5px] font-[600] tracking-tight whitespace-normal break-words leading-tight">
               <div className="w-[5px] h-[5px] rounded-full bg-brand-green shrink-0 mt-[1px]"></div>
               <span>Mission-Critical Infrastructure Engineering</span>
             </div>
@@ -34,7 +34,7 @@ export default function Hero() {
           {/* Block 1: Infrastructure that Performs (Consolidated for Mobile) */}
           <div
             className="bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[95vw] sm:max-w-[calc(100vw-32px)] z-20 rounded-[12px] sm:rounded-l-none sm:rounded-r-[20px]">
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[600] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               Infrastructure <span className="sm:hidden text-brand-green">that Performs</span>
             </h1>
           </div>
@@ -42,7 +42,7 @@ export default function Hero() {
           {/* Block 2: that Performs (Desktop Only) */}
           <div
             className="hidden sm:flex bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-1 lg:pb-3 pt-1 lg:pt-3 flex-col shrink-0 w-max max-w-[95vw] sm:max-w-[calc(100vw-32px)] z-30 rounded-[20px] sm:rounded-l-none sm:rounded-r-[20px]">
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[600] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               that <span className="text-brand-green">Performs</span>
             </h1>
           </div>
@@ -50,7 +50,7 @@ export default function Hero() {
           {/* Block 3: when Failure isn't an Option. (Consolidated for Mobile) */}
           <div
             className="bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex flex-col shrink-0 w-max max-w-[95vw] sm:max-w-[calc(100vw-32px)] z-40 rounded-[12px] sm:rounded-l-none sm:rounded-tr-[20px] sm:rounded-br-[24px]">
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[600] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               when Failure isn&#39;t <span className="sm:hidden text-brand-green">an Option.</span>
             </h1>
           </div>
@@ -58,7 +58,7 @@ export default function Hero() {
           {/* Block 4: an Option. (Desktop Only) */}
           <div
             className="hidden sm:flex bg-[#ffffff] px-5 sm:pr-[32px] lg:pr-[48px] sm:pl-[32px] lg:pl-[48px] relative pointer-events-auto pb-3 sm:pb-4 lg:pb-6 pt-1 lg:pt-3 flex-col shrink-0 w-max max-w-[calc(100vw-32px)] z-50 rounded-[20px] sm:rounded-l-none sm:rounded-tr-[20px] sm:rounded-br-[24px]">
-            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[800] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
+            <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[clamp(28px,7vw,64px)] lg:text-[64px] font-[600] tracking-tight text-[#0a0a0a] leading-[0.95] break-words">
               an <span className="text-brand-green">Option.</span>
             </h1>
           </div>
@@ -79,7 +79,7 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col justify-center pr-4 md:pr-6">
-              <span className="font-bold text-[13px] md:text-[14px] leading-tight mb-[1px] tracking-tight whitespace-nowrap">Hear from Ralph</span>
+              <span className="font-[600] text-[13px] md:text-[14px] leading-tight mb-[1px] tracking-tight whitespace-nowrap">Hear from Ralph</span>
               <span className="text-[#a1a1aa] text-[10px] md:text-[12px] leading-[1.2] font-[500] max-w-[130px] md:max-w-[150px] line-clamp-2 overflow-hidden">
                 Founding Director & Principal Engineer
               </span>
@@ -113,15 +113,15 @@ export default function Hero() {
                   </div>
                 </div>
                 <div className="flex flex-col justify-center">
-                  <span className="font-bold text-[14px] text-[#0a0a0a] leading-tight mb-[1px]">Hear from Ralph</span>
+                  <span className="font-[600] text-[14px] text-[#0a0a0a] leading-tight mb-[1px]">Hear from Ralph</span>
                   <span className="text-[#71717a] text-[11px] leading-[1.2] font-[500]">Founding Director</span>
                 </div>
               </div>
 
-              <button className="bg-brand-green hover:bg-[#328b58] text-white font-[800] text-[clamp(12px,3.8vw,16px)] sm:text-[16px] px-2 sm:px-6 py-3.5 sm:py-4 rounded-[10px] w-full transition-all tracking-wide shadow-lg shadow-brand-green/20 leading-tight whitespace-normal break-words flex items-center justify-center">
+              <button className="bg-brand-green hover:bg-[#328b58] text-white font-[600] text-[clamp(12px,3.8vw,16px)] sm:text-[16px] px-2 sm:px-6 py-3.5 sm:py-4 rounded-[10px] w-full transition-all tracking-wide shadow-lg shadow-brand-green/20 leading-tight whitespace-normal break-words flex items-center justify-center">
                 Schedule Infrastructure Consultation
               </button>
-              <p className="mt-3.5 sm:mt-4 text-[#6b7280] text-[11px] sm:text-[13.5px] text-center sm:text-left font-semibold w-full">
+              <p className="mt-3.5 sm:mt-4 text-[#6b7280] text-[11px] sm:text-[13.5px] text-center sm:text-left font-[600] w-full">
                 Speak directly with an infrastructure engineer.
               </p>
             </div>

@@ -1,5 +1,5 @@
 import { ChevronDown, Menu, X } from 'lucide-react';
-import siteLogo from '../../assets/Logo.png';
+import siteLogo from '../../assets/logo.webp';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS, VIEWS } from '../../constants';
@@ -101,7 +101,7 @@ export default function Navbar({ currentView, setCurrentView }) {
                     onMouseLeave={handleMouseLeave}
                   >
                     <button
-                      className={`flex items-center gap-1.5 cursor-pointer transition-all px-4 lg:px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold ${
+                      className={`flex items-center gap-1.5 cursor-pointer transition-all px-4 lg:px-5 py-2.5 rounded-[12px] text-[13.5px] font-semibold ${
                         isCapabilitiesActive || capDropOpen
                           ? 'bg-[#e8f2ee] text-brand-green border border-[#d2efe2]'
                           : 'bg-transparent hover:bg-gray-100/80 text-gray-800'
@@ -162,7 +162,7 @@ export default function Navbar({ currentView, setCurrentView }) {
                 <button
                   key={link.name}
                   onClick={() => handleLinkClick(link.view)}
-                  className={`flex items-center gap-1.5 cursor-pointer transition-all px-4 lg:px-5 py-2.5 rounded-[12px] text-[13.5px] font-bold ${
+                  className={`flex items-center gap-1.5 cursor-pointer transition-all px-4 lg:px-5 py-2.5 rounded-[12px] text-[13.5px] font-semibold ${
                     isActive
                       ? 'bg-[#e8f2ee] text-brand-green border border-[#d2efe2]'
                       : 'bg-transparent hover:bg-gray-100/80 text-gray-800'
@@ -183,7 +183,7 @@ export default function Navbar({ currentView, setCurrentView }) {
 
           {/* Desktop CTA */}
           <div className="flex-1 hidden md:flex items-center justify-end gap-4">
-            <button className="cursor-pointer bg-brand-green hover:bg-[#328b58] text-white px-7 py-[11px] rounded-[12px] text-[13.5px] font-[800] transition-all duration-300 shadow-lg shadow-brand-green/20">
+            <button className="cursor-pointer bg-brand-green hover:bg-[#328b58] text-white px-7 py-[11px] rounded-[12px] text-[13.5px] font-[600] transition-all duration-300 shadow-lg shadow-brand-green/20">
               Contact Us
             </button>
           </div>
@@ -215,7 +215,7 @@ export default function Navbar({ currentView, setCurrentView }) {
                   <div key={link.name}>
                     <button
                       onClick={() => setMobileCapOpen((prev) => !prev)}
-                      className="flex items-center justify-between w-full p-4 border-b border-gray-100 text-[18px] font-bold text-gray-800 cursor-pointer"
+                      className="flex items-center justify-between w-full p-4 border-b border-gray-100 text-[18px] font-semibold text-gray-800 cursor-pointer"
                     >
                       {link.name}
                       <ChevronDown
@@ -262,7 +262,7 @@ export default function Navbar({ currentView, setCurrentView }) {
                 <button
                   key={link.name}
                   onClick={() => handleLinkClick(link.view)}
-                  className="flex items-center justify-between w-full p-4 border-b border-gray-50 text-[18px] font-bold text-gray-800 text-left cursor-pointer"
+                  className="flex items-center justify-between w-full p-4 border-b border-gray-50 text-[18px] font-semibold text-gray-800 text-left cursor-pointer"
                 >
                   {link.name}
                   {link.hasDropdown && <ChevronDown size={20} />}
@@ -271,7 +271,7 @@ export default function Navbar({ currentView, setCurrentView }) {
             })}
 
             <div className="mt-auto pb-12 flex flex-col gap-4">
-              <button className="w-full cursor-pointer bg-brand-green text-white py-4 rounded-xl font-bold text-[18px]">
+              <button className="w-full cursor-pointer bg-brand-green text-white py-4 rounded-xl font-semibold text-[18px]">
                 Contact Us
               </button>
             </div>

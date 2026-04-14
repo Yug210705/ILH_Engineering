@@ -48,7 +48,7 @@ export default function ScopeOfWork() {
           
           {/* Tag on Left - Exact pill styling */}
           <div className="shrink-0 pt-1">
-            <div className="inline-flex items-center gap-2 bg-[#f0f7f4] text-[#3e976c] px-4 py-2 rounded-lg text-[12.5px] font-[700] tracking-tight border border-[#cfe2d9]/80 shadow-sm shadow-[#3e976c]/5">
+            <div className="inline-flex items-center gap-2 bg-[#f0f7f4] text-[#3e976c] px-4 py-2 rounded-lg text-[12.5px] font-[600] tracking-tight border border-[#cfe2d9]/80 shadow-sm shadow-[#3e976c]/5">
               <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
               Scope of Work
             </div>
@@ -58,7 +58,7 @@ export default function ScopeOfWork() {
           <div className="flex-1 flex justify-start lg:pl-4 text-center lg:text-left">
             <h2 
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-              className="text-[20px] sm:text-[clamp(32px,8.5vw,64px)] font-[800] leading-[1.1] sm:leading-[1.05] tracking-tight text-[#0a0a0a] text-center lg:text-left max-w-none break-words whitespace-normal px-2 sm:px-0"
+              className="text-[20px] sm:text-[clamp(32px,8.5vw,64px)] font-[600] leading-[1.1] sm:leading-[1.05] tracking-tight text-[#0a0a0a] text-center lg:text-left max-w-none break-words whitespace-normal px-2 sm:px-0"
             >
               <span className="lg:whitespace-nowrap">Infrastructure Across</span> <br className="hidden sm:block" /> 
               <span className="lg:whitespace-nowrap">Complex Environments</span>
@@ -96,7 +96,7 @@ export default function ScopeOfWork() {
               <div className={`flex flex-col gap-4 mt-auto ${index === features.length - 1 ? 'items-center md:items-start' : 'items-start'}`}>
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                  className="text-[17px] sm:text-[22px] lg:text-[24px] xl:text-[26px] font-[800] text-[#0a0a0a] tracking-tight leading-tight transition-colors duration-300 group-hover:text-[#3e976c]"
+                  className="text-[17px] sm:text-[22px] lg:text-[24px] xl:text-[26px] font-[600] text-[#0a0a0a] tracking-tight leading-tight transition-colors duration-300 group-hover:text-[#3e976c]"
                 >
                   {item.title}
                 </h3>

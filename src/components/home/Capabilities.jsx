@@ -108,7 +108,7 @@ export default function Capabilities({ setCurrentView }) {
               {/* Card Typography */}
               <div className="flex flex-col justify-center">
                 <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} 
-                    className="text-[18px] sm:text-[22px] lg:text-[24px] font-[700] text-[#0a0a0a] group-hover/card:text-[#3e976c] transition-colors duration-300 tracking-tight mb-1 whitespace-normal break-words leading-snug pr-4">
+                    className="text-[18px] sm:text-[22px] lg:text-[24px] font-[600] text-[#0a0a0a] group-hover/card:text-[#3e976c] transition-colors duration-300 tracking-tight mb-1 whitespace-normal break-words leading-snug pr-4">
                   {item.title}
                 </h3>
                 <p className="text-[#9ca3af] text-[13.5px] font-[500] tracking-tight whitespace-normal break-words pr-4">{item.desc}</p>
@@ -133,7 +133,7 @@ export default function Capabilities({ setCurrentView }) {
                </div>
                
                <div className="flex flex-col mt-1 relative z-10">
-                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[800] text-[#0a0a0a] tracking-tight mb-2 leading-snug">
+                  <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[600] text-[#0a0a0a] tracking-tight mb-2 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-[#64748b] text-[14px] font-[500] tracking-tight leading-[1.6]">

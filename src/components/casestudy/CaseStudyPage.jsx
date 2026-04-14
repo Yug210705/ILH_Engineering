@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
-import expImage from '../../assets/exp_image.png';
-import modernizationImg from '../../assets/modernization.png';
+import expImage from '../../assets/exp_image.webp';
+import modernizationImg from '../../assets/modernization.webp';
 
 export default function CaseStudyPage() {
   const [activeSection, setActiveSection] = useState('problem');
@@ -64,7 +64,7 @@ export default function CaseStudyPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              className="text-[30px] sm:text-[54px] lg:text-[72px] xl:text-[84px] font-[800] leading-[0.95] tracking-[-0.04em] text-[#0a0a0a]"
+              className="text-[30px] sm:text-[54px] lg:text-[72px] xl:text-[84px] font-[600] leading-[0.95] tracking-[-0.04em] text-[#0a0a0a]"
             >
               Large-Scale <br /> Infrastructure <br /> Environments
             </motion.h1>
@@ -81,7 +81,7 @@ export default function CaseStudyPage() {
           <div className="lg:col-span-4 relative">
             <div className="sticky top-[120px] w-full max-w-[320px]">
               <div className="bg-[#f7f8f9] rounded-[24px] p-8 lg:p-10 mb-6">
-                <span className="text-[#a0abbd] text-[13px] font-[700] uppercase tracking-wider mb-6 block">Content</span>
+                <span className="text-[#a0abbd] text-[13px] font-[600] uppercase tracking-wider mb-6 block">Content</span>
                 
                 <ul className="flex flex-col gap-5">
                   {[
@@ -98,9 +98,9 @@ export default function CaseStudyPage() {
                           setActiveSection(item.id);
                           document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }}
-                        className={`text-[20px] font-[700] lg:text-[22px] transition-colors flex items-center gap-2 ${activeSection === item.id ? 'text-[#3e976c]' : 'text-[#8e9aaf] hover:text-[#0a0a0a]'}`}
+                        className={`text-[20px] font-[600] lg:text-[22px] transition-colors flex items-center gap-2 ${activeSection === item.id ? 'text-[#3e976c]' : 'text-[#8e9aaf] hover:text-[#0a0a0a]'}`}
                       >
-                        {activeSection === item.id && <span className="text-[#3e976c] font-bold">»</span>}
+                        {activeSection === item.id && <span className="text-[#3e976c] font-[600]">»</span>}
                         {item.label}
                       </button>
                     </li>
@@ -169,7 +169,7 @@ export default function CaseStudyPage() {
             
             <h2 
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              className="text-[42px] sm:text-[54px] lg:text-[62px] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mb-12"
+              className="text-[42px] sm:text-[54px] lg:text-[62px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] mb-12"
             >
               Read More
             </h2>
@@ -208,7 +208,7 @@ export default function CaseStudyPage() {
               <div className="p-8 pt-6 lg:p-10 lg:pt-8 bg-white flex-1 flex flex-col justify-start">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  className="text-[24px] lg:text-[28px] font-[800] leading-[1.2] text-[#0a0a0a] mb-4 group-hover:text-[#3e976c] transition-colors"
+                  className="text-[24px] lg:text-[28px] font-[600] leading-[1.2] text-[#0a0a0a] mb-4 group-hover:text-[#3e976c] transition-colors"
                 >
                   Enterprise Infrastructure Modernization
                 </h3>
@@ -239,7 +239,7 @@ export default function CaseStudyPage() {
               <div className="p-8 pt-6 lg:p-10 lg:pt-8 bg-white flex-1 flex flex-col justify-start">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  className="text-[24px] lg:text-[28px] font-[800] leading-[1.2] text-[#0a0a0a] mb-4 group-hover:text-[#3e976c] transition-colors"
+                  className="text-[24px] lg:text-[28px] font-[600] leading-[1.2] text-[#0a0a0a] mb-4 group-hover:text-[#3e976c] transition-colors"
                 >
                   Mission-Critical Communications Infrastru...
                 </h3>

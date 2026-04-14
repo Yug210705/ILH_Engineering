@@ -45,7 +45,7 @@ export default function DesignRisk() {
             </div>
 
             {/* Title */}
-            <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-[800] tracking-tight text-[#0f172a] mb-6 px-2 break-words">
+            <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-[600] tracking-tight text-[#0f172a] mb-6 px-2 break-words">
               Fragmented Infrastructure
             </h3>
 
@@ -79,7 +79,7 @@ export default function DesignRisk() {
             </div>
 
             {/* Title */}
-            <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-[800] tracking-tight text-[#0f172a] mb-6 px-2 break-words">
+            <h3 className="text-[22px] sm:text-[26px] lg:text-[30px] font-[600] tracking-tight text-[#0f172a] mb-6 px-2 break-words">
               Engineered Infrastructure
             </h3>
 

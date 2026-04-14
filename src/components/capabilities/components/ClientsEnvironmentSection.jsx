@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import Frame_1 from "../../../assets/Frame_1.png";
-import Frame_2 from "../../../assets/Frame_2.png";
+import Frame_1 from "../../../assets/Frame_1.webp";
+import Frame_2 from "../../../assets/Frame_2.webp";
 import { VIEWS } from "../../../constants";
 
 const facilityCards = [

@@ -1,5 +1,5 @@
 import { ArrowDown } from 'lucide-react';
-import experienceImg from '../../assets/Subtract.png';
+import experienceImg from '../../assets/Subtract.webp';
 import { motion } from 'framer-motion';
 
 export default function ExperienceHero() {
@@ -21,7 +21,7 @@ export default function ExperienceHero() {
           <div className="absolute top-0 sm:top-[2%] lg:-top-[0.2%] xl:-top-[0.2%] left-[10%] sm:left-[8%] lg:left-[10%] z-10 flex flex-col items-start w-full sm:max-w-[75%] lg:max-w-[55%] text-left">
 
             {/* Project Experience Tag */}
-            <div className="inline-flex items-center gap-1 sm:gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-1.5 sm:px-6 pt-[1.5px] pb-0 sm:py-1.5 rounded-full text-[7.5px] sm:text-[15px] lg:text-[16px] font-[700] tracking-tight border border-[#cfe2d9] mb-0.5 sm:mb-5 lg:mb-6 ml-[8%] sm:ml-4 lg:ml-6 leading-none sm:leading-normal">
+            <div className="inline-flex items-center gap-1 sm:gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-1.5 sm:px-6 pt-[1.5px] pb-0 sm:py-1.5 rounded-full text-[7.5px] sm:text-[15px] lg:text-[16px] font-[600] tracking-tight border border-[#cfe2d9] mb-0.5 sm:mb-5 lg:mb-6 ml-[8%] sm:ml-4 lg:ml-6 leading-none sm:leading-normal">
               <div className="w-0.5 sm:w-2.5 h-0.5 sm:h-2.5 rounded-full bg-[#3e976c] mb-[0.5px] sm:mb-0"></div>
               Project Experience
             </div>
@@ -30,10 +30,10 @@ export default function ExperienceHero() {
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
               className="leading-[1.0] lg:leading-[0.95] tracking-tight w-full pl-1 sm:pl-4 lg:pl-6"
             >
-              <span className="block text-[#3e976c] font-[500] text-[clamp(13px,5vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight transition-all">
+              <span className="block text-[#3e976c] font-[600] text-[clamp(13px,5vw,76px)] xl:text-[76px] break-words whitespace-normal leading-tight transition-all">
                 Infrastructure
               </span>
-              <span className="block text-[#000000] font-[800] text-[clamp(15px,5.5vw,84px)] xl:text-[84px] mt-0.5 lg:mt-2 break-words whitespace-normal leading-[0.95] transition-all">
+              <span className="block text-[#000000] font-[600] text-[clamp(15px,5.5vw,84px)] xl:text-[84px] mt-0.5 lg:mt-2 break-words whitespace-normal leading-[0.95] transition-all">
                 Case Studies.
               </span>
             </h1>

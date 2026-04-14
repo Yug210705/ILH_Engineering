@@ -1,6 +1,6 @@
 import { Users, HardHat, Puzzle, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import siteLogo from '../../assets/Logo.png';
+import siteLogo from '../../assets/logo.webp';
 
 export default function Footer({ showTopRow = true }) {
   const features = [
@@ -33,7 +33,7 @@ export default function Footer({ showTopRow = true }) {
                 <f.Icon className="w-7 h-7 text-brand-green" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[800] text-[#0a0a0a] leading-tight mb-3 tracking-tight">{f.title}</h3>
+                <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] font-[600] text-[#0a0a0a] leading-tight mb-3 tracking-tight">{f.title}</h3>
                 <p className="text-[#94a3b8] text-[15px] leading-[1.5] font-medium">{f.desc}</p>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function Footer({ showTopRow = true }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-16 gap-x-12">
               {/* Capabilities */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Capabilities</h4>
+                <h4 className="text-[11px] font-[600] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Capabilities</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">Electrical Power Systems</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Mission Critical Infrastructure</li>
@@ -65,7 +65,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* Get in Touch */}
               <div className="flex flex-col order-last lg:order-none">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Get in Touch</h4>
+                <h4 className="text-[11px] font-[600] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Get in Touch</h4>
                 <ul className="flex flex-col gap-6 text-[14.5px] text-[#9ca3af] font-medium">
                   <li className="flex items-start gap-3.5 transition-colors">
                     <Phone size={18} className="shrink-0 mt-0.5 text-[#379768]" />
@@ -97,7 +97,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* Insights */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Insights</h4>
+                <h4 className="text-[11px] font-[600] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Insights</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">Technical Insights</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Infrastructure Briefings</li>
@@ -107,7 +107,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* Experience */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Experience</h4>
+                <h4 className="text-[11px] font-[600] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">Experience</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">Projects</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Case Studies</li>
@@ -116,7 +116,7 @@ export default function Footer({ showTopRow = true }) {
 
               {/* The Firm */}
               <div className="flex flex-col">
-                <h4 className="text-[11px] font-[800] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">The Firm</h4>
+                <h4 className="text-[11px] font-[600] uppercase tracking-[0.12em] text-[#9ca3af] mb-4 sm:mb-8">The Firm</h4>
                 <ul className="flex flex-col gap-4 text-[14px] text-[#9ca3af] font-medium">
                   <li className="hover:text-white cursor-pointer transition-colors">About ILH Eng.</li>
                   <li className="hover:text-white cursor-pointer transition-colors">Founder</li>
@@ -140,11 +140,11 @@ export default function Footer({ showTopRow = true }) {
           {/* Right Mint CTA Card */}
           <div className="flex-1 bg-[#e8f2ee] rounded-[32px] sm:rounded-[40px] p-8 sm:p-10 lg:p-16 flex flex-col justify-between">
             <div>
-               <div className="inline-flex items-center gap-2 bg-[#d7e9e1] text-[#1f2937] px-4 py-1.5 rounded-full text-[12px] sm:text-[13px] font-[800] tracking-tight border border-white/30 mb-6 sm:mb-10">
+               <div className="inline-flex items-center gap-2 bg-[#d7e9e1] text-[#1f2937] px-4 py-1.5 rounded-full text-[12px] sm:text-[13px] font-[600] tracking-tight border border-white/30 mb-6 sm:mb-10">
                 <div className="w-1.5 h-1.5 rounded-full bg-brand-green"></div>
                 Start the Conversation
               </div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(32px,10vw,76px)] font-[800] text-[#0a0a0a] leading-[1.05] tracking-tight mb-6 sm:mb-10 break-words whitespace-normal px-1">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(32px,10vw,76px)] font-[600] text-[#0a0a0a] leading-[1.05] tracking-tight mb-6 sm:mb-10 break-words whitespace-normal px-1">
                 Discuss Your<br className="hidden sm:block"/>Infrastructure<br />Challenges With <br className="sm:hidden"/><span className="text-[#94a3b8] font-[500] italic">an</span> <br className="sm:hidden"/>Engineer
               </h2>
               <p className="text-[#6b7280] text-[15.5px] sm:text-[18px] font-medium leading-[1.6] max-w-[460px]">
@@ -153,7 +153,7 @@ export default function Footer({ showTopRow = true }) {
             </div>
 
             <div className="mt-10 sm:mt-20">
-              <button className="w-full bg-brand-green hover:bg-[#2e8451] text-white font-[800] py-4 sm:py-6 px-4 rounded-xl text-[14px] sm:text-[18px] transition-all shadow-xl shadow-brand-green/20 mb-6 leading-tight break-words whitespace-normal">
+              <button className="w-full bg-brand-green hover:bg-[#2e8451] text-white font-[600] py-4 sm:py-6 px-4 rounded-xl text-[14px] sm:text-[18px] transition-all shadow-xl shadow-brand-green/20 mb-6 leading-tight break-words whitespace-normal">
                 Schedule Infrastructure Consultation
               </button>
               <p className="text-[#6b7280] text-[14px] font-semibold text-center opacity-80">
@@ -170,11 +170,11 @@ export default function Footer({ showTopRow = true }) {
           <div className="bg-[#e8f2ee] rounded-[32px] p-6 sm:p-10 flex flex-col justify-between relative overflow-hidden">
              <div className="absolute top-0 right-0 w-[150px] h-[150px] bg-[#d7e9e1] rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3"></div>
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-1.5 bg-white/60 backdrop-blur-sm text-[#1f2937] px-3.5 py-1.5 rounded-full text-[11px] font-[800] tracking-tight border border-white/50 mb-8 w-fit shadow-sm">
+              <div className="inline-flex items-center gap-1.5 bg-white/60 backdrop-blur-sm text-[#1f2937] px-3.5 py-1.5 rounded-full text-[11px] font-[600] tracking-tight border border-white/50 mb-8 w-fit shadow-sm">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
                 Start the Conversation
               </div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[32px] sm:text-[40px] font-[800] text-[#0a0a0a] leading-[1.1] tracking-tight mb-5">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[32px] sm:text-[40px] font-[600] text-[#0a0a0a] leading-[1.1] tracking-tight mb-5">
                 Discuss Your Infrastructure Challenges
               </h2>
               <p className="text-[#4b5563] text-[14px] font-medium leading-[1.6]">
@@ -183,7 +183,7 @@ export default function Footer({ showTopRow = true }) {
             </div>
 
             <div className="mt-10 relative z-10">
-              <button className="w-full bg-[#0a0a0a] hover:bg-[#3e976c] text-white font-[800] py-4 rounded-[14px] text-[14px] transition-all shadow-xl shadow-black/10 mb-4 tracking-wide">
+              <button className="w-full bg-[#0a0a0a] hover:bg-[#3e976c] text-white font-[600] py-4 rounded-[14px] text-[14px] transition-all shadow-xl shadow-black/10 mb-4 tracking-wide">
                 Schedule Consultation
               </button>
               <p className="text-[#6b7280] text-[12px] font-semibold text-center opacity-80">
@@ -222,7 +222,7 @@ export default function Footer({ showTopRow = true }) {
             {/* Quick Links Grid */}
             <div className="grid grid-cols-2 gap-y-12 gap-x-6">
               <div className="flex flex-col col-span-2">
-                <h4 className="text-[10px] font-[800] uppercase tracking-[0.16em] text-[#64748b] mb-5">Capabilities</h4>
+                <h4 className="text-[10px] font-[600] uppercase tracking-[0.16em] text-[#64748b] mb-5">Capabilities</h4>
                 <ul className="flex flex-col gap-3.5 text-[13.5px] text-[#cbd5e1] font-medium leading-snug">
                   <li>Electrical Power Systems</li>
                   <li>Mission Critical Infrastructure</li>
@@ -232,7 +232,7 @@ export default function Footer({ showTopRow = true }) {
                 </ul>
               </div>
               <div className="flex flex-col">
-                <h4 className="text-[10px] font-[800] uppercase tracking-[0.16em] text-[#64748b] mb-5">Insights</h4>
+                <h4 className="text-[10px] font-[600] uppercase tracking-[0.16em] text-[#64748b] mb-5">Insights</h4>
                 <ul className="flex flex-col gap-3.5 text-[13.5px] text-[#cbd5e1] font-medium">
                   <li>Technical Insights</li>
                   <li>Briefings</li>
@@ -240,7 +240,7 @@ export default function Footer({ showTopRow = true }) {
                 </ul>
               </div>
               <div className="flex flex-col">
-                <h4 className="text-[10px] font-[800] uppercase tracking-[0.16em] text-[#64748b] mb-5">The Firm</h4>
+                <h4 className="text-[10px] font-[600] uppercase tracking-[0.16em] text-[#64748b] mb-5">The Firm</h4>
                 <ul className="flex flex-col gap-3.5 text-[13.5px] text-[#cbd5e1] font-medium">
                   <li>About ILH Eng.</li>
                   <li>Founder</li>
@@ -251,7 +251,7 @@ export default function Footer({ showTopRow = true }) {
 
             {/* Badge & Copyright */}
             <div className="flex flex-col gap-8 pt-8 border-t border-dashed border-white/10 mt-2">
-              <div className="w-full p-4 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-transparent rounded-[16px] border border-blue-400/20 flex items-center justify-center text-[9.5px] text-blue-200 font-bold text-center leading-[1.5] uppercase tracking-[0.1em]">
+              <div className="w-full p-4 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-transparent rounded-[16px] border border-blue-400/20 flex items-center justify-center text-[9.5px] text-blue-200 font-[600] text-center leading-[1.5] uppercase tracking-[0.1em]">
                 Miami-Dade Disadvantaged<br/>Business Enterprise
               </div>
               

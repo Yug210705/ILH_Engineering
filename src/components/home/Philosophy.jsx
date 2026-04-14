@@ -99,8 +99,8 @@ export default function Philosophy() {
 
             {/* Text Overlay */}
             <g className={isVisible ? 'animate-text' : 'opacity-0'}>
-              <text x="600" y="555" textAnchor="middle" fill="#0a0a0a" className="font-bold text-[34px]">Integrated</text>
-              <text x="600" y="595" textAnchor="middle" fill="#0a0a0a" className="font-bold text-[34px]">Infrastructure</text>
+              <text x="600" y="555" textAnchor="middle" fill="#0a0a0a" fontWeight="600" className="text-[34px]">Integrated</text>
+              <text x="600" y="595" textAnchor="middle" fill="#0a0a0a" fontWeight="600" className="text-[34px]">Infrastructure</text>
             </g>
           </svg>
 
@@ -110,7 +110,7 @@ export default function Philosophy() {
             style={{ left: '13.33%', top: '16.66%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
             <Zap className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
-            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Power</span>
+            <span className="font-semibold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Power</span>
           </div>
 
           <div 
@@ -118,7 +118,7 @@ export default function Philosophy() {
             style={{ left: '13.33%', top: '80%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
             <Shield className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
-            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Security</span>
+            <span className="font-semibold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Security</span>
           </div>
 
           <div 
@@ -126,7 +126,7 @@ export default function Philosophy() {
             style={{ left: '86.66%', top: '16.66%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
             <Share2 className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
-            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Connectivity</span>
+            <span className="font-semibold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Connectivity</span>
           </div>
 
           <div 
@@ -134,7 +134,7 @@ export default function Philosophy() {
             style={{ left: '86.66%', top: '80%', width: '18%', height: '30%', transform: 'translate(-50%, -50%)', animationDelay: '1.8s' }}
           >
             <Settings className="text-brand-green mb-1 sm:mb-4 w-[16px] sm:w-[34px] h-[16px] sm:h-[34px]" strokeWidth={2.4} />
-            <span className="font-bold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Operations</span>
+            <span className="font-semibold text-[clamp(8px,1.5vw,19px)] text-[#0f172a]">Operations</span>
           </div>
         </div>
       </div>
@@ -146,7 +146,7 @@ export default function Philosophy() {
           planning to ensure critical operations remain online when disruption occurs.
         </p>
 
-        <button className="bg-brand-green hover:bg-[#2e8451] text-white font-bold text-[16px] px-10 py-4.5 rounded-[12px] transition-all tracking-wide shadow-md hover:shadow-xl hover:-translate-y-0.5">
+        <button className="bg-brand-green hover:bg-[#2e8451] text-white font-semibold text-[16px] px-10 py-4.5 rounded-[12px] transition-all tracking-wide shadow-md hover:shadow-xl hover:-translate-y-0.5">
           Explore Our Capabilities
         </button>
       </div>

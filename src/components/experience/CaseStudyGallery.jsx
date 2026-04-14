@@ -2,9 +2,9 @@ import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Asset imports
-import expImage from '../../assets/exp_image.png';
+import expImage from '../../assets/exp_image.webp';
 // Using the generated image from previous step
-import modernizationImg from '../../assets/modernization.png';
+import modernizationImg from '../../assets/modernization.webp';
 
 const projects = [
   {
@@ -36,14 +36,14 @@ export default function CaseStudyGallery() {
       
       {/* 1. Header Area */}
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-12 text-center mb-12 lg:mb-16">
-        <div className="inline-flex items-center gap-1.5 bg-[#e8f2ee] text-[#3e976c] px-4 py-2 rounded-lg text-[13px] font-[700] tracking-tight border border-[#cfe2d9] mb-6">
+        <div className="inline-flex items-center gap-1.5 bg-[#e8f2ee] text-[#3e976c] px-4 py-2 rounded-lg text-[13px] font-[600] tracking-tight border border-[#cfe2d9] mb-6">
           <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
           All Case Studies
         </div>
 
         <h2 
           style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-          className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,84px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] mb-6 break-words whitespace-normal px-2"
+          className="text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,84px)] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] mb-6 break-words whitespace-normal px-2"
         >
           Explore <span className="text-[#c8cfd6]">Infrastructure</span> <br className="hidden sm:block"/> Case Studies
         </h2>
@@ -77,7 +77,7 @@ export default function CaseStudyGallery() {
               <div className="p-5 sm:p-10 lg:p-12 flex flex-col gap-4">
                 <h3 
                   style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                  className="text-[20px] lg:text-[24px] xl:text-[28px] font-[800] text-[#0a0a0a] leading-tight group-hover:text-[#3e976c] transition-colors break-words whitespace-normal"
+                  className="text-[20px] lg:text-[24px] xl:text-[28px] font-[600] text-[#0a0a0a] leading-tight group-hover:text-[#3e976c] transition-colors break-words whitespace-normal"
                 >
                   {project.title}
                 </h3>
@@ -95,7 +95,7 @@ export default function CaseStudyGallery() {
         <motion.button 
           whileHover={{ scale: 1.02, backgroundColor: '#fafffe' }}
           whileTap={{ scale: 0.98 }}
-          className="px-12 py-5 rounded-[12px] border-2 border-[#cfe2d9] text-[#3e976c] text-[16px] font-[700] transition-all hover:border-[#3e976c]"
+          className="px-12 py-5 rounded-[12px] border-2 border-[#cfe2d9] text-[#3e976c] text-[16px] font-[600] transition-all hover:border-[#3e976c]"
         >
           Load More
         </motion.button>

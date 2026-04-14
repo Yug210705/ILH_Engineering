@@ -12,7 +12,7 @@ export default function SectionHeading({ children, className = '', as: Tag = 'h2
   return (
     <Tag
       style={{ fontFamily: HEADING_FONT }}
-      className={`text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[800] leading-[1.05] tracking-tight text-[#0a0a0a] ${className}`}
+      className={`text-[clamp(28px,8.5vw,42px)] sm:text-[clamp(42px,7vw,72px)] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] ${className}`}
     >
       {children}
     </Tag>

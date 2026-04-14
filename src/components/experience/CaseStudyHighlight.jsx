@@ -2,9 +2,9 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Asset imports - matching user-specified paths
-import expImage from '../../assets/exp_image.png';
-import subtractShape from '../../assets/Subtract (1).png';
-import linesDecoration from '../../assets/lines.png';
+import expImage from '../../assets/exp_image.webp';
+import subtractShape from '../../assets/Subtract (1).webp';
+import linesDecoration from '../../assets/lines.webp';
 
 export default function CaseStudyHighlight({ setCurrentView }) {
   return (
@@ -54,14 +54,14 @@ export default function CaseStudyHighlight({ setCurrentView }) {
                 
                 {/* Header Info - Locked into the Top Left Cutout area */}
                 <div className="absolute top-[0%] left-[1%] sm:top-[0.5%] sm:left-[1%] lg:top-[1%] lg:left-[1%] max-w-[60%] sm:max-w-[55%]">
-                  <div className="inline-flex items-center gap-1.5 bg-[#f0f7f4] text-[#3e976c] px-2.5 sm:px-4 py-0.5 sm:py-2 rounded-lg text-[9.5px] sm:text-[13px] font-[700] tracking-tight border border-[#cfe2d9] mb-4 lg:mb-10 -translate-y-1 sm:translate-y-0">
+                  <div className="inline-flex items-center gap-1.5 bg-[#f0f7f4] text-[#3e976c] px-2.5 sm:px-4 py-0.5 sm:py-2 rounded-lg text-[9.5px] sm:text-[13px] font-[600] tracking-tight border border-[#cfe2d9] mb-4 lg:mb-10 -translate-y-1 sm:translate-y-0">
                     <div className="w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#3e976c]"></div>
                     Featured
                   </div>
                   
                   <h2 
                     style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                    className="text-[clamp(24px,7.5vw,32px)] sm:text-[40px] lg:text-[48px] xl:text-[56px] font-[800] leading-[1.05] tracking-[-0.04em] text-[#0a0a0a] max-w-[450px] sm:max-w-[550px] lg:max-w-[650px]"
+                    className="text-[clamp(24px,7.5vw,32px)] sm:text-[40px] lg:text-[48px] xl:text-[56px] font-[600] leading-[1.05] tracking-[-0.04em] text-[#0a0a0a] max-w-[450px] sm:max-w-[550px] lg:max-w-[650px]"
                   >
                     Large-Scale <br /> Infrastructure <br /> Environments
                   </h2>
@@ -73,7 +73,7 @@ export default function CaseStudyHighlight({ setCurrentView }) {
                     onClick={() => setCurrentView('caseStudy')}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="bg-[#3e976c] hover:bg-[#347d5a] text-white flex items-center justify-center gap-2 sm:gap-4 px-4 sm:px-[62px] py-1.5 sm:py-6 rounded-[10px] lg:rounded-[18px] text-[11px] sm:text-[18px] lg:text-[19px] font-[800] transition-all shadow-xl shadow-[#3e976c]/30 sm:min-w-[315px] lg:min-w-[355px]"
+                    className="bg-[#3e976c] hover:bg-[#347d5a] text-white flex items-center justify-center gap-2 sm:gap-4 px-4 sm:px-[62px] py-1.5 sm:py-6 rounded-[10px] lg:rounded-[18px] text-[11px] sm:text-[18px] lg:text-[19px] font-[600] transition-all shadow-xl shadow-[#3e976c]/30 sm:min-w-[315px] lg:min-w-[355px]"
                   >
                     <span className="tracking-tight">Explore Case Study</span>
                     <ArrowRight size={14} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2.5} />

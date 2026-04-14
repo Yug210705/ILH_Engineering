@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, BatteryCharging, CircleCheck, Clipboard, FileText, Layers, Network, ShieldCheckIcon, Zap, Thermometer, ChartNoAxesColumnIncreasing } from 'lucide-react';
-import DataCenter from '../../assets/DataCenter.png';
-import Mosaic2 from '../../assets/Mosaic2.png';
+import DataCenter from '../../assets/DataCenter.webp';
+import Mosaic2 from '../../assets/Mosaic2.webp';
 import ClientsEnvironmentSection from './components/ClientsEnvironmentSection';
 
 /* ─── Reusable hook: fires once when element enters viewport ─── */
@@ -130,12 +130,12 @@ export default function CapabilitiesPage({ setCurrentView }) {
             <img src={DataCenter} alt="Electrical Infrastructure" className="w-full h-full object-cover" loading="eager" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-            <div className="absolute top-0 left-0 z-20 mt-8 w-fit rounded-br-[20px] sm:rounded-br-[40px] pr-6 sm:pr-12 pb-4 sm:pb-10 pt-4 sm:pt-8 pl-4 sm:pl-8 lg:pl-10">
-              <div className="inline-flex items-center gap-2 lg:gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-3 sm:px-4 py-2 rounded-[8px] text-[12px] sm:text-[14px] font-[700] tracking-tight border border-[#cfe2d9] mb-4 sm:mb-6 leading-tight whitespace-nowrap">
+            <div className="absolute top-0 left-0 z-20 mt-8 w-fit max-w-[70%] sm:max-w-none bg-white sm:bg-transparent rounded-br-[20px] sm:rounded-br-[40px] pr-3 sm:pr-12 pb-3 sm:pb-10 pt-3 sm:pt-8 pl-3 sm:pl-8 lg:pl-10">
+              <div className="inline-flex items-center gap-2 lg:gap-2.5 bg-[#f0f7f4] text-[#0a0a0a] px-3 sm:px-4 py-2 rounded-[8px] text-[10px] sm:text-[14px] font-[700] tracking-tight border border-[#cfe2d9] mb-3 sm:mb-6 leading-tight flex-wrap sm:flex-nowrap sm:whitespace-nowrap">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
                 Data Center Engineering . Mission-Critical Infrastructure
               </div>
-              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[30px] sm:text-[48px] lg:text-[64px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] m-0 p-0 text-left whitespace-nowrap">
+              <h1 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[20px] sm:text-[48px] lg:text-[64px] font-[600] leading-[1.15] sm:leading-[1.05] tracking-tight text-[#0a0a0a] m-0 p-0 text-left sm:whitespace-nowrap">
                 Data Center &amp;<br />
                 <span className="text-[#3e976c]">Mission-Critical </span>
                 <span className="text-[#0a0a0a]">Infrastructure</span>

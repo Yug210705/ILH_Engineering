@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import groupPhoto from '../../assets/groupphoto.png';
+import groupPhoto from '../../assets/groupphoto.webp';
 import { SectionPill, SectionHeading } from '../ui';
 
 export default function EngineeringNetwork() {

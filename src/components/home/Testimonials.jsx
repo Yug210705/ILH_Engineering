@@ -53,7 +53,7 @@ export default function Testimonials() {
                    </p>
                    
                    <div className="w-full text-right mt-auto">
-                      <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className={`transition-colors duration-[600ms] font-[700] text-[15px] tracking-tight ${dist === 0 ? 'text-[#3e976c]' : 'text-[#a1a1aa]'}`}>
+                      <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className={`transition-colors duration-[600ms] font-[600] text-[15px] tracking-tight ${dist === 0 ? 'text-[#3e976c]' : 'text-[#a1a1aa]'}`}>
                          {t.author}
                       </span>
                    </div>
