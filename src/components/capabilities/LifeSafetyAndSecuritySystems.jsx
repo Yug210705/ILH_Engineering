@@ -128,18 +128,18 @@ export default function CapabilitiesPage({ setCurrentView }) {
             }}>
           </div>
 
-          <div className="relative z-10 px-8">
+          <div className="relative z-10 px-0 sm:px-8">
             {/* Header row */}
-            <div className={`flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-12 mb-12 sm:mb-20 stagger-children ${whatIn ? visible : hidden}`}>
-              <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-[#0a0a0a] px-3 py-1.5 rounded-[8px] text-[12px] font-[600] tracking-tight border border-[#cfe2d9] whitespace-nowrap shrink-0 self-start lg:self-center">
+            <div className={`flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-12 mb-12 sm:mb-20 stagger-children ${whatIn ? visible : hidden}`}>
+              <div className="inline-flex items-center gap-2 bg-[#e8f2ee] text-[#0a0a0a] px-3 py-1.5 rounded-[8px] text-[12px] font-[600] tracking-tight border border-[#cfe2d9] whitespace-nowrap shrink-0 self-center">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
                 What We Do
               </div>
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] mt-6 sm:text-[42px] lg:text-[46px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] max-w-[700px] flex-[2]">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[28px] mt-2 sm:mt-6 sm:text-[42px] lg:text-[46px] font-[600] leading-[1.05] tracking-tight text-[#0a0a0a] max-w-[600px] flex-[2] text-center lg:text-left">
                 Life Safety &amp; Security Systems We <span className="text-[#3e976c]">Design</span> and <span className="text-[#3e976c]">Deliver.</span>
               </h2>
               <div className="flex-1 lg:max-w-[320px] self-start lg:self-center">
-                <p className="text-[#848484] text-[15px] sm:text-[16px] leading-[1.6] font-[500] tracking-tight">
+                <p className="text-[#848484] text-[15px] sm:text-[16px] leading-[1.6] font-[500] tracking-tight text-center lg:text-left">
                   Integrated safety and security systems engineered for facilities where compliance and protection are non-negotiable.
                 </p>
               </div>
@@ -208,7 +208,7 @@ export default function CapabilitiesPage({ setCurrentView }) {
                 <div
                   key={idx}
                   style={{ animationDelay: `${idx * 80}ms` }}
-                  className={`p-6 bg-white rounded-none shadow-sm border border-gray-100 flex flex-col pt-8 ${whatIn ? visible : hidden}`}
+                  className={`p-6 bg-[#ffffff] sm:bg-white rounded-[20px] sm:rounded-none shadow-[0_8px_30px_rgb(0,0,0,0.06)] sm:shadow-sm border border-[#eef5f1] sm:border-gray-100 flex flex-col items-center text-center pt-8 ${whatIn ? visible : hidden}`}
                 >
                   {item.icon}
                   <h3 className="font-[600] text-[18px] text-[#0a0a0a] tracking-tight leading-tight mb-1">{item.title}</h3>
@@ -222,33 +222,31 @@ export default function CapabilitiesPage({ setCurrentView }) {
         {/* ── 3. The Problem Section ── */}
         <section
           ref={problemRef}
-          className="w-full max-w-[1200px] mx-auto px-12 sm:px-8 lg:px-12 py-16 sm:py-24 relative isolate"
+          className="w-full max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24 relative isolate"
         >
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-4">
 
             {/* Text Block */}
-            <div
-              className={`flex-[1] flex flex-col items-start w-full order-2 lg:order-1 pt-0 lg:pt-8 xl:pt-12 ${problemIn ? visible : hidden}`}
-            >
+            <div className={`flex-[1] flex flex-col items-center lg:items-start w-full order-2 lg:order-1 pt-0 lg:pt-8 xl:pt-12 stagger-children ${problemIn ? visible : hidden}`}>
               <div className="inline-flex items-center gap-2 bg-[#f0f7f4] text-[#0a0a0a] px-3.5 py-1.5 rounded-[6px] text-[12.5px] font-[600] tracking-tight border border-[#cfe2d9] mb-8">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]"></div>
                 The Problem
               </div>
 
-              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[36px] sm:text-[46px] lg:text-[48px] xl:text-[45px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6">
+              <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }} className="text-[36px] sm:text-[46px] lg:text-[48px] xl:text-[45px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6 text-center lg:text-left">
                 Safety Failures Are<br />
                 <span className="text-[#3e976c]">Compliance</span> Failures
               </h2>
 
-              <p className="text-[#848484] text-[15px] sm:text-[17px] leading-[1.65] font-[400] max-w-[500px] mb-10">
+              <p className="text-[#848484] text-[15px] sm:text-[17px] leading-[1.65] font-[400] max-w-[500px] mb-10 text-center lg:text-left">
                 Disconnected safety systems, incomplete coverage, and non-compliant installations don't just create operational risk — they create legal exposure. In critical environments, a gap in life safety infrastructure can shut down an entire facility.
               </p>
 
-              <div className="flex w-max rounded-lg overflow-hidden shadow-lg shadow-[#3e976c]/20 transition-transform active:scale-95 cursor-pointer group">
-                <button className="bg-[#3e976c] group-hover:bg-[#34835d] text-white font-[700] text-[15.5px] px-6 py-3.5 flex items-center justify-center transition-colors">
+              <div className="flex w-full sm:w-max rounded-[12px] sm:rounded-lg overflow-hidden shadow-[0_8px_24px_rgba(62,151,108,0.25)] sm:shadow-lg sm:shadow-[#3e976c]/20 transition-transform active:-translate-y-0.5 sm:active:scale-95 cursor-pointer group">
+                <button className="bg-[#3e976c] group-hover:bg-[#34835d] text-white font-[600] text-[15px] sm:text-[15.5px] px-6 py-4 sm:py-3.5 flex items-center justify-center transition-colors flex-1 sm:flex-none">
                   Review Your Deployment Plan
                 </button>
-                <div className="bg-[#34835d] group-hover:bg-[#2c7150] flex items-center justify-center px-4 py-3.5 border-l border-[#40a373]/30 transition-colors">
+                <div className="bg-[#34835d] group-hover:bg-[#2c7150] flex items-center justify-center px-5 sm:px-4 py-4 sm:py-3.5 border-l border-[#40a373]/30 transition-colors">
                   <ArrowUpRight strokeWidth={2.5} size={20} className="text-white" />
                 </div>
               </div>

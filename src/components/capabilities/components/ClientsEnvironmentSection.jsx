@@ -2,11 +2,13 @@ import { useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Frame_1 from "../../../assets/Frame_1.webp";
 import Frame_2 from "../../../assets/Frame_2.webp";
+import Frame_3 from "../../../assets/Frame_3.webp";
 import { VIEWS } from "../../../constants";
 
 const facilityCards = [
   { title: "Data centers and server environments", img: Frame_1 },
   { title: "Municipal and government facilities", img: Frame_2 },
+  { title: "Enterprise and commercial complexes", img: Frame_3 },
 ];
 
 const relatedServices = [
@@ -49,12 +51,12 @@ export default function ClientsEnvironmentSection({ setCurrentView }) {
     <div className="w-full bg-white">
 
       {/* ── Clients & Environment ── */}
-      <section className="w-full px-5 sm:px-12 lg:px-24 xl:px-40 py-16 sm:py-24">
+      <section className="w-full px-4 sm:px-12 lg:px-24 xl:px-40 py-16 sm:py-24">
         
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
           {/* Left */}
-          <div className="flex flex-col items-start gap-8 flex-shrink-0 w-full lg:w-[300px]">
+          <div className="flex flex-col items-center lg:items-start gap-8 flex-shrink-0 w-full lg:w-[300px]">
             <div className="inline-flex items-center gap-2 bg-[#f0f7f4] text-[#0a0a0a] px-3 py-1.5 rounded-[8px] text-[12.5px] font-[600] tracking-tight border border-[#cfe2d9]">
               <div className="w-1.5 h-1.5 rounded-full bg-[#3e976c]" />
               Clients &amp; Environment
@@ -62,14 +64,11 @@ export default function ClientsEnvironmentSection({ setCurrentView }) {
 
             <h2
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-              className="text-[36px] sm:text-[46px] lg:text-[48px] xl:text-[45px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6"
+              className="text-[36px] sm:text-[46px] lg:text-[48px] xl:text-[45px] font-[700] leading-[1.05] tracking-tight text-[#0a0a0a] w-full mb-6 text-center lg:text-left"
             >
-              Built for
-              <br />
-              <span className="text-[#3e976c]">Facilities</span>
-              <br />
-              Where <span className="text-[#3e976c]">Power</span>
-              <br />
+              Built for <br className="hidden sm:block" />
+              <span className="text-[#3e976c]">Facilities</span> <br className="hidden sm:block" />
+              Where <span className="text-[#3e976c]">Power</span> <br className="hidden sm:block" />
               Cannot Fail.
             </h2>
 
@@ -94,7 +93,7 @@ export default function ClientsEnvironmentSection({ setCurrentView }) {
             {visibleCards.map((card, idx) => (
               <div
                 key={(startIdx + idx) % facilityCards.length}
-                className="flex-1 bg-white overflow-hidden flex flex-col min-w-0 shadow-sm border border-gray-200"
+                className={`flex-1 bg-white overflow-hidden flex-col min-w-0 shadow-sm border border-gray-200 ${idx === 1 ? 'hidden sm:flex' : 'flex'}`}
               >
                 <div className="p-6 pb-0">
                   <img
@@ -120,7 +119,7 @@ export default function ClientsEnvironmentSection({ setCurrentView }) {
 
       {/* ── Related Services ── */}
       <section
-        className="w-full px-6 sm:px-12 lg:px-24 xl:px-40 pb-16 sm:pb-24 pt-12 sm:pt-16"
+        className="w-full px-4 sm:px-12 lg:px-24 xl:px-40 pb-16 sm:pb-24 pt-12 sm:pt-16"
         style={{
           backgroundImage: `
             linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(232,244,239,0.6) 100%),
@@ -133,10 +132,10 @@ export default function ClientsEnvironmentSection({ setCurrentView }) {
         <div className="max-w-[1100px] mx-auto">
 
           {/* Header */}
-          <div className="flex items-center justify-between mb-12 flex-wrap gap-6">
+          <div className="flex items-center justify-center lg:justify-between mb-12 flex-wrap gap-6">
             
             {/* Left side (pill + heading) */}
-            <div className="flex items-center gap-6 flex-wrap sm:flex-nowrap">
+            <div className="flex items-center justify-center lg:justify-start gap-6 flex-wrap sm:flex-nowrap">
               
               {/* Pill */}
               <div className="inline-flex items-center gap-2 bg-[#f0f7f4] text-[#0a0a0a] px-3 py-1.5 rounded-[8px] text-[12px] font-[600] tracking-tight border border-[#cfe2d9] whitespace-nowrap">
@@ -147,18 +146,18 @@ export default function ClientsEnvironmentSection({ setCurrentView }) {
               {/* Heading */}
               <h2
                 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                className="text-[36px] sm:text-[44px] lg:text-[52px] xl:text-[56px] px-12 font-[600] leading-[1.1] tracking-tight text-[#0a0a0a]"
+                className="text-[36px] sm:text-[44px] lg:text-[52px] xl:text-[56px] px-0 sm:px-12 font-[600] leading-[1.1] tracking-tight text-[#0a0a0a] text-center lg:text-left"
               >
                 Related <span className="text-[#3e976c]">Services</span>
               </h2>
             </div>
 
             {/* CTA Button */}
-            <div className="flex w-max rounded-lg overflow-hidden shadow-md shadow-[#3e976c]/20 cursor-pointer group">
-              <button className="bg-[#3e976c] group-hover:bg-[#34835d] text-white font-[700] text-[14px] px-5 py-3 whitespace-nowrap">
+            <div className="flex w-full sm:w-max rounded-[12px] sm:rounded-lg overflow-hidden shadow-[0_8px_24px_rgba(62,151,108,0.25)] sm:shadow-md sm:shadow-[#3e976c]/20 cursor-pointer group hover:-translate-y-0.5 transition-transform">
+              <button className="bg-[#3e976c] group-hover:bg-[#34835d] text-white font-[700] text-[15px] sm:text-[14px] px-5 py-4 sm:py-3 whitespace-nowrap flex-[1] sm:flex-none">
                 View All Capabilities
               </button>
-              <div className="bg-[#34835d] group-hover:bg-[#2c7150] flex items-center justify-center px-3.5 border-l border-[#40a373]/30">
+              <div className="bg-[#34835d] group-hover:bg-[#2c7150] flex items-center justify-center px-5 sm:px-3.5 py-0 border-l border-[#40a373]/30">
                 <ArrowUpRight size={18} className="text-white" />
               </div>
             </div>
